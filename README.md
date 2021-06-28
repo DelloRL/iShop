@@ -14,3 +14,17 @@ Mauricio Caggiano: Estudiante de ultimo año nivel secundario, experiencia en HT
 Franco Mazuryk:Estudiante de ultimo nivel secundario actualmente sin mucho conocimiento en el mundo de desarollo web.
 
 Dello Russo Lucas: Estudiante de secundario industrial, cursando 7mo año, experiencia de dos años con programación C, C++ JavaScript HTML , CSS, Bootstrap y título B2 first de inglés.
+
+Paginas modelo:
+
+https://www.mercadolibre.com.ar/
+
+https://www.apple.com/la/
+
+https://www.samsung.com/ar/
+
+https://compragamer.com/?listado_prod=1-9874&cp=7130
+
+https://www.musimundo.com/
+
+https://tienda.movistar.com.ar/
