@@ -4,7 +4,7 @@ Somos una E-commerce. Nuestro principal objetivo es, a través de una pagina web
 Compra en dolares o Pesos con una mínima tasa de interes, y en cuotas.
 "Nunca fue tan facil conseguir un iphone como hasta ahora".
 Orientado a adultos jovenes, interesados en la ultima tecnología de Celulares de la compañia Apple, que buscan la posibilidad de acceder a los mismos de una manera más facil, dinámica y accesible.
-
+Incluimos venta de cargadores y auriculares!
 
 miembros fundadores:
 
