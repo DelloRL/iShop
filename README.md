@@ -29,3 +29,6 @@ https://compragamer.com/?listado_prod=1-9874&cp=7130
 https://www.musimundo.com/
 
 https://tienda.movistar.com.ar/
+
+
+Tablero de trabajo: https://trello.com/b/KmtgSRiv/trabajo-integrador-digitalhouse
