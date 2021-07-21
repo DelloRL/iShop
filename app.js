@@ -6,12 +6,12 @@ const app = express();
 
 
 app.listen(3080,() => {
-    console.log("El hamster corre")
+    console.log("Servidor corriendo en el puerto 3080")
 });
 
 
-app.get("/home",(req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/home.html"))
+app.get("/detalle",(req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/detalle.html"))
 });
 
 app.use(express.static("public"));
