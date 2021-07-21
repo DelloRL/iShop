@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: rgb(24, 145, 185);
     font-family: 'Roboto';
     margin: 0;
     padding: 0;
@@ -203,6 +204,22 @@ border-color: black;
 }
 
 
+.boton-vaciar{
+    text-align:right;
+
+}
+
+.vaciar-carrito{
+    text-align: center;
+    
+
+
+
+
+    background-color: rgb(211, 110, 110);
+    cursor: pointer;    
+    
+}
 
 /* mediaQ*/
 
