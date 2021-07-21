@@ -6,7 +6,7 @@ const app = express();
 
 
 app.listen(3080,() => {
-    console.log("El hamster corre")
+    console.log("Servidor corriendo en el puerto 3080")
 });
 
 
