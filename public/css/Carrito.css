@@ -1,13 +1,7 @@
 /*header*/ 
+
 * {
     box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(24, 145, 185);
-    font-family: 'Roboto';
-    margin: 0;
-    padding: 0;
 }
 
 .main-header {
@@ -32,7 +26,7 @@ body {
 
 
 .hamburger-button {
-    background-color:cadetblue;
+    background-color:rgb(24, 145, 185);
     color: white;
     display: block;
     max-width: 40px;
@@ -62,164 +56,57 @@ body {
     display: none;
 }
 
-/* Configuración del boton de busqueda */
-
-form {
-    display: flex;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    margin-right: 10px;
-}
-
-.form-control, .btn {
-    border-radius: 0;
-}
-
-.btn-outline-light {
-color: #1e4872;
-border-color: black;
-}
-
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #E2C3FF;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
 /*body*/
 
-
-.titulo{
-    font-size: 24px;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-family: 'Noto Serif', serif;
-
-}
-
-/*casillas*/
-
-.listaPrincipal{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0px;
-    color: black;
-    font-size: 24px;
-    font-family: 'Noto Serif', serif;
-    justify-content:space-between;
-}
-
-.producto{
-    margin-left: 20px;
-}
-
-.subtotal{
-    margin-right: 200px;
-}
-.cantidad-button{   
-    max-width: 50px;
-    
-}
-/*ejemplo de producto*/
-
-.producto-carrito{
-    margin: 18px;
-    border:solid black 1px;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+body {
+    background-color: rgb(24, 145, 185);
+    font-family: 'Roboto';
+    margin: 0;
     padding: 0;
-    color: black;
-    font-size: 18px;
-    font-family: 'Noto Serif', serif;
-    justify-content: space-between;
-    background-color: #23c49b;
 }
 
-/*Total*/
+/*main*/
 
- 
-.total{
-    text-align: right;
+.Titulo{
     font-size: 20px;
-    font-family: 'Noto Serif', serif;
-    margin-right: 270px; 
-
-}
-
-
-/*botones*/
-
-.botones{
-    display: flex;
-    justify-content: space-between;
-}
-
-.continuar-compra{
-    color:black;
-    font-size: 20px;
-    background-color: #F4D03F;
-    margin-bottom:10px;
     margin-left: 10px;
-    font-family: 'Noto Serif', serif;
-    cursor: pointer;
 }
 
-.pagar{
-    font-size: 20px;
-    background-color: #2ECC71;
-    margin-bottom:10px;
-    margin-right: 10px;
-    font-family: 'Noto Serif', serif;
-    text-align: right;
-    cursor: pointer;
+.InfoProducto {
+    margin-left: 5%;
+    width:50vh;
+    max-width:300px;
+    height:25vh;
+    max-height:100px;
+    position:relative;
+    background:white;
+    position: relative;
+  }
+
+.ImagenProducto{
+    width: 100px;
+    height: 100px;
+    position:absolute;
 }
 
 
-.boton-vaciar{
-    text-align:right;
 
-}
-
-.vaciar-carrito{
+.cantidad-button{
+    top: 50%;
+    left: 50%;
+    position: absolute;
     text-align: center;
-    
-
-
-
-
-    background-color: rgb(211, 110, 110);
-    cursor: pointer;    
-    
+    max-width: 30px;
 }
+.precio{
+    color: blue;
+    left: 50%;  
+    position:absolute;
+}
+
+.boton-quitar{
+    color: rgb(231, 114, 114)a(255, 0, 0, 0.959);    
+}   
 
 /* mediaQ*/
 
@@ -267,7 +154,12 @@ border-color: black;
     .iconHome {
         margin-right: 15px;
     }
+
 }
+
+
+
+
 
 /* A partir de 1200px, resolución desktop */
 
@@ -304,3 +196,7 @@ border-color: black;
         display: none;
     }   
 }
+
+
+
+
