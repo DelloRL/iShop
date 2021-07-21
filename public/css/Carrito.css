@@ -112,7 +112,101 @@ border-color: black;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-/* A partir de 768px, resolución tablet */
+/*body*/
+
+
+.titulo{
+    font-size: 24px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-family: 'Noto Serif', serif;
+
+}
+
+/*casillas*/
+
+.listaPrincipal{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0px;
+    color: black;
+    font-size: 24px;
+    font-family: 'Noto Serif', serif;
+    justify-content:space-between;
+}
+
+.producto{
+    margin-left: 20px;
+}
+
+.subtotal{
+    margin-right: 200px;
+}
+.cantidad-button{   
+    max-width: 50px;
+    
+}
+/*ejemplo de producto*/
+
+.producto-carrito{
+    margin: 18px;
+    border:solid black 1px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    color: black;
+    font-size: 18px;
+    font-family: 'Noto Serif', serif;
+    justify-content: space-between;
+    background-color: #23c49b;
+}
+
+/*Total*/
+
+ 
+.total{
+    text-align: right;
+    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    margin-right: 270px; 
+
+}
+
+
+/*botones*/
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.continuar-compra{
+    color:black;
+    font-size: 20px;
+    background-color: #F4D03F;
+    margin-bottom:10px;
+    margin-left: 10px;
+    font-family: 'Noto Serif', serif;
+    cursor: pointer;
+}
+
+.pagar{
+    font-size: 20px;
+    background-color: #2ECC71;
+    margin-bottom:10px;
+    margin-right: 10px;
+    font-family: 'Noto Serif', serif;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+
+/* mediaQ*/
+
+/* A partir de 768px, resolución tablet */ 
 
 @media (min-width: 768px) {
     .main-header-top {
@@ -193,92 +287,3 @@ border-color: black;
         display: none;
     }   
 }
-/*body*/
-
-
-.titulo{
-    font-size: 24px;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-family: 'Noto Serif', serif;
-
-}
-
-/*casillas*/
-
-.listaPrincipal{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0px;
-    color: black;
-    font-size: 24px;
-    font-family: 'Noto Serif', serif;
-    justify-content:space-between;
-}
-
-.producto{
-    margin-left: 20px;
-}
-
-.subtotal{
-    margin-right: 200px;
-}
-.cantidad-button{   
-    max-width: 50px;
-    
-}
-/*ejemplo de producto*/
-
-.producto-carrito{
-    margin: 18px;
-    border:solid black 1px;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    color: black;
-    font-size: 18px;
-    font-family: 'Noto Serif', serif;
-    justify-content: space-between;
-}
-
-/*Total*/
-
- 
-.total{
-    text-align: right;
-    font-size: 20px;
-    font-family: 'Noto Serif', serif;
-    margin-right: 270px; 
-
-}
-
-
-/*botones*/
-
-.botones{
-    display: flex;
-    justify-content: space-between;
-}
-
-.continuar-compra{
-    color:black;
-    font-size: 20px;
-    background-color: #F4D03F;
-    margin-bottom:10px;
-    margin-left: 10px;
-    font-family: 'Noto Serif', serif;
-    cursor: pointer;
-}
-
-.pagar{
-    font-size: 20px;
-    background-color: #2ECC71;
-    margin-bottom:10px;
-    margin-right: 10px;
-    font-family: 'Noto Serif', serif;
-    text-align: right;
-    cursor: pointer;
-}
-
