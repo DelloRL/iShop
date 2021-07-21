@@ -74,8 +74,9 @@ body {
 
 .InfoProducto {
     margin-left: 5%;
+    margin-right: 5%;   
     width:50vh;
-    max-width:300px;
+    max-width:400px;    
     height:25vh;
     max-height:100px;
     position:relative;
@@ -99,14 +100,38 @@ body {
     max-width: 30px;
 }
 .precio{
+    font-size: 20px;    
     color: blue;
     left: 50%;  
     position:absolute;
 }
 
 .boton-quitar{
-    color: rgb(231, 114, 114)a(255, 0, 0, 0.959);    
+    position: absolute;
+    right:30px;
+    bottom: 20px;
+    border-radius:5px;
+    background-color: rgb(235, 111, 111);
 }   
+
+.elegir-Pago{
+    top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;   
+    width:50vh;
+    max-width:400px;    
+    height:25vh;
+    max-height:100px;
+    position:relative;
+    background:rgb(71, 166, 197);
+    position: relative;
+}
+
+
+
+
+
+
 
 /* mediaQ*/
 
