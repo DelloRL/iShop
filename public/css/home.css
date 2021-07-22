@@ -1,7 +1,13 @@
-/*header*/ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 * {
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
 }
 
 .main-header {
@@ -26,7 +32,7 @@
 
 
 .hamburger-button {
-    background-color:rgb(24, 145, 185);
+    background-color:cadetblue;
     color: white;
     display: block;
     max-width: 40px;
@@ -56,86 +62,58 @@
     display: none;
 }
 
-/*body*/
+/* Configuración del boton de busqueda */
 
-body {
-    background-color: rgb(24, 145, 185);
-    font-family: 'Roboto';
-    margin: 0;
-    padding: 0;
+form {
+    display: flex;
 }
 
-/*main*/
-
-.Titulo{
-    font-size: 20px;
-    margin-left: 10px;
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-right: 10px;
 }
 
-.InfoProducto {
-    margin-left: 5%;
-    margin-right: 5%;   
-    width:50vh;
-    max-width:400px;    
-    height:25vh;
-    max-height:100px;
-    position:relative;
-    background:white;
-    position: relative;
-  }
-
-.ImagenProducto{
-    width: 100px;
-    height: 100px;
-    position:absolute;
+.form-control, .btn {
+    border-radius: 0;
 }
 
+.btn-outline-light {
+color: #1e4872;
+border-color: black;
+}
 
-
-.cantidad-button{
-    top: 50%;
-    left: 50%;
-    position: absolute;
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
     text-align: center;
-    max-width: 30px;
-}
-.precio{
-    font-size: 20px;    
-    color: blue;
-    left: 50%;  
-    position:absolute;
-}
-
-.boton-quitar{
-    position: absolute;
-    right:30px;
-    bottom: 20px;
-    border-radius:5px;
-    background-color: rgb(235, 111, 111);
-}   
-
-.elegir-Pago{
-    top: 10px;
-    margin-left: 5%;
-    margin-right: 5%;   
-    width:50vh;
-    max-width:400px;    
-    height:25vh;
-    max-height:100px;
-    position:relative;
-    background:rgb(71, 166, 197);
-    position: relative;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #E2C3FF;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-
-
-
-
-
-
-/* mediaQ*/
-
-/* A partir de 768px, resolución tablet */ 
+/* A partir de 768px, resolución tablet */
 
 @media (min-width: 768px) {
     .main-header-top {
@@ -179,12 +157,7 @@ body {
     .iconHome {
         margin-right: 15px;
     }
-
 }
-
-
-
-
 
 /* A partir de 1200px, resolución desktop */
 
@@ -221,7 +194,5 @@ body {
         display: none;
     }   
 }
-
-
 
 
