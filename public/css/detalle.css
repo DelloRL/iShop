@@ -199,40 +199,94 @@ border-color: black;
  /* body */
 
 
-body {
-    font-family: "Roboto sans-serif";
-    box-sizing: border-box;
-}
-
-.title-modelo {
+ body {
     font-family: "Roboto sans-serif";
     font-size: 80%;
     text-align:center;
-    color: red;
+    background-color: #BBDEFB;
+    color: white;
+ 
+ }
+ /* titulo y foto */
+ .titulo-foto {
+        margin-top: 5%;
+     background-color: black;
+ }
+
+ .title-modelo {
+     font-size: 30px;
+     font-family:  'Marck Script', cursive;
+      border: 3px solid transparent;
+      position: relative;  }
+ .imagen-principal-detalle {
+     width: 100%;
+     height: 100%;
+    }
+/* caja precios */
+ .precio {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    display: inline-block;
+   }
+   .precio h4 {
+    background-color: 
+ #4CAF50;
+ }
+ .precio h3{
+    font-family:revert;
+    font-size: 29px;
+    color: black;
+
+}
+
+.oferta {
+    font-size: 13px;
+    background-color: #8BC34A;
+    padding: 20px;
+
+}
+/* caja mini ficha tecnica */
+.especificaciones-breves {
+    font-size: 15px;
+     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+     background-color: white;
+     color: gray;
+     padding: 20px;
+     width: 50%;
+     display: inline-block;
    
 }
-
-.imagen-principal-detalle {
-    width: 85%;
-    height: 85%;
-    align-content:center;    
+/* ficha técnica */
+.ficha-tecnica {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: white;
+    color: gray;
+    text-align:center;
+    padding: 20px;
+    padding: 20px;
+}
+.ficha-tecnica h2 {
+   color: black
 }
 
+/* información detallada */
+.informacion-detallada {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  color: grey;
+  background-color: white;
+  padding: 20px;
+}
 
-
-
-
-@media (min-width: 992px) {
-    .contenedor01, .contenedor02 {
-    border: solid 10px grey;
-    }
+.informacion-detallada h2, .informacion-detallada h3 {
+    color: black;
     
 }
 
 
-@media (min-width: 1200px) {
-    .contenedor01, .contenedor02 {
-        max-width: 1200px;
+@media (max-width: 360px) {
+    .informacion-detallada {
+        visibility: hidden;
     }
-    
 }
