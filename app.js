@@ -10,8 +10,8 @@ app.listen(3080,() => {
 });
 
 
-app.get("/login",(req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/LoginYRegistro.html"))
+app.get("/Carrito",(req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/Carrito.html"))
 });
 
 app.use(express.static("public"));
