@@ -11,13 +11,13 @@ body {
 }
 
 .main-header {
-    background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+    background: rgba(0, 0, 0, 0.85);
     padding: 18px;
 }
 
 .logo {
-    width: 100px;
-    margin-left: 110px;
+    width: 150px;
+    margin-left: 90px;
 }
 
 .h2-header {
@@ -30,6 +30,9 @@ body {
     color: white;
 }
 
+.submenu {
+    margin-left: 3px;
+}
 
 .hamburger-button {
     background-color:cadetblue;
@@ -51,7 +54,7 @@ body {
 
 .main-navbar a {
     text-decoration: none;
-    color: #222222;
+    color: white;
     display: inline-block;
     padding: 5px 0;
     font-size: 17px;
@@ -62,55 +65,8 @@ body {
     display: none;
 }
 
-/* Configuración del boton de busqueda */
-
-form {
-    display: flex;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    margin-right: 10px;
-}
-
-.form-control, .btn {
-    border-radius: 0;
-}
-
-.btn-outline-light {
-color: #1e4872;
-border-color: black;
-}
-
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #E2C3FF;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.banner {
+    width: 50%;
 }
 
 /* A partir de 768px, resolución tablet */
@@ -122,7 +78,7 @@ border-color: black;
         align-items: center;
     }
     .logo {
-        width: 80px;
+        width: 200px;
         margin-left: 0;
     }
     .hamburger-button {
@@ -163,7 +119,8 @@ border-color: black;
 
 @media (min-width: 1200px) {  
     .logo {
-        width: 100px;
+        width: 250px;
+        margin-top: 10px;
     }
     .main-header-top, .main-navbar{
         max-width: 1200px;
