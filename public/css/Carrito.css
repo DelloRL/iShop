@@ -73,23 +73,23 @@ body {
 }
 
 .InfoProducto {
-    margin-left: 5%;
-    margin-right: 5%;   
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border: 1px black solid;
+    margin-left: 10px;
+    margin-right: 10px;   
     width:50vh;
     max-width:400px;    
     height:25vh;
     max-height:100px;
     position:relative;
     background:white;
-    position: relative;
-  }
+}
 
 .ImagenProducto{
     width: 100px;
     height: 100px;
     position:absolute;
 }
-
 
 
 .cantidad-button{
@@ -107,6 +107,7 @@ body {
 }
 
 .boton-quitar{
+    font-size: 20px;
     position: absolute;
     right:30px;
     bottom: 20px;
@@ -123,11 +124,56 @@ body {
     height:25vh;
     max-height:100px;
     position:relative;
-    background:rgb(71, 166, 197);
-    position: relative;
+    background:rgb(96, 179, 207);
+    text-align: center;
+    border-radius: 10%;
+}
+
+.ofertas{
+    font-size: 18px;
+}
+
+.descuento{
+    position: absolute;
+    font-size: 20px;
+    color:green; 
+    bottom:2px ;
+    left: 25%;  
+}   
+
+/* botones de abajo*/
+
+.pagar{
+    float: right;
+    margin-top: 10%;
+    font-size: 20px;
+    background-color: #2ECC71;
+    margin-bottom:10px;
+    margin-right: 10px;
+    font-family: 'Noto Serif', serif;
+    text-align: right;
+    cursor: pointer;
+}
+
+.fa-hand-point-right{
+    visibility: hidden;
 }
 
 
+
+
+.boton-vaciar{
+    margin-left: 130px;
+    margin-top: 12%;
+    font-size: 15px;
+    background-color: rgb(235, 111, 111);
+    margin-bottom:10px;
+    margin-right: 10px;
+    font-family: 'Noto Serif', serif;
+    text-align: right;
+    cursor: pointer;
+    
+}
 
 
 
@@ -179,6 +225,57 @@ body {
     .iconHome {
         margin-right: 15px;
     }
+        /*esto es para el body*/
+
+    .Titulo{
+        font-size: 40px;
+        margin-top: 15px;
+    }
+
+
+
+    .InfoProducto{
+        max-width: 700px;
+        max-height: 200px;
+    }
+
+    .ImagenProducto{
+        width: 200px;
+        height: 200px;
+    }
+
+    .boton-quitar{
+        font-size: 40px;
+    }
+
+    .precio{
+        font-size: 30px;
+    }
+
+    .cantidad-button{
+        font-size: 20px;
+        max-width: 40px;
+        border: solid 1px black;
+    }
+
+    .elegir-Pago{
+        margin-top: 20px;
+        max-width: 700px ;  
+        width: 680px;
+        border-radius: 20%;
+    }   
+
+    .pagar{
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+
+    .fa-hand-point-right{
+        visibility: visible;
+    }
+
+
 
 }
 

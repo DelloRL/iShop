@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,11 @@
     <link rel="stylesheet" href="/css/Carrito.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 </head>
 
-  <body>
+<body>
 
     <header class="main-header">
 
@@ -28,7 +28,7 @@ rel="stylesheet" />
         <a href="#" class="hamburger-button">
             <i class="fas fa-bars"></i>
         </a>
-        
+
         <nav class="main-navbar">
 
             <div class="links-navbar">
@@ -40,45 +40,68 @@ rel="stylesheet" />
                     <li><a href="#">Ayuda</a></li>
                     <li><a href="#">Productos</a></li>
                 </ul>
-                
+
             </div>
-            
+
             <div class="buscador">
 
                 <form class="d-flex my-2-lg-0">
-                    <input class="form-control me-2" type="busqueda" placeholder="Buscar productos" aria-label="busqueda">
+                    <input class="form-control me-2" type="busqueda" placeholder="Buscar productos"
+                        aria-label="busqueda">
                     <button class="btn btn-outline-light" type="submit">Buscar</button>
                 </form>
 
                 <a href="#"><i class="fas fa-shopping-basket"></i></a>
 
             </div>
-            
-    
-        </nav>
- 
-</header>
-    <main>
-       <h3 class="Titulo">Tu carrito de compras</h3> 
 
-        <div class="InfoProducto"> 
+
+        </nav>
+
+    </header>
+    <main>
+        <h3 class="Titulo">Tu carrito de compras</h3>
+
+        <div class="InfoProducto">
             <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
             <p class="precio"> Precio: $$$$$$$</p>
-            <input type="number"min="0" class="cantidad-button">
+            <input type="number" min="0" class="cantidad-button">
             <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
-        </div>  
+        </div>
+        <br>
+        <div class="InfoProducto">
+            <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
+            <p class="precio"> Precio: $$$$$$$</p>
+            <input type="number" min="0" class="cantidad-button">
+            <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
+        </div>
+        <br>
+        <div class="InfoProducto">
+            <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
+            <p class="precio"> Precio: $$$$$$$</p>
+            <input type="number" min="0" class="cantidad-button">
+            <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
+        </div>
 
         <div class="elegir-Pago">
+            <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked>
+            <label for="Cuotas">Cuotas</label>
+            <input type="radio" name="radio-input" value="Contado" id="Contado">
+            <label for="Contado">Al Contado</label>
+            <p class="ofertas">Pagando de contado tenes un
+            <p class="descuento">15% de descuento!</p>
+            <p>Total:$$$</p>
+            </p>
+        </div>
 
-            
-
-        </div>      
-
-
-
-
+        <div class="botones">
+            <button class="pagar"> Pagar <i class="fas fa-hand-point-right"></i> </button>
+        </div>
+        <div class="botones">
+            <button class="boton-vaciar"> Vaciar Carrito </button>
+        </div>
     </main>
 
-  </body>
+</body>
 
 </html>
