@@ -12,7 +12,7 @@
 
 body {
     font-family: Arial;
-    background: url(https://64.media.tumblr.com/71054dbf624f91d827838294e4e84fa6/tumblr_ozts1h66cn1upvbufo1_540.gifv);
+    background: url(https://media.giphy.com/media/26n79t82lmj989iAE/giphy.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,12 +22,13 @@ body {
 .form-login {
     width: 400px;
     height: 21pc;
-    background: #4e4d4d;
+    border-radius: 15px;
+    background: #777777;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
-    border-top: 4px solid #017bab;
+    border-top: 4px solid #4796E6;
     color: white;
 }
 
@@ -41,12 +42,12 @@ body {
 
 .controls {
     width: 100%;
-    border: 1px solid #00b5fd;
+    border-bottom: 3px solid #4796E6;
     margin-bottom: 15px;
+    border-radius: 5px;
     padding: 11px 10px;
-    background: #252323;
+    background: #686868;
     font-size: 14px;
-    font-weight: italic;
     color: white;
 }
 
@@ -57,7 +58,9 @@ body {
 input[type="button"] {
     width: 100%;
     height: 40px;
-    background: #017bab;
+    font-size: 20px;
+    border-radius: 12px;
+    background: #4796E6;
     border: none;
     color: white;
     margin-bottom: 16px;
@@ -66,29 +69,31 @@ input[type="button"] {
 
 input[type="text"] {
     width: 100%;
-    border: 1px solid #00b5fd;
+    border-bottom: 3px solid #4796E6;
     margin-bottom: 20px;
+    border-radius: 5px;
     height: 50px;
     line-height: 52px;
     padding: 11px 10px;
     background: #252323;
     font-size: 18px;
     font-weight: italic;
-    text-align: center;
+    text-align: left;
     color: white;
 }
 
 input[type="password"] {
     width: 100%;
-    border: 1px solid #00b5fd;
+    border-bottom: 3px solid #4796E6;
     margin-bottom: 20px;
     height: 50px;
+    border-radius: 5px;
     line-height: 52px;
     padding: 11px 10px;
     background: #252323;
     font-size: 18px;
     font-weight: italic;
-    text-align: center;
+    text-align: left;
     color: white;
 }
 
@@ -96,9 +101,11 @@ input[type="submit"] {
     border: 3px;
     padding: 0 20px;
     width: 100%;
+    border-radius: 12px;
+    font-size: 20px;
     line-height: 40px;
     height: 40px;
-    background: #017bab;
+    background: #4796E6;
     border: none;
     color: white;
     margin-bottom: 16px;
@@ -129,7 +136,7 @@ input[type="submit"]:hover{
 }
 
 .popup{
-    background: #f8f8f8;
+    background: #e2e2e2;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .6);
     border-radius: 15px;
     font-family: 'Montserrat' sans-serif;

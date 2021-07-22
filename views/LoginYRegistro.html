@@ -19,8 +19,8 @@
         <form id="form1" action="" method="post">
             <section class="form-login">
                 <h5>Inicio de Sesión</h5>
-                <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
-                <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
+                <input type="text" name="usuario" value="" placeholder="Usuario">
+                <input type="password" name="contrasena" value="" placeholder="Contraseña">
                 <input type="button" value="Ingresar" onclick="enviarForm('validarLogin.php');">
                 <input type="button" id="button" value="Registrarse">
             </section>
@@ -42,7 +42,7 @@
                 <form action="registro.php" method="POST">
                     <div class="contenedor-inputs">
                         <input type="text" name="txtNombre" placeholder="Nombre Completo">
-                        <input type="text" name="txtUsuario" placeholder="Nombre Usuario">
+                        <input type="text" name="txtUsuario" placeholder="Nombre de Usuario">
                         <input type="password" name="txtContraseña" placeholder="Contraseña">
                         <input type="text" name="txtCorreo" placeholder="Correo Electronico">
                     </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <script src="popup.js"></script>
+        <script src="/js/popup.js"></script>
 
     </body>
 
