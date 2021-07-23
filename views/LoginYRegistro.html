@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Formulario Login</title>
+        <title>¡Inicia Sesión en iShop!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
@@ -16,23 +16,23 @@
 
     <body>
 
+    <header class="main-header">
+        <div class="logoWrapper">
+            <div class="logoContainer">
+                <img src="/images/logo_white_large.png" alt="LogoApple" class="logo">
+            </div>
+        </div>
+    </header>
+
         <form id="form1" action="" method="post">
             <section class="form-login">
                 <h5>Inicio de Sesión</h5>
-                <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
-                <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
-                <input type="button" value="Ingresar" onclick="enviarForm('validarLogin.php');">
+                <input type="text" name="usuario" value="" placeholder="Usuario">
+                <input type="password" name="contrasena" value="" placeholder="Contraseña">
+                <input type="button" value="Ingresar">
                 <input type="button" id="button" value="Registrarse">
             </section>
         </form>
-
-        <script>
-            function enviarForm(pagina){
-                let formulario = document.getElementById("form1");
-                formulario.action = pagina;
-                formulario.submit();
-            }
-        </script>
 
         <div class="overlay" id="overlay">
             <div class="popup" id="popup">
@@ -42,7 +42,7 @@
                 <form action="registro.php" method="POST">
                     <div class="contenedor-inputs">
                         <input type="text" name="txtNombre" placeholder="Nombre Completo">
-                        <input type="text" name="txtUsuario" placeholder="Nombre Usuario">
+                        <input type="text" name="txtUsuario" placeholder="Nombre de Usuario">
                         <input type="password" name="txtContraseña" placeholder="Contraseña">
                         <input type="text" name="txtCorreo" placeholder="Correo Electronico">
                     </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <script src="popup.js"></script>
+        <script src="/js/popup.js"></script>
 
     </body>
 

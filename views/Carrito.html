@@ -16,9 +16,9 @@
 <body>
 
     <header class="main-header">
-
+            
         <div class="main-header-top">
-            <img src="/images/logo-apple.png" alt="LogoApple" class="logo">
+            <img src="/images/logo_white_large.png" alt="LogoApple" class="logo">
 
             <h2 class="h2-header">
                 <i class="fas fa-user"></i>
@@ -28,57 +28,55 @@
         <a href="#" class="hamburger-button">
             <i class="fas fa-bars"></i>
         </a>
-
+        
         <nav class="main-navbar">
-
+        
             <div class="links-navbar">
-
+                
                 <a href="#" class="iconHome"><i class="fas fa-home"></i></a>
-
+                
                 <ul class="left-navbar">
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Nosotros </a></li>
+                    <li><a href="#">Ayuda </a></li>
+                    <li><a href="#">Productos </a></li>
                 </ul>
-
+                
             </div>
-
+            
             <div class="buscador">
-
-                <form class="d-flex my-2-lg-0">
-                    <input class="form-control me-2" type="busqueda" placeholder="Buscar productos"
-                        aria-label="busqueda">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
-                </form>
-
+                
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-shopping-basket"></i></a>
-
+                
             </div>
-
-
+            
         </nav>
-
     </header>
-    <main>
-        <h3 class="Titulo">Tu carrito de compras</h3>
 
+    <main>
+
+        <br>
+        <h3 class="Titulo">Tu carrito de compras</h3>
+    <nav class="todoElCarrito">
         <div class="InfoProducto">
             <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
-            <p class="precio"> Precio: $$$$$$$</p>
+            <p class="precio"> <a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
+            
             <input type="number" min="0" class="cantidad-button">
             <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
         </div>
         <br>
         <div class="InfoProducto">
             <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
-            <p class="precio"> Precio: $$$$$$$</p>
+            <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
             <input type="number" min="0" class="cantidad-button">
             <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
         </div>
         <br>
         <div class="InfoProducto">
             <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
-            <p class="precio"> Precio: $$$$$$$</p>
+            <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
             <input type="number" min="0" class="cantidad-button">
             <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
         </div>
@@ -93,7 +91,7 @@
             <p>Total:$$$</p>
             </p>
         </div>
-
+    </nav>
         <div class="botones">
             <button class="pagar"> Pagar <i class="fas fa-hand-point-right"></i> </button>
         </div>
