@@ -182,8 +182,6 @@ body {
 
 
 
-
-
 /* body */
 
 
@@ -204,12 +202,12 @@ body {
 
  .title-modelo {
      font-size: 30px;
-     font-family:  'Marck Script', cursive;
       border: 3px solid transparent;
       position: relative;  }
   .title-color {
       color: red;
       position: relative;
+
   }
  .imagen-principal-detalle {
      width: 100%;
@@ -225,7 +223,7 @@ body {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     background-color: white;
     padding: 20px;
-    max-width: 39%
+    max-width: 50%
     
    }
    .precio h4 {
@@ -295,9 +293,73 @@ img-grande {
     height: 300px;
 }
 
-@media (max-width: 360px) {
-    .informacion-detallada {
+/*resolucion celular*/
+@media (max-width: 767px) {
+    .informacion-detallada, .img-grande {
         visibility: hidden;
+    }
+    .imagen-principal-detalle {
+      display: display-block;
+      width: 300px;
+      align-items: center;
+      margin-left: 100px;
+      }
+    header {
+      width: 500px;
+    }
+    .titulo-foto {
+      width: 500px;
+     display: inline-block;
+    }
+    .title-modelo {
+      font-size: 20px;
+     position: absolute;
+     top: 80%;
+     left: 20%;
+    }
+    .title-color {
+      position: absolute;
+      top: 81.5%;
+      font-size: 18px;
+      left: 69%
+    }
+    .img-frontal {
+      width: 110px;
+      position: absolute;
+      top: 118%;
+      left: 50%
+    }
+    .img-costado {
+      width: 100px;
+      height: 205px;
+      position: absolute;
+      top: 118%;
+      right: 60% 
+    }
+    .img-trasera {
+       width: 110px;
+      position: absolute;
+      top: 118%;
+      left: 80%
+    }
+    .especificaciones-breves {
+      position: absolute;
+      top: 95%;
+      height: 90px;
+      width: 350px;
+      margin-left: 75px;
+    }
+    .precio {
+      position: absolute;
+      max-width: 300px;
+      top: 165%;
+      left: 20%
+      }
+
+     .ficha-tecnica {
+       position: absolute;
+       top: 1390px;
+       left: 55px
     }
 }
 /*resolucion tablet*/
@@ -313,8 +375,9 @@ img-grande {
 }
 .title-color {
   font-size: 28px;
-  top: 180px;
-  right: 1%
+  top: 185px;
+  right: 4%;
+ 
 }
 
 .especificaciones-breves {
@@ -322,8 +385,216 @@ img-grande {
     display: inline-block;
     position: absolute;
     right: 45%;
-    bottom: -15%;
+    bottom: 30%;
     margin-left: 500%;
+ }
+   /* body */
+
+
+body {
+    font-family: "Roboto sans-serif";
+    font-size: 80%;
+    text-align:center;
+    background-color: rgb(221,220,220);
+    color: white;
+ 
+ }
+ /* titulo y foto */
+ .titulo-foto {
+       margin-top: 5%;
+      
+     background-color: black;
+ }
+
+ .title-modelo {
+     font-size: 30px;
+      border: 3px solid transparent;
+      position: relative;  }
+  .title-color {
+      color: red;
+      position: relative;
+
+  }
+ .imagen-principal-detalle {
+     width: 100%;
+     height: 100%;
+    }
+/* buttom */
+.buttom-a {
+  background-color: #4CAF50;
+  border-radius: 80%;
+ 
+}
+/* caja precios */
+ .precio {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: white;
+    padding: 20px;
+    max-width: 50%
+    
+   }
+   .precio h4 {
+    background-color: 
+ #4CAF50;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    color: black;
+ }
+ .precio h3{
+    font-family:revert;
+    font-size: 29px;
+    color: black;
+
+}
+
+.oferta {
+    font-size: 13px;
+    background-color: gray;
+    color: black;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    padding: 20px;
+
+}
+/* caja mini ficha tecnica */
+.especificaciones-breves {
+    font-size: 17px;
+     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+     background-color: white;
+     color: black;
+     padding: 20px;
+    
+}
+/* ficha técnica */
+.ficha-tecnica {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: white;
+    color: black;
+    text-align:center;
+    font-size: 15px;
+    padding: 20px;
+    padding: 20px;
+}
+.ficha-tecnica h2 {
+   color: black;
+  
+}
+.ficha-tecnica li {
+  list-style:none
+}
+
+/* información detallada */
+.informacion-detallada {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  color: black;
+  font-size: 15px;
+  background-color: white;
+  padding: 20px;
+}
+
+.informacion-detallada h2, .informacion-detallada h3 {
+    color: black;
+    
+}
+/* imagenes*/ 
+img-grande {
+    width: 300px; 
+    height: 300px;
+}
+
+/*resolucion celular*/
+@media (max-width: 767px) {
+    .informacion-detallada, .img-grande {
+        visibility: hidden;
+    }
+    .imagen-principal-detalle {
+      display: display-block;
+      width: 300px;
+      align-items: center;
+      margin-left: 100px;
+      }
+    header {
+      width: 500px;
+    }
+    .titulo-foto {
+      width: 500px;
+     display: inline-block;
+    }
+    .title-modelo {
+      font-size: 20px;
+     position: absolute;
+     top: 80%;
+     left: 20%;
+    }
+    .title-color {
+      position: absolute;
+      top: 81.5%;
+      font-size: 18px;
+      left: 69%
+    }
+    .img-frontal {
+      width: 110px;
+      position: absolute;
+      top: 118%;
+      left: 50%
+    }
+    .img-costado {
+      width: 100px;
+      height: 205px;
+      position: absolute;
+      top: 118%;
+      right: 60% 
+    }
+    .img-trasera {
+       width: 110px;
+      position: absolute;
+      top: 118%;
+      left: 80%
+    }
+    .especificaciones-breves {
+      position: absolute;
+      top: 95%;
+      height: 90px;
+      width: 350px;
+      margin-left: 75px;
+    }
+    .precio {
+      position: absolute;
+      max-width: 300px;
+      top: 165%;
+      left: 20%
+      }
+
+     .ficha-tecnica {
+       position: absolute;
+       top: 1100px;
+       left: 50px
+    }
+}
+/*resolucion tablet*/
+@media (min-width: 768px) {
+.title-modelo {
+    display: inline-block;
+    top: 20%;
+    margin-left: 25%;
+    right: 36%;
+   bottom: -310px;
+   text-align: center;
+
+}
+.title-color {
+  font-size: 28px;
+  top: 185px;
+  right: 4%;
+ 
+}
+
+.especificaciones-breves {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    right: 45%;
+    bottom: 10%;
+    margin-left: 500%;
+    margin: 5 15%;
 }
 .ficha-tecnica {
   width: 50%;
@@ -337,8 +608,9 @@ img-grande {
     display: inline-block;
     position: relative;
     right: 28%;
-    margin-top: -35.5%;
+    margin-top: -31.5%;
     margin-left: 8%;
+   
     
 
 }
@@ -354,8 +626,8 @@ img-grande {
 .imagen-principal-detalle {
     display: inline-block;
     max-width: 400px;
-    margin-top: -20%
-   
+    margin-top: -20%;
+    
 
 }
 .imagenes-miniatura {
@@ -400,10 +672,139 @@ img-grande {
 }
 
 
-/*resolucion destokp*/
-/*@media (min-width: 1200px) {
+
+@media (min-width: 1200px) {
+    .imagen-principal-detalle {
+    max-width: 400px;
+    }
+
+    .especificaciones-breves {
+    bottom: 28%;
+   
+    }
+    .img-frontal {
+      margin-top: 69%
+    }
+    .precio {
+      top: -580px;
     
-} */
+    }
+    .informacion-detallada {
+      top: 57px;
+    }
+    .img-frontal, .img-costado, 
+    .img-trasera ,.img-grande {
+      max-width: 200px;
+    }
+    } 
+
+
+
+
+
+}
+.ficha-tecnica {
+  width: 50%;
+  display: inline-block; 
+  position: relative;
+  left: 23% ;
+  margin-left: 8%
+}
+.informacion-detallada {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    right: 28%;
+    margin-top: -31.5%;
+    margin-left: 8%;
+   
+    
+
+}
+.precio {
+    width: 40%;
+    padding: 15px;
+    display: inline-block;
+    margin-top: 20%;
+    position:relative;
+    left: 22%;
+    top: -670px;
+    }
+.imagen-principal-detalle {
+    display: inline-block;
+    max-width: 400px;
+    margin-top: -20%;
+    
+
+}
+.imagenes-miniatura {
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    flex-direction:column;
+}
+.img-costado, .img-trasera, .img-frontal {
+    position: relative;
+    width: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    color: grey;
+    margin: 15px;
+    margin-left: 50px;
+   }
+
+  .img-frontal {
+      margin-top: 60%;
+  }
+  .img-costado {
+      min-height: 190px;
+  }
+  .img-grande {
+    display:inline-block;
+    position: relative;
+    margin-top: -300px;
+    margin-left: 1%;
+    left: -5%;
+    width: 100px;
+    height: 100px;
+   
+    }
+    .ficha-tecnica li {
+      position: relative;
+      right: 12%;
+      text-align: center;
+      font-size: 18px;
+      
+    }
+
+
+
+
+@media (min-width: 1200px) {
+    .imagen-principal-detalle {
+    max-width: 400px;
+    }
+
+    .especificaciones-breves {
+    bottom: 33%;
+   
+    }
+    .img-frontal {
+      margin-top: 69%
+    }
+    .precio {
+      top: -580px;
+    
+    }
+    .informacion-detallada {
+      top: 57px;
+    }
+    .img-frontal, .img-costado, 
+    .img-trasera ,.img-grande {
+      max-width: 200px;
+    }
+    } 
+
 
 
 
