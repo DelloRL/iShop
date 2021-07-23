@@ -89,7 +89,7 @@ body {
     height:25vh;
     max-height:100px;
     position:relative;
-    background:white;
+    background:rgb(187, 186, 186);
 }
 
 .ImagenProducto{
@@ -339,8 +339,5 @@ body {
     }
     .NombreDeProducto{
     visibility: visible;
-    }
-    .todoElCarrito{
-        
     }
 }
