@@ -5,13 +5,13 @@
 }
 
 .main-header {
-    background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+    background: rgba(0, 0, 0, 0.85);
     padding: 18px;
 }
 
 .logo {
-    width: 100px;
-    margin-left: 110px;
+    width: 150px;
+    margin-left: 90px;
 }
 
 .h2-header {
@@ -24,9 +24,12 @@
     color: white;
 }
 
+.submenu {
+    margin-left: 3px;
+}
 
 .hamburger-button {
-    background-color:rgb(24, 145, 185);
+    background-color:cadetblue;
     color: white;
     display: block;
     max-width: 40px;
@@ -45,7 +48,7 @@
 
 .main-navbar a {
     text-decoration: none;
-    color: #222222;
+    color: white;
     display: inline-block;
     padding: 5px 0;
     font-size: 17px;
@@ -56,10 +59,14 @@
     display: none;
 }
 
+.banner {
+    width: 50%;
+}
+
 /*body*/
 
 body {
-    background-color: rgb(24, 145, 185);
+    background-color: rgb(221, 220, 220);
     font-family: 'Roboto';
     margin: 0;
     padding: 0;
@@ -99,7 +106,13 @@ body {
     text-align: center;
     max-width: 30px;
 }
+
+.NombreDeProducto{
+    visibility: hidden;
+}
+
 .precio{
+    bottom: 50%;
     font-size: 20px;    
     color: blue;
     left: 50%;  
@@ -124,7 +137,7 @@ body {
     height:25vh;
     max-height:100px;
     position:relative;
-    background:rgb(96, 179, 207);
+    background:rgb(184, 214, 224);
     text-align: center;
     border-radius: 10%;
 }
@@ -136,9 +149,10 @@ body {
 .descuento{
     position: absolute;
     font-size: 20px;
-    color:rgb(16, 190, 16); 
+    color:rgb(19, 230, 19); 
     bottom:2px ;
     left: 25%;  
+    -webkit-text-stroke: 1px gray
 }   
 
 /* botones de abajo*/
@@ -231,8 +245,9 @@ body {
     }
 
     .InfoProducto{
-        max-width: 700px;
+        max-width: 900px;
         max-height: 200px;
+        width: 600px;
     }
 
     .ImagenProducto{
@@ -269,12 +284,6 @@ body {
         bottom:50px;
         
     }
-
-    .descuento:hover{
-        
-    }
-
-
 
     .pagar{
         font-size: 30px;
@@ -335,8 +344,23 @@ body {
     .main-navbar .right-navbar {
         display: none;
     }   
+
+/*Para el body*/
+
+    .InfoProducto{
+    width: 900px;
+    height: 200px;
+    }
+    .NombreDeProducto{
+    visibility: visible;
+    }
+    .todoElCarrito{
+        
+    }
+
+
+
+
+
+
 }
-
-
-
-
