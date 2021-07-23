@@ -173,9 +173,6 @@ body {
     visibility: hidden;
 }
 
-
-
-
 .boton-vaciar{
     margin-left: 130px;
     font-size: 15px;
@@ -186,10 +183,6 @@ body {
     cursor: pointer;
     
 }
-
-
-
-
 
 /* mediaQ*/
 
@@ -301,14 +294,7 @@ body {
         margin-top: 6%;
         margin-right: 10px;
     }
-
-
-
 }
-
-
-
-
 
 /* A partir de 1200px, resolución desktop */
 
@@ -357,10 +343,4 @@ body {
     .todoElCarrito{
         
     }
-
-
-
-
-
-
 }
