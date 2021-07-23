@@ -16,9 +16,21 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 100vh;
+}
+/* CSS HEADER MAURI*/
+
+.logo {
+    margin-top: 25px;
+    width: 250px;
 }
 
+.logoWrapper {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*CSS LOGIN/REGISTRO*/
 .form-login {
     width: 400px;
     height: 21pc;
@@ -65,6 +77,11 @@ input[type="button"] {
     color: white;
     margin-bottom: 16px;
     cursor: pointer;
+    transition: .3s ease all;
+}
+
+input[type="button"]:hover{
+    background: #00587a;;
 }
 
 input[type="text"] {
@@ -115,7 +132,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover{
-    background: #00587a;;
+    background: #00587a;
 }
 
 .overlay{
