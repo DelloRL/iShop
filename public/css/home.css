@@ -13,11 +13,19 @@ body {
 .main-header {
     background: rgba(0, 0, 0, 0.85);
     padding: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
 }
 
 .logo {
     width: 150px;
     margin-left: 90px;
+}
+
+.iconAngle {
+    margin-left: 3px;
+    font-size: 15px;
 }
 
 .h2-header {
@@ -32,6 +40,7 @@ body {
 
 .submenu {
     margin-left: 3px;
+    padding: 5px 10px;
 }
 
 .hamburger-button {
@@ -46,7 +55,13 @@ body {
     margin: auto;
 }
 
-.main-navbar ul {
+/* .main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} */
+
+.left-navbar {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -68,8 +83,158 @@ body {
 .banner {
     width: 50%;
 }
+.submenu li {
+    color: white;
+    font-weight: 600;
+}
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+nav li:hover > ul {
+    display: block;
+}
+
+nav li ul li {
+    background: #434343;
+    list-style: none;
+    padding: 6px 12px;
+}
+
+.submenu a {
+    font-size: 16px!important;
+}
+
+
+/* SECTION 1 */
+
+.section-one {
+    width: 90%;
+    margin: auto;
+    max-width: 1300px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.container-section-all {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.iphone-img-one {
+    width: 100%;
+}
+
+.col-one {
+    max-width: 500px;
+}
+
+.col-two {
+    max-width: 500px;
+}
+
+.col-two h1 {
+    text-align: center;
+    color: #111111;
+    font-size: 38px;
+    font-family: SF Pro Display, Sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+.col-two p {
+    text-align: center;
+    font-weight: bold;
+    color: #17a2b8;
+}
+
+/* END SECTION ONE  */
+
+
+/* SECTION TWO */
+
+.section-two {
+    width: 90%;
+    margin: auto;
+    max-width: 1300px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.title-one {
+    color: black
+}
+
+.airpods-logo {
+    width: 30%;
+}
+.airpods-logo-center {
+    text-align: center;
+    margin-top: 30px;
+}
+.airpods-title {
+    color: #111111;
+    font-size: 38px;
+    font-family: SF Pro Display, Sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+.airpods-desc {
+    text-align: center;
+    font-weight: bold;
+    color: #17a2b8;
+}
+.airpods-img-one {
+    width: 90%;
+    margin-left: 10px;
+}
+
+/* END SECTION TWO */
+
+/* SECTION THREE */
+
+.section-three {
+    width: 100%;
+    margin: auto;
+    /* max-width: 1300px; */
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #000000;
+}
+
+.section-three h1 {
+    color: #F17627 ;
+    font-size: 38px;
+    font-family: SF Pro Display, Sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+
+.container-section-three {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col-one-funda {
+    max-width: 500px;
+}
+.col-two-funda {
+    max-width: 500px;
+    margin: 20px 0;
+}
+.col-three-funda {
+    max-width: 500px;
+}
 
 /* FOOTER */
+
 
 footer{
     width: 100%;
@@ -78,6 +243,9 @@ footer{
     
 }
 
+.footer-logo-box {
+    text-align:center;
+}
 .container-footer-all{
     width: 100%;
     max-width: 1200px;
@@ -195,6 +363,7 @@ footer{
     width: 50%;
 }
 
+
 @media screen and (max-width: 1100px){
     
     .container-body{
@@ -210,6 +379,10 @@ footer{
         margin-top: 40px;
     }
 }
+
+
+/* END FOOTER */
+
 
 /* A partir de 768px, resolución tablet */
 
@@ -235,7 +408,10 @@ footer{
         margin-top: 15px;
         align-items: center;
     }
-    .main-navbar ul {
+    /* .main-navbar ul {
+        display: flex;
+    } */
+    .left-navbar {
         display: flex;
     }
     .main-navbar li {
@@ -263,6 +439,28 @@ footer{
     .links-navbar img {
         display: none;
     }
+    .iphone-img-one {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .col-two {
+        margin-left: 10px;
+    }
+    .container-section-all {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    .container-section-three {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .airpods-img-one {
+        width: 300px;
+        margin-top: 70px;
+    }
 }
 
 /* A partir de 1200px, resolución desktop */
@@ -281,10 +479,12 @@ footer{
     }
     
 
-
-    .main-navbar ul {
+    .left-navbar {
         margin-left: 300px;
     }
+    /* .main-navbar ul {
+        margin-left: 300px;
+    } */
     .main-navbar li {
         margin: 0 20px;
     }
@@ -299,9 +499,9 @@ footer{
         display: none;
     }
 
-    .left-navbar {
+    /* .left-navbar {
         margin-left: 100px;
-    }
+    } */
     .left-navbar a {
         color: white;
         opacity: 0.7;
@@ -321,6 +521,114 @@ footer{
     .links-navbar .iconHome {
         display: none;
     }
+    .footer-logo-box {
+        display: none;
+    }
+    .iphone-img-one {
+        width: 100%;
+        margin-top: 0;
+    }
+    .airpods-img-one {
+        width: 90%;
+        margin-left: 35px;
+    }
 }
 
 
+/* PRUEBA SLIDER */
+
+.contenedor{
+    width: 100%;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contenido-slider:nth-child(2){
+    background: white;
+    color: black;
+}
+
+.contenido-slider:nth-child(3){
+    background: white;
+    color: black;
+}
+
+.contenido-slider > img{
+    width: 400px;
+}
+
+.contenido-slider > div{
+    width: 40%;
+}
+
+.contenido-slider h2{
+    font-weight: bold;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contenido-slider h3{
+    font-weight: bold;
+    text-align: justify;
+    line-height: 30px;
+    color: #17a2b8;
+}
+
+.contenido-slider a{
+    color: #fff;
+    background: #332863;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.contenido-slider:nth-child(2) a{
+    background: #332863;
+    color: #fff;
+    
+}
+
+@media screen and (max-width:900px){
+    .contenido-slider > img{
+        width: 250px;
+    }
+
+    .contenido-slider > div{
+        width: 40%;
+    }
+
+    .contenido-slider h2{
+        font-size: 23px;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .contenido-slider{
+       flex-direction: column-reverse;
+    }
+
+    .contenido-slider > div{
+        width: 80%;
+    }
+
+}
