@@ -17,7 +17,7 @@ app.get("/login",(req,res)=>{
     res.sendFile(path.join(__dirname, "/views/LoginYRegistro.html"))
 });
 
-app.get("/detalles",(req,res)=>{
+app.get("/detalle",(req,res)=>{
     res.sendFile(path.join(__dirname, "/views/detalle.html"))
 });
 
