@@ -86,6 +86,10 @@ body {
 
 }
 
+.todoElCarrito{
+    margin: 5%;
+}
+
 .InfoProducto {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border: 1px black solid; 
@@ -186,9 +190,6 @@ body {
     visibility: hidden;
 }
 
-
-
-
 .boton2{
     text-align: center  ;
 }
@@ -255,6 +256,10 @@ body {
         margin-top: 15px;
     }
 
+    .todoElCarrito{
+        margin: 12%;
+    }
+
     .InfoProducto{
         max-width: 900px;
         max-height: 200px;
@@ -283,6 +288,7 @@ body {
     .elegir-Pago{
         font-size: 30px;
         margin-top: 20px;
+        margin-left: 20%;
         max-width: 700px ;  
         max-height: 700px;
         height: 200px;  
@@ -329,8 +335,6 @@ body {
     .main-navbar {
         margin-top: 30px;
     }
-
-
     .h2-header {
         max-width: none;
         font-size: 22px;
@@ -358,9 +362,7 @@ body {
     visibility: visible;
     }
 }
-.todoElCarrito{
-    margin-left: 10%;
-}
+
 
 /*Footer*/
 

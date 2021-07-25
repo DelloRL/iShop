@@ -106,137 +106,102 @@ nav li ul li {
     font-size: 16px!important;
 }
 
-
-/* SECTION 1 */
-
-.section-one {
-    width: 90%;
-    margin: auto;
-    max-width: 1300px;
-    padding: 20px;
-    margin-top: 30px;
+.banner-promo {
+    background: #c71b36;
+    padding: 13px 0px;
+    display: flex;
+    justify-content: center;
 }
 
-.container-section-all {
+.banner-promo .bold {
+    
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-right: 5px;
+}
+
+.banner-text {
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+}
+
+.title-subtitle {
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 40px;
+}
+
+.ubication {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+/* SECTION PRODUCTS  */
+
+.section-products {
+    width: 90%;
+    margin: auto;
+}
+
+.container-products {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.iphone-img-one {
-    width: 100%;
+.product {
+    margin: 20px;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    padding: 15px;
+    max-width: 400px;
 }
 
-.col-one {
-    max-width: 500px;
-}
-
-.col-two {
-    max-width: 500px;
-}
-
-.col-two h1 {
+.button-product {
+    color: #F17627 !important;
     text-align: center;
-    color: #111111;
-    font-size: 38px;
-    font-family: SF Pro Display, Sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    text-align: center;
-}
-
-.col-two p {
-    text-align: center;
+    justify-content: center;
     font-weight: bold;
-    color: #17a2b8;
+    text-decoration: none;
 }
 
-/* END SECTION ONE  */
-
-
-/* SECTION TWO */
-
-.section-two {
-    width: 90%;
-    margin: auto;
-    max-width: 1300px;
-    padding: 20px;
-    margin-top: 30px;
+.iconRight {
+    margin-left: 5px;
 }
-.title-one {
-    color: black
-}
-
-.airpods-logo {
-    width: 30%;
-}
-.airpods-logo-center {
-    text-align: center;
-    margin-top: 30px;
-}
-.airpods-title {
-    color: #111111;
-    font-size: 38px;
-    font-family: SF Pro Display, Sans-serif;
-    font-weight: 600;
-    font-style: normal;
+.product-center {
     text-align: center;
 }
-.airpods-desc {
-    text-align: center;
+.product h1 {
     font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.product p {
     color: #17a2b8;
-}
-.airpods-img-one {
-    width: 90%;
-    margin-left: 10px;
+    font-weight: bold;
 }
 
-/* END SECTION TWO */
-
-/* SECTION THREE */
-
-.section-three {
-    width: 100%;
-    margin: auto;
-    /* max-width: 1300px; */
-    padding: 20px;
-    margin-top: 30px;
-    background-color: #000000;
+.product img {
+    width: 300px;
+    height: 300px;
 }
 
-.section-three h1 {
-    color: #F17627 ;
-    font-size: 38px;
-    font-family: SF Pro Display, Sans-serif;
-    font-weight: 600;
-    font-style: normal;
+.img-contenedor {
     text-align: center;
 }
 
 
-.container-section-three {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.col-one-funda {
-    max-width: 500px;
-}
-.col-two-funda {
-    max-width: 500px;
-    margin: 20px 0;
-}
-.col-three-funda {
-    max-width: 500px;
-}
-
-/* FOOTER */
+/* FOOTER  */
 
 
-footer{
+
+
+
+footer {
     width: 100%;
     background: #202020;
     color: white;   
@@ -532,103 +497,4 @@ footer{
         width: 90%;
         margin-left: 35px;
     }
-}
-
-
-/* PRUEBA SLIDER */
-
-.contenedor{
-    width: 100%;
-    overflow: hidden;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.slider-contenedor{
-    width: 100%;
-    display: flex;
-}
-
-.contenido-slider{
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.contenido-slider:nth-child(2){
-    background: white;
-    color: black;
-}
-
-.contenido-slider:nth-child(3){
-    background: white;
-    color: black;
-}
-
-.contenido-slider > img{
-    width: 400px;
-}
-
-.contenido-slider > div{
-    width: 40%;
-}
-
-.contenido-slider h2{
-    font-weight: bold;
-    text-align: justify;
-    line-height: 30px;
-}
-
-.contenido-slider h3{
-    font-weight: bold;
-    text-align: justify;
-    line-height: 30px;
-    color: #17a2b8;
-}
-
-.contenido-slider a{
-    color: #fff;
-    background: #332863;
-    width: 100px;
-    display: block;
-    padding: 15px 0;
-    text-align: center;
-    border-radius: 3px;
-    margin-top: 20px;
-    text-decoration: none;
-}
-
-.contenido-slider:nth-child(2) a{
-    background: #332863;
-    color: #fff;
-    
-}
-
-@media screen and (max-width:900px){
-    .contenido-slider > img{
-        width: 250px;
-    }
-
-    .contenido-slider > div{
-        width: 40%;
-    }
-
-    .contenido-slider h2{
-        font-size: 23px;
-    }
-}
-
-
-@media screen and (max-width:600px){
-    .contenido-slider{
-       flex-direction: column-reverse;
-    }
-
-    .contenido-slider > div{
-        width: 80%;
-    }
-
 }
