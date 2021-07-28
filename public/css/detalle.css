@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
 body {
     font-family: 'Roboto';
     margin: 0;
@@ -21,7 +19,6 @@ body {
     }
 
 
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
 .main-header {
     background: rgba(0, 0, 0, 0.85);
     padding: 18px;
@@ -192,41 +189,6 @@ body {
     }
 }
 
-<<<<<<< HEAD
-/* body */
-
-body {
-    font-family: "Roboto sans-serif";
-    font-size: 80%;
-    text-align:center;
-    background-color: rgb(221,220,220);
-    color: white;
-}
- /* titulo y foto */
-.titulo-foto {
-    margin-top: 5%;
-    
-    background-color: black;
-}
-
-.title-modelo {
-    font-size: 30px;
-    border: 3px solid transparent;
-    position: relative;  }
-.title-color {
-    color: red;
-    position: relative;
-
-}
-.imagen-principal-detalle {
-    width: 100%;
-    height: 100%;
-    }
-/* buttom */
-.buttom-a {
-    background-color: #4CAF50;
-
-=======
 /* FOOTER */
 
 footer{
@@ -404,7 +366,6 @@ footer{
   color: white;
   transition: color .5;
  
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
 }
 
 .buttom-a:hover {
@@ -490,15 +451,6 @@ img-grande {
     visibility: hidden;
     }
     .imagen-principal-detalle {
-<<<<<<< HEAD
-    display: display-block;
-    width: 300px;
-    align-items: center;
-    margin-left: 100px;
-    }
-    header {
-    width: 500px;
-=======
       display: display-block;
       width: 300px;
       align-items: center;
@@ -506,25 +458,12 @@ img-grande {
       }
     header, footer {
       width: 500px;
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
     }
     .titulo-foto {
     width: 500px;
     display: inline-block;
     }
     .title-modelo {
-<<<<<<< HEAD
-    font-size: 20px;
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    }
-    .title-color {
-    position: absolute;
-    top: 81.5%;
-    font-size: 18px;
-    left: 69%
-=======
       font-size: 22px;
      position: absolute;
      top: 70%;
@@ -535,7 +474,6 @@ img-grande {
       top: 72%;
       font-size: 18px;
       left: 72%
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
     }
     .img-frontal {
     width: 110px;
@@ -557,19 +495,11 @@ img-grande {
     left: 80%
     }
     .especificaciones-breves {
-<<<<<<< HEAD
-    position: absolute;
-    top: 95%;
-    height: 90px;
-    width: 350px;
-    margin-left: 75px;
-=======
       position: absolute;
       top: 90%;
       height: 90px;
       width: 350px;
       margin-left: 75px;
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
     }
     .precio {
     position: absolute;
@@ -578,17 +508,10 @@ img-grande {
     left: 20%
     }
 
-<<<<<<< HEAD
-    .ficha-tecnica {
-    position: absolute;
-    top: 1390px;
-    left: 55px
-=======
      .ficha-tecnica {
        position: absolute;
        top: 225%;
        left: 62px;
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
     }
 }
 
@@ -599,16 +522,6 @@ img-grande {
     top: 20%;
     margin-left: 20%;
     right: 36%;
-<<<<<<< HEAD
-    bottom: -310px;
-    text-align: center;
-
-}
-.title-color {
-    font-size: 28px;
-    top: 185px;
-    right: 4%;
-=======
    bottom: -343px;
    text-align: center;
 
@@ -618,7 +531,6 @@ img-grande {
   top: 218px;
   right: 4%;
  
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
 }
 
 .especificaciones-breves {
@@ -675,17 +587,6 @@ img-grande {
     color: grey;
     margin: 15px;
     margin-left: 50px;
-<<<<<<< HEAD
-}
-
-.img-frontal {
-    margin-top: 60%;
-}
-.img-costado {
-    min-height: 190px;
-}
-.img-grande {
-=======
    }
 
   .img-frontal {
@@ -695,49 +596,10 @@ img-grande {
       min-height: 190px;
   }
   .img-grande {
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
     display:inline-block;
     position: relative;
     margin-top: -300px;
     margin-left: 1%;
-<<<<<<< HEAD
-    left: -5%;
-    width: 100px;
-    height: 100px;
-    }
-    .ficha-tecnica li {
-    position: relative;
-    right: 12%;
-    text-align: center;
-    font-size: 18px;
-    }
-}
-
-
-
-@media (min-width: 1200px) {
-    .imagen-principal-detalle {
-    max-width: 400px;
-    }
-    .especificaciones-breves {
-    bottom: 28%;
-    }
-    .img-frontal {
-    margin-top: 69%
-    }
-    .precio {
-    top: -580px;
-    
-    }
-    .informacion-detallada {
-    top: 57px;
-    }
-    .img-frontal, .img-costado, 
-    .img-trasera ,.img-grande {
-    max-width: 200px;
-    }
-}
-=======
     left: 10%;
     width: 100px;
     height: 100px;
@@ -791,4 +653,3 @@ img-grande {
 
 
 
->>>>>>> 3804f8404688454b3660066aef0c0618720a1be5
