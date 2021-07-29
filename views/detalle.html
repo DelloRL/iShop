@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer documento en HTML </title>
-    <link rel="stylesheet" href="/css/detalle.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-</head>
-
-<body>
+<html lang=“en”>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi primer documento en HTML </title>
+        <link rel="stylesheet" href="/css/detalle.css">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/normalize.css">
+    </head>
     <header class="main-header">
             
         <div class="main-header-top">
@@ -35,13 +32,19 @@
         <nav class="main-navbar">
         
             <div class="links-navbar">
-                
+                <img src="/images/logo_white_large.png" alt="LogoApple" class="logo">
                 <a href="#" class="iconHome"><i class="fas fa-home"></i></a>
                 
                 <ul class="left-navbar">
                     <li><a href="#">Nosotros </a></li>
                     <li><a href="#">Ayuda </a></li>
-                    <li><a href="#">Productos </a></li>
+                    <li class="menu-des"><a href="#">Productos <i class="fas fa-angle-down iconAngle"></i></a>
+                        <ul class="submenu">
+                            <li><a href="/iphones" class="submenu-A">iPhones</a></li>
+                            <li><a href="/auriculares" class="submenu-A">Auriculares</a></li>
+                            <li><a href="/fundas" class="submenu-A">Fundas</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 
             </div>
@@ -56,104 +59,102 @@
             
         </nav>
     </header>
-
-
-
-    <article div class="detalle-producto">
-        <div class="titulo-foto">
-            <div div class="title-modelo">
-                <h1> IPHONE XR </h1>
+    <article>
+        <div class= "caja1" >
+            <div class="subcaja1"  >
+                <div class="imagen-principal-detalle">
+                <!-- <img src="/images/iphoneXR.jpg" height="300" alt="iphone xr"> -->
+                </div>
+                <div class="titulos">
+                    <div class="title-modelo">
+                        <h1> IPHONE XR </h1>
+                    </div>
+                    <div class="title-color">
+                        <h2> ROJO</h2>
+                    </div>
+                </div>
+                <div class= "especificaciones-breves">
+                    Alto: 150.9 mm Memoria RAM: 3gb
+                    <br>
+                    Peso: 194 g Almacenamiento: 128GB
+                    <br>
+                    Grosor: 8.3mm Color: BLACK
+                    <br>
+                </div>
+            
+                <div class="imagenes">
+                    <div class="img-pequeñas">
+                        <img class= "img-frontal"src="images/xrRojo-frontal.jpg"  alt=“Iphone XR ROJO parte frontal”>
+                        <img class="img-trasera"  src="images/xrRojo-trasera.jpg" alt=“Iphone XR ROJO parte trasera”>
+                        <img class="img-costado" src="images/xrRojo-costado.jpg" alt=“Iphone XR ROJO parte img-costado”>
+                    </div>
+                    <div class="img-grande">
+                        <img src="images/xrRojo.jpg"  alt=“iphone XR ROJO de ambos lado”>
+                    </div>
+                </div>
             </div>
-            <div class="title-color">
-                <h2> ROJO</h2>
+            <!-- <i class=“fas fa-arrow-up”></i> -->
+            <div class="precio">
+                <h3> PRECIO 700USD</h3>
+                <H4>AL CONTADO, 15%OF</H4>
+                <H2 class="oferta"> PAGALO EN PESOS, EN HASTA12 CUOTAS SIN INTERES CON SOLO UN 20%
+                    DE AUMENTO </H2>
+                <button class="buttom-a" type="button"> AGREGAR AL CARRITO</button>
             </div>
-
-            <img class="imagen-principal-detalle" src="/images/iphoneXR.jpg" alt="iphone xr">
         </div>
-        <div class="imagenes-miniatura" width= "150px">
-            <img class="img-frontal" src="/images/xrRojo-frontal.jpg" alt="Iphone XR ROJO parte frontal">
-            <img class="img-trasera" src="/images/xrRojo-trasera.jpg" alt="Iphone XR ROJO parte trasera">
-            <img class="img-costado" src="/images/xrRojo-costado.jpg" alt="Iphone XR ROJO parte img-costado">
+        <div class= "caja2">
+            <div class="subcaja2A">
+                <H2> INFROMACIÓN GENERAL DEL PRODUCTO</H2> 
+                <h3> Bateria </h3>
+                Tiempo de conversación: Hasta 25 horas
+                Uso de Internet: Hasta 15 horas
+                Reproducción de video:Hasta 16 horas
+                Reproducción de audio: Hasta 65 horas
+                <h4 Reproducción de bateria>
+                    Formatos de video compatibles: HEVC, H.264, MPEG‑4 Parte 2 y Motion JPEG
+                    Compatible con contenido Dolby Vision, HDR10 y HLG
+                </h4>
+                <h3> Camara</h3>
+                Sistema de cámara única de 12 MP (gran angular)
+                Apertura de ƒ/1.8
+                Zoom digital de hasta 5x
+                Modo Retrato con bokeh avanzado y Control de Profundidad
+                Iluminación de Retrato con tres efectos (Luz Natural, Luz de Estudio Fotográfico, Luz al Contorno)
+                Estabilización óptica de imagen
+                Lente de seis elementos
+                Flash LED True Tone con sincronización lenta
+                Fotos panorámicas (hasta 63 MP)
+                Autoenfoque con Focus Pixels
+                HDR Inteligente para fotos
+                Amplia gama de colores en fotos y Live Photos
+                Corrección avanzada de ojos rojos
+                Estabilización automática de imagen
+                Modo ráfaga
+                Geoetiquetado de fotos
+                Captura de imagen en formatos HEIF y JPEG
+            </div>
+            <div class= "subcaja2B">
+                <div class="ficha-tecnica">
+                    <H2 >FICHA TÉCNICA DEL PRODUCTO</H2>
+                    <ul>
+                        <li>Pantalla: 6.1”, 828 x 1792 pixels</li>
+                        <li>Procesador: Apple A12 Bionic</li>
+                        <li>RAM: 3GB</li>
+                        <li>Almacenamiento: 64GB/128GB/256GB</li>
+                        <li>Expansión: sin microSD</li>
+                        <li>Cámara: 12 MP</li>
+                        <li>Batería: 2942 mAh</li>
+                        <li>OS: iOS 14</li>
+                        <li>Peso: 194 g</li>
+                        <li>Perfil: 8.3 mm</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="img-grande">
-            <img src="/images/xrRojo.jpg" width="360px" height="630px" alt="iphone XR ROJO de ambos lado">
-        </div>
-        <i class="fas fa-arrow-up"></i>
-        
-        <div class="precio">
-            <h3> PRECIO 700USD</h3>
-
-            <H4>AL CONTADO, 15%OF</H4>
-
-            <H2 div class="oferta"> PAGALO EN PESOS, EN HASTA12 CUOTAS SIN INTERES CON SOLO UN 20%
-                DE AUMENTO </H2>
-            <button class="buttom-a" type="button"> AGREGAR AL CARRITO</button>
-        </div>
-
-        <div class="especificaciones-breves">
-            Alto: 150.9 mm Memoria RAM: 3gb
-            <br>
-            Peso: 194 g Almacenamiento: 128GB
-            <br>
-            Grosor: 8.3mm Color: BLACK
-            <br>
-
-        </div>
-        <hr> </hr>
-        <div class="ficha-tecnica">
-            <H2>FICHA TÉCNICA DEL PRODUCTO</H2>
-            <ul>
-                <li>Pantalla: 6.1", 828 x 1792 pixels</li>
-                <li>Procesador: Apple A12 Bionic</li>
-                <li>RAM: 3GB</li>
-                <li>Almacenamiento: 64GB/128GB/256GB</li>
-                <li>Expansión: sin microSD</li>
-                <li>Cámara: 12 MP</li>
-                <li>Batería: 2942 mAh</li>
-                <li>OS: iOS 14</li>
-                <li>Peso: 194 g</li>
-                <li>Perfil: 8.3 mm</li>
-            </ul>
-
-        </div>
-        <div class="informacion-detallada">
-            <H2> INFROMACIÓN GENERAL DEL PRODUCTO</H2>
-            <h3> Bateria </h3>
-            Tiempo de conversación: Hasta 25 horas
-            Uso de Internet: Hasta 15 horas
-            Reproducción de video:Hasta 16 horas
-            Reproducción de audio: Hasta 65 horas
-            <h4 Reproducción de bateria>
-                Formatos de video compatibles: HEVC, H.264, MPEG‑4 Parte 2 y Motion JPEG
-                Compatible con contenido Dolby Vision, HDR10 y HLG
-            </h4>
-            <h3> Camara</h3>
-            Sistema de cámara única de 12 MP (gran angular)
-            Apertura de ƒ/1.8
-            Zoom digital de hasta 5x
-            Modo Retrato con bokeh avanzado y Control de Profundidad
-            Iluminación de Retrato con tres efectos (Luz Natural, Luz de Estudio Fotográfico, Luz al Contorno)
-            Estabilización óptica de imagen
-            Lente de seis elementos
-            Flash LED True Tone con sincronización lenta
-            Fotos panorámicas (hasta 63 MP)
-            Autoenfoque con Focus Pixels
-            HDR Inteligente para fotos
-            Amplia gama de colores en fotos y Live Photos
-            Corrección avanzada de ojos rojos
-            Estabilización automática de imagen
-            Modo ráfaga
-            Geoetiquetado de fotos
-            Captura de imagen en formatos HEIF y JPEG
-        </div>
-        
     </article>
-
-
     <footer>
-       
         <div class="container-footer-all">
-         
+        
              <div class="container-body">
  
                  <div class="colum1">
@@ -226,7 +227,6 @@
  
              </div>
          
-     </footer>
+    </footer>
 </body>
-
 </html>
