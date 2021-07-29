@@ -7,11 +7,19 @@
 .main-header {
     background: rgba(0, 0, 0, 0.85);
     padding: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
 }
 
 .logo {
     width: 150px;
     margin-left: 90px;
+}
+
+.iconAngle {
+    margin-left: 3px;
+    font-size: 15px;
 }
 
 .h2-header {
@@ -26,6 +34,7 @@
 
 .submenu {
     margin-left: 3px;
+    padding: 5px 10px;
 }
 
 .hamburger-button {
@@ -40,7 +49,13 @@
     margin: auto;
 }
 
-.main-navbar ul {
+/* .main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} */
+
+.left-navbar {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -61,6 +76,28 @@
 
 .banner {
     width: 50%;
+}
+.submenu li {
+    color: white;
+    font-weight: 600;
+}
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+nav li:hover > ul {
+    display: block;
+}
+
+nav li ul li {
+    background: #434343;
+    list-style: none;
+    padding: 6px 12px;
+}
+
+.submenu a {
+    font-size: 16px!important;
 }
 
 /*body*/
@@ -90,7 +127,7 @@ body {
     margin: 5%;
 }
 
-.InfoProducto {
+.InfoProducto{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border: 1px black solid; 
     width:50vh;
@@ -99,8 +136,6 @@ body {
     max-height:100px;
     position:relative;
     background:white;
-    margin-left: 20px;
-    margin-right: 15px;
     padding: 0;
     margin: 0;
 }
@@ -214,14 +249,14 @@ body {
         align-items: center;
     }
     .logo {
-        width: 80px;
+        width: 200px;
         margin-left: 0;
     }
     .hamburger-button {
         display: none;
     }
     .h2-header {
-        font-size: 18px;
+        display: none;
     }
     .main-navbar {
         display: flex;
@@ -229,7 +264,10 @@ body {
         margin-top: 15px;
         align-items: center;
     }
-    .main-navbar ul {
+    /* .main-navbar ul {
+        display: flex;
+    } */
+    .left-navbar {
         display: flex;
     }
     .main-navbar li {
@@ -242,12 +280,42 @@ body {
     }
     .buscador a {
         margin-left: 15px;
+        color: white;
+        transition: color 0.5s;
+    }
+    .buscador a:hover {
+        color: #45CFF1;
     }
     .links-navbar {
         display: flex;
     }
     .iconHome {
         margin-right: 15px;
+    }
+    .links-navbar img {
+        display: none;
+    }
+    .iphone-img-one {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .col-two {
+        margin-left: 10px;
+    }
+    .container-section-all {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    .container-section-three {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .airpods-img-one {
+        width: 300px;
+        margin-top: 70px;
     }
         /*esto es para el body*/
 
@@ -257,7 +325,7 @@ body {
     }
 
     .todoElCarrito{
-        margin: 12%;
+        margin: 0;
     }
 
     .InfoProducto{
@@ -323,7 +391,7 @@ body {
 
 @media (min-width: 1200px) {  
     .logo {
-        width: 100px;
+        width: 130px;
     }
     .main-header-top, .main-navbar{
         max-width: 1200px;
@@ -332,17 +400,16 @@ body {
     .main-header-top {
         align-items: center;
     }
-    .main-navbar {
-        margin-top: 30px;
+    
+
+    .left-navbar {
+        margin-left: 300px;
     }
-    .h2-header {
-        max-width: none;
-        font-size: 22px;
-        font-weight: 400px;
-        margin: 0;
-    }
+    /* .main-navbar ul {
+        margin-left: 300px;
+    } */
     .main-navbar li {
-        margin: 0 10px;
+        margin: 0 20px;
     }
     .main-navbar a {
         font-size: 19px;
@@ -350,7 +417,44 @@ body {
     
     .main-navbar .right-navbar {
         display: none;
-    }   
+    }
+    .h2-header {
+        display: none;
+    }
+
+    /* .left-navbar {
+        margin-left: 100px;
+    } */
+    .left-navbar a {
+        color: white;
+        opacity: 0.7;
+        transition: opacity 0.5s
+    }
+
+    .left-navbar a:hover {
+        opacity: 1;
+    }
+    .main-header-top {
+        display: none;
+    }
+
+    .links-navbar img {
+        display: flex;
+    }
+    .links-navbar .iconHome {
+        display: none;
+    }
+    .footer-logo-box {
+        display: none;
+    }
+    .iphone-img-one {
+        width: 100%;
+        margin-top: 0;
+    }
+    .airpods-img-one {
+        width: 90%;
+        margin-left: 35px;
+    }
 
 /*Para el body*/
 

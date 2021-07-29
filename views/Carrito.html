@@ -18,8 +18,8 @@
     <header class="main-header">
             
         <div class="main-header-top">
-            <img src="/images/logo_white_large.png" alt="LogoApple" class="logo">
-
+            <a href="/home"><img src="/images/logo_white_large.png" alt="LogoApple" class="logo"></a>
+    
             <h2 class="h2-header">
                 <i class="fas fa-user"></i>
                 <a href="#">Mi cuenta</a>
@@ -32,22 +32,28 @@
         <nav class="main-navbar">
         
             <div class="links-navbar">
-                
+                <a href="/home"><img src="/images/logo_white_large.png" alt="LogoApple" class="logo"></a>
                 <a href="#" class="iconHome"><i class="fas fa-home"></i></a>
                 
                 <ul class="left-navbar">
                     <li><a href="#">Nosotros </a></li>
                     <li><a href="#">Ayuda </a></li>
-                    <li><a href="#">Productos </a></li>
+                    <li class="menu-des"><a href="#">Productos <i class="fas fa-angle-down iconAngle"></i></a>
+                        <ul class="submenu">
+                            <li><a href="/iphones" class="submenu-A">iPhones</a></li>
+                            <li><a href="/auriculares" class="submenu-A">Auriculares</a></li>
+                            <li><a href="/fundas" class="submenu-A">Fundas</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 
             </div>
             
             <div class="buscador">
                 
-                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="/login"><i class="fas fa-user"></i></a>
                 <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                <a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
                 
             </div>
             
@@ -88,7 +94,7 @@
                 <p class="ofertas">Pagando de contado tenes un
                 <p class="descuento">15% de descuento!</p>
                 <p class="Total">Total:$$$</p>
-                </p>
+            </p>
             </div>
     
             <div class="boton1" >
@@ -97,9 +103,7 @@
             <div class="boton2">
                 <button class="boton-vaciar"> Vaciar Carrito </button>
             </div>
-
-
-
+    
     </main>
 
     <footer>

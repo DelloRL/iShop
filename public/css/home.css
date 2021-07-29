@@ -468,7 +468,6 @@ footer{
 @media (min-width: 1200px) {  
     .logo {
         width: 130px;
-       
     }
     .main-header-top, .main-navbar{
         max-width: 1200px;
