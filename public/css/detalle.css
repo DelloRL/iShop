@@ -603,11 +603,13 @@ footer {
 .subcaja2A {
   min-width: 500px;
   align-content: center;
+  margin-left: 200px;
 }
 .ficha-tecnica {
   min-width: 500px;
   align-content: center;
   margin-top: 5px;
+  margin-left: 200px;
 } 
 
 }
