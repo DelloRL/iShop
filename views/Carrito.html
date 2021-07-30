@@ -16,10 +16,10 @@
 <body>
 
     <header class="main-header">
-            
+
         <div class="main-header-top">
             <a href="/home"><img src="/images/logo_white_large.png" alt="LogoApple" class="logo"></a>
-    
+
             <h2 class="h2-header">
                 <i class="fas fa-user"></i>
                 <a href="#">Mi cuenta</a>
@@ -28,13 +28,13 @@
         <a href="#" class="hamburger-button">
             <i class="fas fa-bars"></i>
         </a>
-        
+
         <nav class="main-navbar">
-        
+
             <div class="links-navbar">
                 <a href="/home"><img src="/images/logo_white_large.png" alt="LogoApple" class="logo"></a>
                 <a href="#" class="iconHome"><i class="fas fa-home"></i></a>
-                
+
                 <ul class="left-navbar">
                     <li><a href="#">Nosotros </a></li>
                     <li><a href="#">Ayuda </a></li>
@@ -46,64 +46,72 @@
                         </ul>
                     </li>
                 </ul>
-                
+
             </div>
-            
+
             <div class="buscador">
-                
+
                 <a href="/login"><i class="fas fa-user"></i></a>
                 <a href="#"><i class="fas fa-search"></i></a>
                 <a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
-                
+
             </div>
-            
+
         </nav>
     </header>
 
     <main>
-        <h3 class="Titulo">Tu carrito Ishop </h3> 
-        <nav class="todoElCarrito">
+        <h3 class="Titulo">Tu carrito Ishop </h3>
+
+        <nav class="Caja-carrito">
             <div class="InfoProducto">
-                <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
-                <p class="precio"> <a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
-                
+                <img src="/images/auricularesAirPods.png" alt="Imagen del Producto" class="ImagenProducto">
+                <p class="precio"> <a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$
+                </p>
+
                 <input type="number" min="0" class="cantidad-button">
                 <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
             </div>
             <br>
             <div class="InfoProducto">
-                <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
+                <img src="/images/xrRojo.jpg" alt="Imagen del Producto" class="ImagenProducto">
                 <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
                 <input type="number" min="0" class="cantidad-button">
                 <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
             </div>
             <br>
             <div class="InfoProducto">
-                <img src="/images/logo-apple.png" alt="Imagen del Producto" class="ImagenProducto">
+                <img src="/images/funda1.png" alt="Imagen del Producto" class="ImagenProducto">
                 <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
                 <input type="number" min="0" class="cantidad-button">
                 <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
             </div>
         </nav>
+
+    <div class="elegir-Pago">
+            <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
+            <label for="Cuotas">Cuotas</label>
+            <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
+            <label for="Contado">Al Contado</label>
+        <div>
     
-            <div class="elegir-Pago">
-                <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
-                <label for="Cuotas">Cuotas</label>
-                <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
-                <label for="Contado">Al Contado</label>
-                <p class="ofertas">Pagando de contado tenes un
-                <p class="descuento">15% de descuento!</p>
-                <p class="Total">Total:$$$</p>
-            </p>
-            </div>
+        </div class="Texto">
+            <p> Pagando al contado tenes hasta un </p>
+            <p class="descuento">15% de descuento!</p>
+            <p class="total">Total:$$$</p>
+        </div>
     
-            <div class="boton1" >
-                <button class="pagar"> Pagar <i class="fas fa-hand-point-right"></i> </button>
-            </div>
-            <div class="boton2">
-                <button class="boton-vaciar"> Vaciar Carrito </button>
-            </div>
-    
+    </div>
+    <div class="botones">
+        <div class="padreBotonP">
+            <button class="pagar"> Pagar <i class="fas fa-hand-point-right"></i> </button>
+        </div>
+
+        <div class="padreBotonV">
+            <button class="boton-vaciar"> Vaciar Carrito </button>
+        </div>
+    </div>
+
     </main>
 
     <footer>
@@ -113,10 +121,14 @@
                 <div class="colum1">
                     <h1>Mas informacion de la compañia</h1>
 
-                    <p>Nuestro principal objetivo es, a través de una pagina web, hacer posíble a Argentínos de todo el país, acceder de una manera sencilla a productos APPLE.
-                        Marca que no tiene tiendas de ventas oficiales en nuestro país. Compra en dolares o pesos con una mínima tasa de interes, y en cuotas.
+                    <p>Nuestro principal objetivo es, a través de una pagina web, hacer posíble a Argentínos de todo el
+                        país, acceder de una manera sencilla a productos APPLE.
+                        Marca que no tiene tiendas de ventas oficiales en nuestro país. Compra en dolares o pesos con
+                        una mínima tasa de interes, y en cuotas.
                         <!-- "Nunca fue tan facil conseguir un iphone como hasta ahora". -->
-                        Orientado a adultos jovenes, interesados en la ultima tecnología de Celulares de la compañia Apple, que buscan la posibilidad de acceder a los mismos de una manera más facil, dinámica y accesible.
+                        Orientado a adultos jovenes, interesados en la ultima tecnología de Celulares de la compañia
+                        Apple, que buscan la posibilidad de acceder a los mismos de una manera más facil, dinámica y
+                        accesible.
                         Incluimos venta de cargadores y auriculares.
                     </p>
                     <img src="/images/logo_white_large.png" class="logo-footer">
@@ -157,17 +169,18 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container-footer">
-                <div class="footer">
-                    <div class="copyright">
-                        © 2021 Todos los Derechos Reservados | <a href="">iShop</a>
-                    </div>
-                    <div class="information">
-                        <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
-                    </div>
+            <div class="footer">
+                <div class="copyright">
+                    © 2021 Todos los Derechos Reservados | <a href="">iShop</a>
+                </div>
+                <div class="information">
+                    <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y
+                        Condiciones</a>
                 </div>
             </div>
+        </div>
     </footer>
 
 </body>
