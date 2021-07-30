@@ -517,7 +517,7 @@ body {
   color: black;
   padding: 20px;
   width: 390px;
-  margin: 0px 150px 15px;
+  margin: 0px 150px 20px;
   
 }
 
@@ -527,8 +527,8 @@ body {
   color: black;
   font-size: 20px;
   padding: 20px;
-  margin: 60px 15px 0px;
-  height: 521px;
+  margin: 60px 15px 10px;
+  height: 515px;
   text-align:justify;
   line-height : 30px;
 
@@ -587,9 +587,43 @@ body {
   width: 150px;   
   height: 210px;
 }
+/* media detalle producto */
+@media (max-width: 767px) {
+header {
+  width: 800px;
+}
+footer {
+  width: 800px;
+  
+}
+.precio {
+  min-width: 500px;
+  flex-wrap: nowrap;
+}
+.subcaja2A {
+  min-width: 500px;
+  align-content: center;
+}
+.ficha-tecnica {
+  min-width: 500px;
+  align-content: center;
+  margin-top: 5px;
+} 
+
+}
 
 
+@media (min-width: 768px) {
+  .ficha-tecnica {
+   height: 650px;
+  }
+}
 
+@media (min-width: 1200px) {
+  .ficha-tecnica {
+    height: 515px;
+  }
+}
 /*
 
 
