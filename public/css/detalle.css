@@ -402,8 +402,13 @@ footer{
 
 
 
+.section-three {
+  background-color: black;
 
-
+}
+.section-three h1 {
+  color: #fd611a;
+}
 /* body */
 
 body {
@@ -467,7 +472,7 @@ body {
 }
 
 .buttom-a {
-  background-color: black;
+  background-color: #fd611a;
   color: white;
   transition: color .5;
   font-size: 20px;
@@ -493,7 +498,6 @@ body {
 .precio h4 {
   font-size: 23px;
   background-color: #4CAF50;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
   color: black;
 }
 .precio h3{
@@ -504,17 +508,16 @@ body {
 
 .oferta {
   font-size: 18px;
-  background-color: gray;
+  background-color: white;
   color: black;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
   padding: 20px;
 }
 
 .especificaciones-breves {
   font-size: 20px;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  background-color: white;
-  color: black;
+  background-color: #fd611a;
+  color:white;
   padding: 20px;
   width: 390px;
   margin: 0px 150px 20px;
@@ -535,7 +538,8 @@ body {
 }
 .ficha-tecnica h2 {
   text-align: center;
-  color: black;
+  color: white;
+  background-color: #fd611a;;
 }
 
 .ficha-tecnica li {
@@ -554,14 +558,15 @@ body {
 
 .subcaja2A h2{
   font-size: 35px;
+  background-color: #fd611a;
+  color: white
 }
 .subcaja2A h3{
   font-size: 25px;
+  color: #fd611a;
 }
 
-.subcaja2A h2, .subcaja2A h3 {
-  color: black;
-}
+
 
 .imagenes{
   flex-wrap: wrap;
@@ -571,7 +576,7 @@ body {
 
 .img-grande {
   flex: 2; 
-  width:360px ;
+  width:340px ;
   height:630px; 
 }
 .img-pequeñas{
@@ -599,6 +604,7 @@ footer {
 .precio {
   min-width: 500px;
   flex-wrap: nowrap;
+  margin-left: 200px;
 }
 .subcaja2A {
   min-width: 500px;
@@ -611,6 +617,10 @@ footer {
   margin-top: 5px;
   margin-left: 200px;
 } 
+.section-three {
+  visibility: hidden;
+  display: none;
+}
 
 }
 
