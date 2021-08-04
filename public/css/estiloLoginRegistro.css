@@ -13,9 +13,10 @@
 body {
     font-family: Arial;
     background: url(https://media.giphy.com/media/26n79t82lmj989iAE/giphy.gif);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
 }
 /* CSS HEADER MAURI*/
@@ -230,3 +231,31 @@ input[type="submit"]:hover{
         opacity: 1;
     }
 }
+
+
+
+@media (min-width: 320px) and (max-width: 768px){
+    .body{
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat; 
+    }
+    
+    .form-login{
+        margin: 15px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .body{
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat; 
+    }
+    
+    .form-login{
+        margin: 15px;
+    }
+
+}   
