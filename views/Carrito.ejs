@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu carrito</title>
+    <link rel="stylesheet" href="/css/Carrito.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <%- include('./partials/header') -%>
+
+
+    <!--Main-->
+    <main>
+        <h3 class="Titulo">Tu carrito Ishop </h3>
+
+        <nav class="Caja-carrito">
+            <div class="InfoProducto">
+                <img src="/images/auricularesAirPods.png" alt="Imagen del Producto" class="ImagenProducto">
+                <p class="precio"> <a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$
+                </p>
+
+                <input type="number" min="0" class="cantidad-button">
+                <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
+            </div>
+            <br>
+            <div class="InfoProducto">
+                <img src="/images/xrRojo.jpg" alt="Imagen del Producto" class="ImagenProducto">
+                <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
+                <input type="number" min="0" class="cantidad-button">
+                <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
+            </div>
+            <br>
+            <div class="InfoProducto">
+                <img src="/images/funda1.png" alt="Imagen del Producto" class="ImagenProducto">
+                <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
+                <input type="number" min="0" class="cantidad-button">
+                <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
+            </div>
+        </nav>
+
+    <div class="elegir-Pago">
+            <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
+            <label for="Cuotas">Cuotas</label>
+            <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
+            <label for="Contado">Al Contado</label>
+        <div>
+    
+        </div class="Texto">
+            <p> Pagando al contado tenes hasta un </p>
+            <p class="descuento">15% de descuento!</p>
+            <p class="total">Total:$$$</p>
+        </div>
+    
+    </div>
+    <div class="botones">
+        <div class="padreBotonP">
+            <button class="pagar"> Pagar <i class="fas fa-hand-point-right"></i> </button>
+        </div>
+
+        <div class="padreBotonV">
+            <button class="boton-vaciar"> Vaciar Carrito </button>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <%- include('./partials/footer') -%>
+
+</body>
+
+</html>

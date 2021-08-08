@@ -1,14 +1,26 @@
 const express= require("express");
 
-const path= require("path");
-
 const app = express();
+
+const mainRoutes= require("./routes/mainRoutes");
+
+app.use(express.static('./public'));
+
+app.set('view engine', 'ejs');
+
+app.use('/', mainRoutes);
 
 
 app.listen(3080,() => {
     console.log("Servidor corriendo en el puerto 3080")
 });
 
+
+
+
+/* Ruteo previo sin ejs. */
+
+/*
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname, "/views/home.html"))
 });
@@ -37,5 +49,4 @@ app.get("/fundas", (req,res) => {
 app.get("/auriculares", (req,res) => {
     res.sendFile(path.join(__dirname + "/views/storeAuriculares.html"))
 })
-
-app.use(express.static("public"));
+*/
