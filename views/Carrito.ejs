@@ -18,14 +18,16 @@
 
     <!--Main-->
     <main>
-        <h3 class="Titulo">Tu carrito Ishop </h3>
-
+        <div class="Seccion1">
+            <h3 class="Titulo">Tu carrito Ishop</h3> 
+            <i class="fas fa-angle-double-left" href="/home"></i>
+        </div>
         <nav class="Caja-carrito">
             <div class="InfoProducto">
                 <img src="/images/auricularesAirPods.png" alt="Imagen del Producto" class="ImagenProducto">
                 <p class="precio"> <a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$
                 </p>
-
+    
                 <input type="number" min="0" class="cantidad-button">
                 <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
             </div>
@@ -45,13 +47,15 @@
             </div>
         </nav>
 
-    <div class="elegir-Pago">
-            <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
-            <label for="Cuotas">Cuotas</label>
-            <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
-            <label for="Contado">Al Contado</label>
-        <div>
-    
+        
+            <div class="elegir-Pago">
+                <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
+                <label for="Cuotas">Cuotas</label>
+                <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
+                <label for="Contado">Al Contado</label>
+            <div>
+        
+
         </div class="Texto">
             <p> Pagando al contado tenes hasta un </p>
             <p class="descuento">15% de descuento!</p>
@@ -61,11 +65,11 @@
     </div>
     <div class="botones">
         <div class="padreBotonP">
-            <button class="pagar"> Pagar <i class="fas fa-hand-point-right"></i> </button>
+            <a class="button" href="#">Pagar</a>
         </div>
 
         <div class="padreBotonV">
-            <button class="boton-vaciar"> Vaciar Carrito </button>
+            <a class="boton-vaciar" href="#">Vaciar</a>
         </div>
     </div>
 
