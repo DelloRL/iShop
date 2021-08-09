@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu carrito</title>
-    <link rel="stylesheet" href="/css/Carrito.css">
+    <link rel="stylesheet" href="/css/Carrito.css">   
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
 </head>
 
 <body>
@@ -18,12 +21,13 @@
 
     <!--Main-->
     <main>
-        <div class="Seccion1">
+        <nav class="Seccion1">
             <h3 class="Titulo">Tu carrito Ishop</h3> 
-            <i class="fas fa-angle-double-left" href="/home"></i>
-        </div>
-        <nav class="Caja-carrito">
-            <div class="InfoProducto">
+            <a href="/home" class="fas fa-angle-double-left" ></a>
+        </nav>
+
+        <nav class="Seccion2">
+            <div class="Producto">
                 <img src="/images/auricularesAirPods.png" alt="Imagen del Producto" class="ImagenProducto">
                 <p class="precio"> <a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$
                 </p>
@@ -32,14 +36,14 @@
                 <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
             </div>
             <br>
-            <div class="InfoProducto">
+            <div class="Producto">
                 <img src="/images/xrRojo.jpg" alt="Imagen del Producto" class="ImagenProducto">
                 <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
                 <input type="number" min="0" class="cantidad-button">
                 <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
             </div>
             <br>
-            <div class="InfoProducto">
+            <div class="Producto">
                 <img src="/images/funda1.png" alt="Imagen del Producto" class="ImagenProducto">
                 <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
                 <input type="number" min="0" class="cantidad-button">
@@ -47,31 +51,32 @@
             </div>
         </nav>
 
-        
+        <nav class="Seccion3">
             <div class="elegir-Pago">
-                <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
-                <label for="Cuotas">Cuotas</label>
-                <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
-                <label for="Contado">Al Contado</label>
             <div>
+                    <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
+                    <label for="Cuotas">Cuotas</label>
+                    <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
+                    <label for="Contado">Al Contado</label>
+            </div>
         
+                <div class="Texto">
+                    <p> Pagando al contado tenes hasta un </p>
+                    <p class="descuento">15% de descuento!</p>
+                    <p class="total">Total:$$$</p>
+                </div>
+            </div>
+        </nav>
 
-        </div class="Texto">
-            <p> Pagando al contado tenes hasta un </p>
-            <p class="descuento">15% de descuento!</p>
-            <p class="total">Total:$$$</p>
-        </div>
-    
-    </div>
-    <div class="botones">
+    <nav class="botones">
         <div class="padreBotonP">
-            <a class="button" href="#">Pagar</a>
+            <a class="boton-Pagar">Pagar</a>
         </div>
 
         <div class="padreBotonV">
-            <a class="boton-vaciar" href="#">Vaciar</a>
+            <a class="boton-vaciar">Vaciar</a>
         </div>
-    </div>
+    </nav>
 
     </main>
 

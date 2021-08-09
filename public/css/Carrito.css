@@ -11,7 +11,7 @@ body {
     padding: 0;
 }
 
-/*Carrito*/
+/*Carrito seccion 1*/
 
 .Seccion1{
     display: flex;
@@ -25,60 +25,48 @@ body {
 }
 
 .fa-angle-double-left{
-    font-size: 20px;    
+    font-size: 25px;    
     margin-right: 20px;
+    text-decoration: none;
+    color: black;
 }
 
+/*La caja de productos o seccion 2*/
 
-.Caja-carrito{
-    margin: 5%;
-    
+.Seccion2{
+    margin: 0 5%;
 }
 
-.InfoProducto{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border: 1px black solid; 
-    width:300px;   
-    height:140px;
-    position:relative;  
+.Producto{
+    border: 1px rgb(233, 232, 232) solid; 
     margin: 5px 4%;
-    
+    display: flex;
+    align-items: center;
 }
 
-.ImagenProducto{
-    width: 100px;
-    height: 120px;
-    position:absolute;
-    margin: 5px;
-}
-
-
-.cantidad-button{
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    text-align: center;
-    max-width: 30px;
+.Producto:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .NombreDeProducto{
     visibility: hidden;
 }
 
-.precio{
-    bottom: 50%;
-    font-size: 20px;    
-    color: black;
-    left: 50%;  
-    position:absolute;
+.ImagenProducto{
+    width: 100px;
+    height: 120px;
+    margin: 5px;
+}
+
+.cantidad-button{
+    text-align: center;
+    max-width: 30px;
 }
 
 .boton-quitar{
-    font-size: 20px;
-    position: absolute;
-    right:30px;
-    bottom: 20px;
+    font-size: 15px;
     border-radius:5px;
+    margin: 5px;
     background-color: rgba(0, 0, 0, 0.678); 
     color: orange;
     transition: color 1s;
@@ -89,7 +77,12 @@ body {
     color:rgb(236, 108, 108)
 }
 
+/*Elegir pago o seccion 3*/
 
+.Seccion3{
+    display: flex;
+    justify-content: center;
+}
 
 .elegir-Pago{
     padding: 10px;
@@ -112,7 +105,7 @@ body {
     font-size: 25px;
 }
 
-/* botones de abajo*/
+/* botones o seccion 4*/
 
 .botones{
     display: flex;
@@ -126,12 +119,7 @@ body {
     
 }
 
-
-
-
-
-
-.button {
+.boton-Pagar{
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -142,13 +130,14 @@ body {
     background: -webkit-gradient(linear, left top, left bottom, from(#7fbf75), to(#4dab4d));
     background: -moz-linear-gradient(top, #7fbf75, #4dab4d);
     background: linear-gradient(to bottom, #7fbf75, #4dab4d);
-    text-shadow: #000000 1px 1px 1px;
+    text-shadow: #144216 1px 1px 1px;
     font: normal normal bold 18px arial;
     color: #fafafa;
     text-decoration: none;
 }
-.button:hover,
-.button:focus {
+
+.boton-Pagar:hover,
+.boton-Pagar:focus {
     background: #98e58c;
     background: -webkit-gradient(linear, left top, left bottom, from(#98e58c), to(#5ccd5c));
     background: -moz-linear-gradient(top, #98e58c, #5ccd5c);
@@ -156,13 +145,15 @@ body {
     color: #fafafa;
     text-decoration: none;
 }
-.button:active {
+
+.boton-Pagar:active {
     background: #4c7346;
     background: -webkit-gradient(linear, left top, left bottom, from(#4c7346), to(#4dab4d));
     background: -moz-linear-gradient(top, #4c7346, #4dab4d);
     background: linear-gradient(to bottom, #4c7346, #4dab4d);
 }
-.button:before{
+
+.boton-Pagar:before{
     content:  "\0000a0";
     display: inline-block;
     height: 24px;
@@ -177,31 +168,9 @@ body {
 }
 
 
-
-
-
-
-/* .pagar{
-    font-size: 20px;
-    background-color: #2ECC71;
-    border-radius: 10px;
-    font-family: 'Noto Serif', serif;
-    cursor: pointer;
-    transition:  0.5s;
-}
-.pagar:hover{
-    color:white;
-    background-color: #4daf76;
-}
-*/ 
-.fa-hand-point-right{
-    visibility: hidden;
-}
-
 .padreBotonV{
     margin: 1% 5% 2%;
 }
-
 
 .boton-vaciar {
     display: inline-block;
@@ -219,6 +188,7 @@ body {
     color: #ffffff;
     text-decoration: none;  
 }
+
 .boton-vaciar:hover,
 .boton-vaciar:focus {
     border: 2px solid #ff2233;
@@ -229,12 +199,14 @@ body {
     color: #ffffff;
     text-decoration: none;
 }
+
 .boton-vaciar:active {
     background: #994e53;
     background: -webkit-gradient(linear, left top, left bottom, from(#994e53), to(#962e34));
     background: -moz-linear-gradient(top, #994e53, #962e34);
     background: linear-gradient(to bottom, #994e53, #962e34);
 }
+
 .boton-vaciar:before{
     content:  "\0000a0";
     display: inline-block;
@@ -249,22 +221,6 @@ body {
     background-size: 100% 100%;
 }
 
-
-/*
-.boton-vaciar{
-    margin-top: 5%;
-    font-size: 18px;
-    background-color: rgb(235, 111, 111);
-    font-family: 'Noto Serif', serif;
-    cursor: pointer;
-    transition:  0.5s;
-}
-.boton-vaciar:hover{
-    color: white;
-    background-color: tomato;
-}
-*/
-
 /* mediaQ*/
 
 /* A partir de 768px, resolución tablet */ 
@@ -274,70 +230,45 @@ body {
         font-size: 40px;
         margin:2% 5% 1%
 }
-
-    .Caja-carrito{
+.fa-angle-double-left{
+    margin-right: 50px;
+    font-size: 35px;
+}
+    .Seccion2 {
         margin: 5px 12%;
 }
-
     .InfoProducto{
         width: 550px;   
         height: 240px;
 }
-
     .ImagenProducto{
-        margin: 5px;
         width: 200px;
         height: 220px;
 }
-
     .boton-quitar{
-        font-size: 40px;
+        font-size: 30px;
 }
-
     .precio{
         font-size: 30px;
 }
-
     .cantidad-button{
         font-size: 20px;
         max-width: 40px;
         border: solid 1px black;
+        border-radius:5px ;
 }
-
     .elegir-Pago{
         width: 375px;
         height:150px;
         margin: 3% 27% 0px;
         font-size: 20px;
 }   
-
     .descuento{
         font-size: 28px;
 }
-
     .total{
         font-size: 30px;
 }
-
-    .pagar{
-        font-size: 30px;
-        background-color: #2ECC71;
-        font-family: 'Noto Serif', serif;
-        cursor: pointer;
-}
-
-    .fa-hand-point-right{
-        visibility: visible;
-}
-
-    .boton-vaciar{
-        background-color: rgb(235, 111, 111);
-        font-family: 'Noto Serif', serif;
-        cursor: pointer;
-        margin-top: 5%;
-        font-size: 25px;
-}
-
 }
 
 
@@ -346,14 +277,10 @@ body {
 /* A partir de 1200px, resolución desktop */
 
 @media (min-width: 1200px) {  
-
-    .Caja-carrito{
-    border: green solid 1px;
-    
+    .fa-angle-double-left{
+    font-size: 40px;
+    margin-right: 70px;
 }
-
-
-
     .InfoProducto{
     width: 800px;
     height: 250px;
@@ -361,6 +288,13 @@ body {
 
     .NombreDeProducto{
     visibility: visible;
+}
+.boton-quitar{
+    align-self: flex-end;
+}
+.cantidad-button{
+    align-self: flex-end;
+    margin: 5px;
 }
 
 .elegir-Pago{
@@ -370,10 +304,8 @@ body {
     font-size: 22px;
 }   
 
-.pagar{
+.boton-Pagar{
     font-size: 33px;
-    background-color: #2ECC71;
-    font-family: 'Noto Serif', serif;
     cursor: pointer;
 }
 
@@ -382,12 +314,8 @@ body {
 }
 
 .boton-vaciar{
-    background-color: rgb(255, 255, 255);
-    font-family: 'Noto Serif', serif;
     cursor: pointer;
-    margin-top: 5%;
-    font-size: 30px;
-    border-radius: 10px;
+    font-size: 33px;
 }
 
 }
