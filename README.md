@@ -30,5 +30,8 @@ https://www.musimundo.com/
 
 https://tienda.movistar.com.ar/
 
+https://maximstore.ar/
+
+
 
 Tablero de trabajo: https://trello.com/b/KmtgSRiv/trabajo-integrador-digitalhouse
