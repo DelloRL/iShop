@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: auto;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto";
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+input[type="text"]{
+    width: 100%;
+    border-bottom: 3px solid #4796E6;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 11px 10px;
+    background: #c0c0c0;
+    font-size: 14px;
+    color: black;
+}
+
+textarea{
+    font-family: "Roboto";
+    width: 100%;
+    border-bottom: 3px solid #4796E6;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 11px 10px;
+    background: #c0c0c0;
+    font-size: 14px;
+    color: black;
+}
+
+
+input[type="file"]{
+    font-family: "Roboto";
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    margin: 16px;
+    cursor: pointer;
+    align-self: center;
+    transition: .3s ease all;
+}
+
+.button-submit{
+    background-color: #4796E6;
+    color: white;
+    width: 40vh;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    margin: 16px;
+    cursor: pointer;
+    align-self: center;
+    transition: .3s ease all;
+}
+
+.button-submit:hover {
+    background-color: #00587a;
+    cursor: pointer;
+}

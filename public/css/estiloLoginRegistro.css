@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 
 * {
@@ -82,7 +82,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover{
-    background: #00587a;;
+    background: #00587a;
 }
 
 input[type="text"] {

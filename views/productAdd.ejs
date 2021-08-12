@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/productAdd.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
+    <title>Sube tu producto</title>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('./partials/header') -%>
+
+
+    <!-- Main -->
+    <form action="" method="POST" class="container">
+        <p>
+            <input type="text" name="name" required placeholder="Nombre del Producto">
+        </p>
+
+        <p>
+            <input type="text" name="price" required placeholder="Precio del Producto">
+        </p>
+
+        <p>
+            <input type="text" name="category" required placeholder="Categoría">
+        </p>
+
+        <p>
+            <textarea rows="4" cols="50" placeholder="Descripción del producto"></textarea>
+        </p>
+
+        <h4>Especificaciones Técnicas:</h4>
+        <p>
+            <input type="text" name="color" required placeholder="Color">
+        </p>
+
+        <p>
+            <input type="text" name="ancho" required placeholder="Ancho">
+        </p>
+
+        <p>
+            <input type="text" name="alto" required placeholder="Alto">
+        </p>
+
+        <p>
+            <input type="text" name="ram" required placeholder="Memoria Ram">
+        </p>
+
+
+        <div class="bluetooth">
+        <h5>Tiene Bluetooth?</h5><br>
+        <input type="radio" name="radio-input" value="Si" id="bluetooth-si" checked>
+        <label for="bluetooth-si"> Sí </label>
+        <input type="radio" name="radio-input" value="No" id="bluetooth-no" checked>
+        <label for="bluetooth-no"> No </label>
+        </div>
+
+        <p>
+            <input type="text" name="calidad-camara" required placeholder="Calidad de Cámara Principal">
+        </p>
+
+        <h4>Añade imágenes del producto:</h4>
+        <input type="file" id="img" name="img" accept=".pdf,.jpg,.png" 3 />
+        <br>
+        
+
+        <button class="button-submit" type="submit"> Publicar Producto </button>
+    </form>
+
+    <!-- Footer -->
+    <%- include('./partials/footer') -%>
+</body>
+</html>
