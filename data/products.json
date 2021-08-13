@@ -1,0 +1,108 @@
+[
+
+    {
+        "id": 1,
+        "nombre": "",
+        "precio": 1,
+        "descripcion":"",
+        "imagen":"image",
+        "categoría": "categoria"
+    },
+
+{
+    "id": 1,
+    "nombre": "iPhone 12 mini",
+    "precio": 1,    
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "IPhones"
+},
+{
+    "id": 2,
+    "nombre": "iPhone 12",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "IPhones"
+},
+{
+    "id": 3,
+    "nombre": "iPhone 12 PRO",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "IPhones"
+},
+{
+    "id": 4,
+    "nombre": "iPhone XR",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "IPhones"
+},
+{
+    "id": 5,
+    "nombre": "iPhone 12 ProMax",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "IPhones"
+},
+
+
+{
+    "id": 6,
+    "nombre": "AirPods Caja",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "Auriculares"
+},
+{
+    "id": 7,
+    "nombre": "AirPods Pro",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "Auriculares"
+},
+{
+    "id": 8,
+    "nombre": "EarPods",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "Auriculares"
+},
+
+
+{
+    "id": 1,
+    "nombre": "Funda ProMax",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "Fundas y protección"
+},
+{
+    "id": 1,
+    "nombre": "Funda Tech",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "Fundas y protección"
+},
+{
+    "id": 1,
+    "nombre": "Funda iPhone 12",
+    "precio": 1,
+    "descripcion":"",
+    "imagen":"image",
+    "categoría": "Fundas y protección"
+}
+
+]
+
+
+
