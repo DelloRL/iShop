@@ -10,7 +10,13 @@ body {
     padding: 0;
 }
 
-
+.banner-first {
+    width: 100%;
+    display: none;
+}
+.banner-mobile {
+    width: 100%;
+}
 
 
 /* SECTION 1 */
@@ -170,6 +176,12 @@ body {
     }
     .contenedor {
         display: flex;
+    }
+    .banner-first {
+        display: flex;
+    }
+    .banner-mobile {
+        display: none;
     }
 }
 
