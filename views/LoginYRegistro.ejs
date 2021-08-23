@@ -40,12 +40,11 @@
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <h3>Registro</h3>
                 <h4>Registra tu usuario en nuestro e-commerce.</h4>
-                <form action="registro.php" method="POST">
+                <form action="/register" method="POST">
                     <div class="contenedor-inputs">
-                        <input type="text" name="txtNombre" placeholder="Nombre Completo">
-                        <input type="text" name="txtUsuario" placeholder="Nombre de Usuario">
-                        <input type="password" name="txtContraseña" placeholder="Contraseña">
-                        <input type="text" name="txtCorreo" placeholder="Correo Electronico">
+                        <input type="text" name="txtNombre" placeholder="Nombre Completo" id="nameRegister">
+                        <input type="text" name="txtUsuario" placeholder="Nombre de Usuario" id="usernameRegister">
+                        <input type="password" name="txtContrasena" placeholder="Contraseña" id="passwordRegister">
                     </div>
                     <input type="submit" class="btn-submit" value="Enviar Registro">
                 </form>
