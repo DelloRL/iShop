@@ -78,7 +78,7 @@
 
 
 {
-    "id": 1,
+    "id": 9,
     "nombre": "Funda ProMax",
     "precio": 1,
     "descripcion":"",
@@ -86,7 +86,7 @@
     "categoría": "Fundas y protección"
 },
 {
-    "id": 1,
+    "id": 10,
     "nombre": "Funda Tech",
     "precio": 1,
     "descripcion":"",
@@ -94,7 +94,7 @@
     "categoría": "Fundas y protección"
 },
 {
-    "id": 1,
+    "id": 11,
     "nombre": "Funda iPhone 12",
     "precio": 1,
     "descripcion":"",

@@ -15,10 +15,4 @@ router.get('/detalle', mainController.detalle);
 
 router.get('/carrito', mainController.carrito);
 
-router.get('/iphones', mainController.iphones);
-
-router.get('/fundas', mainController.fundas);
-
-router.get('/auriculares', mainController.auriculares);
-
 module.exports = router;
