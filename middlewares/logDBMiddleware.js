@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function logDBMiddleware(req, res, next){
-    fs.writeFileSync('logDB.txt', 'Se creó un registro al ingresar en la página' + req.url);
+    fs.appendFileSync('logDB.txt', 'Se creó un registro al ingresar en la página' + req.url);
 
     next();
 }
