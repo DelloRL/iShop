@@ -8,16 +8,16 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	// Show all products
-	Iphones: (req, res) => {
-		res.render("iphones",{products})
+	iphones: (req, res) => {
+		res.render("storeIPhone",{products})
 	},
 
     fundas:(req,res)=>{
-        res.render("fundas", {products})
+        res.render("storeFundas", {products})
     },
 
     auriculares: (req,res)=> {
-        res.render("auriculares", {products})
+        res.render("storeAuriculares", {products})
     },
 
 	// Detail from one product
@@ -99,3 +99,5 @@ const controller = {
 
 
 };
+
+module.exports = controller

@@ -1,5 +1,5 @@
 const express= require("express");
-const mainRoutes= require("./routes/mainRoutes");
+
 const logMiddleware = require('./middlewares/logMiddleware');
 const app = express();
 
@@ -10,8 +10,10 @@ app.use(express.static('./public'));
 
 app.use(logMiddleware);
 
+const productsRoutes = require('./routes/products')
+const mainRoutes= require("./routes/mainRoutes");
 app.use('/', mainRoutes);
-
+app.use('/', productsRoutes)
 
 //servidor
 app.listen(3080,() => {
