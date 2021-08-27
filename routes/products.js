@@ -20,10 +20,6 @@ router.post("/upload", upload.single("img-product"),productsController.store);
 
 router.get("/upload", productsController.create)
 
-router.get('/iphones', productsController.iphones);
-
-router.get('/fundas', productsController.fundas);
-
-router.get('/auriculares', productsController.auriculares);
+router.get('/products', productsController.products);
 
 module.exports = router

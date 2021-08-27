@@ -34,8 +34,9 @@ body {
 .title-subtitle {
     font-weight: bold;
     text-align: center;
-    padding: 15px 0;
-    font-size: 40px;
+    padding: 8px 0;
+    font-size: 35px;
+    margin-left: 12px;
 }
 
 .ubication {
@@ -61,6 +62,7 @@ body {
     box-shadow: 0px 0px 10px rgb(100 100 100);
     padding: 15px;
     max-width: 400px;
+    background-color: #f4f4f4;
 }
 
 .button-product {

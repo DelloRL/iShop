@@ -8,18 +8,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	// Show all products
-	iphones: (req, res) => {
-		res.render("storeIPhone",{products})
-	},
-
-    fundas:(req,res)=>{
-        res.render("storeFundas", {products})
+	products: (req, res) => {
+        res.render('products', {products})
     },
-
-    auriculares: (req,res)=> {
-        res.render("storeAuriculares", {products})
-    },
-
 	// Detail from one product
     detail: (req, res) => {
         let productId = req.params.id - 1;
