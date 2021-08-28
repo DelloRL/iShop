@@ -1,7 +1,12 @@
 const express= require("express");
-
+const mainRoutes= require("./routes/mainRoutes.js");
+const products = require("./routes/products.js");
 const logMiddleware = require('./middlewares/logMiddleware');
 const app = express();
+
+app.use(express.urlencoded({extende: false}));
+app.use(express.json());
+
 
 
 // view engine setup //
@@ -10,10 +15,8 @@ app.use(express.static('./public'));
 
 app.use(logMiddleware);
 
-const productsRoutes = require('./routes/products')
-const mainRoutes= require("./routes/mainRoutes");
 app.use('/', mainRoutes);
-app.use('/', productsRoutes)
+app.use("/products",products)
 
 //servidor
 app.listen(3080,() => {

@@ -17,7 +17,7 @@
 
 
     <!-- Main -->
-    <form action="" method="POST" class="container">
+    <form action="/products/create" method="POST" class="container" enctype="multipart/form-data">
         <p>
             <input type="text" name="name" required placeholder="Nombre del Producto">
         </p>
@@ -65,7 +65,7 @@
         </p>
 
         <h4>Añade imágenes del producto:</h4>
-        <input type="file" id="img" name="img" accept=".pdf,.jpg,.png" 3 />
+        <input type="file" id="img" name="img" />
         <br>
         
 

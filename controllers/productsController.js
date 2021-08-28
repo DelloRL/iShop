@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json')
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -20,29 +20,12 @@ const controller = {
 
 	// create
 	create: (req, res) => {
-	res.render("productAdd");
-        let productosJSON = fs.readFileSync("src/data/products.json", {enconding:"utf-8"})
-
-        let producto;
-
-        if (productosJSON == ""){
-            producto= [];
-        } else {
-            products =JSON.parse(productosJSON);
-        };
-
-        let product = {
-            id:id,
-            name:req.body.nombre,
-            descripcion:req.body.price,
-            categoria: req.body.category
-        }
-
+		res.render("productAdd");
 	},
 
 	// store
 	store: (req, res) => {
-		let productsDataJSON = fs.readFileSync("src/data/productsDataBase.json",{encoding: "utf-8"})
+		let productsDataJSON = fs.readFileSync("data/products.json",{encoding: "utf-8"})
 
 		let products;
 
@@ -52,6 +35,10 @@ const controller = {
 			products = JSON.parse(productsDataJSON);
 		};
 
+		let id = uuid.v4()
+	
+		
+		
 		let product = {
 			id: id,
 			name: req.body.name,
@@ -65,9 +52,10 @@ const controller = {
 
 		let productsJSON = JSON.stringify(products);
 
-		fs.writeFileSync("src/data/productsDataBase.json",productsJSON)
+	//	fs.writeFileSync("src/data/productsDataBase.json",productsJSON)
 
-		return res.redirect("/")
+	//	return res.redirect("/")
+		res.send(productsJSON)
 	},
 
 	// Update - Form to edit
@@ -80,7 +68,7 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		res.send('updated');
+		res.render('products', {product});
 	},
 
 	// Delete - Delete one product from DB
