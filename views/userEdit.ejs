@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="css/estiloLoginRegistro.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <%- include('./partials/header') -%>
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h3>Registro</h3>
+            <h4>Registra tu usuario en nuestro e-commerce.</h4>
+            <form action="/register" method="POST">
+                <div class="contenedor-inputs">
+                    <input type="text" name="txtNombre" placeholder="Nombre Completo" id="nameRegister" value="<%= userToEdit.name %>">
+                    <input type="text" name="txtUsuario" placeholder="Nombre de Usuario" id="usernameRegister" value="<%= userToEdit.user %>">
+                    <input type="password" name="txtContrasena" placeholder="Contraseña" id="passwordRegister" value="<%= userToEdit.pass %>">
+                </div>
+                <input type="submit" class="btn-submit" value="Editar">
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <%- include('./partials/footer') -%>
+
+</body>
+</html>
