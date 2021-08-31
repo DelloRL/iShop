@@ -23,6 +23,9 @@ router.post('/', validateRegister, userController.store);
 router.post('/register', logDBMiddleware, userController.store);
 
 /*Detalle de un usuario*/
-router.get('/:id', controller.show)
+router.get('/:id', userController.show)
+
+/*Editar un usuario*/
+router.get('/edit/:idUser', userController.edit)
 
 module.exports = router;

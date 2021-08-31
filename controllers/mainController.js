@@ -23,6 +23,12 @@ const controller = {
     auriculares: (req, res) => {
         return res.render('storeAuriculares');
     },
+    products: (req, res) => {
+        return res.render('products')
+    },
+    editarUsuarios: (req, res) => {
+        return res.render('userEdit')
+    }
 }
 
 module.exports = controller;
