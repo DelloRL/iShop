@@ -5,12 +5,6 @@ const controller = {
     login: (req, res) => {
         return res.render('LoginYRegistro');
     },
-    upload: (req, res) => {
-        return res.render('productAdd');
-    },
-    detalle: (req, res) => {
-        return res.render('detalle');
-    },
     carrito: (req, res) => {
         return res.render('Carrito');
     },
