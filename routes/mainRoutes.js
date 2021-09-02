@@ -9,10 +9,6 @@ router.get('/home', mainController.home);
 
 router.get('/login', mainController.login);
 
-router.get('/upload', mainController.upload);
-
-router.get('/detalle', mainController.detalle);
-
 router.get('/carrito', mainController.carrito);
 
 router.get('/userEdit', mainController.carrito);
