@@ -1,15 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const uuid = require("uuid");
-const productsFilePath = path.join(__dirname, '../data/products.json')
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const controller = {
 	// Show all products
 	products: (req, res) => {
-        res.render('products', {products})
+        res.render('products', { products })
     },
 	// Detail from one product
     detail: (req, res) => {
@@ -35,7 +34,7 @@ const controller = {
 			products = JSON.parse(productsDataJSON);
 		};
 
-		let id = uuid.v4()
+		let id = products.length + 1;
 	
 		
 		
@@ -53,9 +52,8 @@ const controller = {
 		let productsJSON = JSON.stringify(products);
 
 	fs.appendFileSync("data/products.json",productsJSON)
-
-	//	return res.redirect("/")
 		res.send(productsJSON)
+		return res.redirect("/")
 	},
 
 	// Update - Form to edit
@@ -80,3 +78,5 @@ const controller = {
 };
 
 module.exports = controller
+
+console.log(products)

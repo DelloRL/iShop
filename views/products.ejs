@@ -20,27 +20,22 @@
         <p class="bold">Bienvenidos</p><p class="banner-text"> a iShop STORE</p>
     </div>
     <p class="ubication"><a href="/home">Inicio</a> Productos / iPhone</p>
-    <!-- <div class="title-subtitle">
-        <h1>iPhone 12</h1>
-    </div> -->
-
-
-    <!-- SECTION PRODUCTS -->
+    
+    <!-- SECTION PRODUCTS IPHONE -->
     <div class="section-products">
         <div class="title-subtitle">
             <h1>iPhone 12</h1>
         </div>
         <div class="container-products">
-
+            <% products.forEach(product => { %>
+                <% if(product.category == 'IPhones') {%>
             <div class="product"> 
                 <div class="img-contenedor">
-                <img src="images/iphone12miniazul.png" alt="">
+                <img src="images/<%= product.imagen %>" alt="">
                 </div>
-                <h1>iPhone 12 mini</h1>
+                <h1><%= product.nombre %></h1>
                 <p class="description">
-                    El chip A14 Bionic es el más rápido en un smartphone.
-                    Y supera los lí­mites de todo lo que era posible hacer hasta ahora.
-                    Como procesar billones de operaciones en el Neural Engine.
+                    <%= product.descripcion %>
                 </p>
                 <div class="product-center">
                 <a class="button-product" href="/detalle">Ver más
@@ -48,76 +43,14 @@
                 </a>
                 </div>
             </div>
+            <% }  %>
 
-            <div class="product">
-                <div class="img-contenedor">
-                    <img src="images/iPhone12negro.png" alt="">
-                </div>
-                <h1>iPhone 12</h1>
-                <p class="description">
-                    El iPhone 12 tiene el chip A14 Bionic, el más rápido en un smartphone.
-                    Una pantalla OLED de borde a borde.
-                    Un nuevo frente de Ceramic Shield, cuatro veces más resistente a las caídas.
-                </p>
-                <div class="product-center">
-                    <a class="button-product" href="/detalle">Ver más
-                        <i class="fas fa-arrow-right iconRight"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img-contenedor">
-                    <img src="images/iPhone12progrfito.png" alt="">
-                </div>
-                <h1>iPhone 12 PRO</h1>
-                <p class="description">
-                    El Chip A14 Bionic, el más rápido en un smartphone.
-                    Y un sistema de cámaras Pro para tomar fotos increíbles con poca luz,
-                    que alcanza su máxima expresión en el iPhone 12 Pro Max.
-                </p>
-                <div class="product-center">
-                    <a class="button-product" href="/detalle">Ver más
-                        <i class="fas fa-arrow-right iconRight"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img-contenedor">
-                    <img src="images/XrBlack.png" alt="">
-                </div>
-                <h1>iPhone XR</h1>
-                <p class="description">
-                    El iPhone XR tiene el LCD más avanzado en un smartphone:
-                    una pantalla Liquid Retina de 6,1 pulgadas con la mayor precisión de color de la industria y un innovador diseño retroiluminado
-                    que lleva esta increíble pantalla hasta las esquinas
-                </p>
-                <div class="product-center">
-                    <a class="button-product" href="/detalle">Ver más
-                        <i class="fas fa-arrow-right iconRight"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product">
-                <div class="img-contenedor">
-                    <img src="images/iPhone12ProMaxFam.png" alt="">
-                </div>
-                <h1>iPhone 12 ProMax</h1>
-                <p class="description">
-                    Un salto al siguiente nivel. El chip A14 Bionic es muy superior a cualquier otro chip de smartphone.
-                    El sistema de cámaras Pro te permite tomar fotos espectaculares con poca luz, y el iPhone 12 Pro Max lleva tu talento fotográfico mucho más allá. 
-                </p>
-                <div class="product-center">
-                    <a class="button-product" href="/detalle">Ver más
-                        <i class="fas fa-arrow-right iconRight"></i>
-                    </a>
-                </div>
-            </div>
-
+            <% }); %>
         </div>
     </div>
 
+
+    
     
 
 

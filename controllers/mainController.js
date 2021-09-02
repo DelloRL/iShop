@@ -14,18 +14,6 @@ const controller = {
     carrito: (req, res) => {
         return res.render('Carrito');
     },
-    iphones: (req, res) => {
-        return res.render('storeiPhone');
-    },
-    fundas: (req, res) => {
-        return res.render('storeFundas');
-    },
-    auriculares: (req, res) => {
-        return res.render('storeAuriculares');
-    },
-    products: (req, res) => {
-        return res.render('products')
-    },
     editarUsuarios: (req, res) => {
         return res.render('userEdit')
     }
