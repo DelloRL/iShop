@@ -26,24 +26,16 @@ const controller = {
 	store: (req, res) => {
 		let productsDataJSON = fs.readFileSync("data/products.json",{encoding: "utf-8"})
 
-		let products;
+		let products = JSON.parse(productsDataJSON);
 
-		if (productsDataJSON == ""){
-			products = [];
-		} else {
-			products = JSON.parse(productsDataJSON);
-		};
 
 		let id = products.length + 1;
 	
-		
-		
 		let product = {
 			id: id,
 			name: req.body.name,
 			description:req.body.description,
 			price:req.body.price,
-			discount:req.body.discount,
 			category: req.body.category,
 			image:req.file.filename
 		};
@@ -51,8 +43,7 @@ const controller = {
 
 		let productsJSON = JSON.stringify(products);
 
-	fs.appendFileSync("data/products.json",productsJSON)
-		res.send(productsJSON)
+		fs.writeFileSync('data/products.json', productsJSON);
 		return res.redirect("/")
 	},
 
