@@ -5,12 +5,20 @@
     padding: 0;
 }
 
-
+.text-center {
+    text-align: center;
+}
 .current {
     padding: 15px;
     text-align: center;
 }
-
+.current-edit {
+    text-align: center;
+    padding: 30px 30px 15px;
+}
+.color {
+    color: #0000ff75;
+}
 .text-img-current {
     text-align: center;
     font-size: 18px;

@@ -56,10 +56,47 @@ const controller = {
         });
 	},
 	// Update - Method to update
-	update: (req, res) => {
-		res.render('products', {product});
+	pruebaPut: (req, res) => {
+		res.send("put funciona")
 	},
+	editSave: (req, res) => {
+		let productsJSON = fs.readFileSync('data/products.json', { encoding: 'utf-8' });
 
+        let products = JSON.parse(productsJSON);
+
+        let updatedProducts = [];
+        products.forEach(product => {
+
+            if (product.id == req.params.id) {
+
+                let updatedProduct = {
+                    name: req.body.name,
+					description:req.body.description,
+					price:req.body.price,
+					category: req.body.category,
+                };
+                if (req.files == '') {
+                    updatedProduct["image"] = product.image;
+                } else {
+                    updatedProduct["image"] = req.file.filename;
+                };
+
+                updatedProducts.push(updatedProduct);
+
+            } else {
+                updatedProducts.push(product);
+            };
+
+
+
+        });
+
+        let updatedProductsJSON = JSON.stringify(updatedProducts);
+
+        fs.writeFileSync('data/products.json', updatedProductsJSON);
+    
+		return res.redirect('../detail/' + req.params.id);
+    },
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		// Do the magic
@@ -69,5 +106,3 @@ const controller = {
 };
 
 module.exports = controller
-
-console.log(products)
