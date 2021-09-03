@@ -30,15 +30,15 @@
         <div class="container-section-all">
 
             <div class="col-one">
-                <img src="images/products/<%= product.image %>" class="iphone-img-one">
+                <img src="../images/products/<%= product.image %>" class="iphone-img-one">
             </div>
 
             <div class="col-two">
-                <h2> <%= product.name %> </h2>
+                <h2 class="description"> <%= product.name %> </h2>
                 <h2>Descripción</h3>
                 <p> <%= product.description %> </p>
                 <h2>Precio</h2>
-                <p class="text-center"><%= product.price%></p>
+                <p id="price">$<%= product.price%></p>
                 <br>
                 <div class="text-center">
                 <a href="#" class="button">Agregar al carrito</a>
@@ -47,7 +47,9 @@
 
         </div>
     </div>
-
+    <br><br><br>
+    <br><br><br>
+    <br><br>
     <!-- Footer -->
     <%- include('./partials/footer') -%>
 </body>
