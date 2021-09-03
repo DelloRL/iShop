@@ -38,7 +38,7 @@
                     <%= product.description %>
                 </p>
                 <div class="product-center">
-                <a class="button-product" href="/detalle">Ver más
+                <a class="button-product" href="/products/<%= product.id %>">Ver más
                     <i class="fas fa-arrow-right iconRight"></i>
                 </a>
                 </div>
@@ -66,7 +66,7 @@
                 <% if(product.category == 'Fundas y protección' ) {%>
             <div class="product"> 
                 <div class="img-contenedor">
-                <img src="images/products/<%= product.image %> " alt="">
+                <img src="images/products/<%= product.image %>" alt="">
                 </div>
                 <h1> <%= product.name %>  </h1>
                 <p class="description">        
@@ -74,7 +74,7 @@
                 
                 </p>
                 <div class="product-center">
-                <a class="button-product" href="/detalle">Ver más
+                <a class="button-product" href="/products/<%= product.id %>">Ver más
                     <i class="fas fa-arrow-right iconRight"></i>
                 </a>
                 </div>
@@ -105,7 +105,7 @@
                     <%= product.description %> 
                 </p>
                 <div class="product-center">
-                    <a class="button-product" href="/detalle">Ver más
+                    <a class="button-product" href="/products/<%= product.id %>">Ver más
                         <i class="fas fa-arrow-right iconRight"></i>
                     </a>
                 </div>
