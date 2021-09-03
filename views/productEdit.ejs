@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/productAdd.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
+    <title>Sube tu producto</title>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('./partials/header') -%>
+
+
+    <!-- Main -->
+    <form action="/products/create" method="POST" class="container" enctype="multipart/form-data">
+        <p>
+            <input type="text" name="name" value="<%= product.name %>" required placeholder="Nombre del Producto">
+        </p>
+
+        <p>
+            <input type="text" name="price" value="<%= product.price %>"required placeholder="Precio del Producto">
+        </p>
+
+        <p>
+            <select name="category" id="category" class="form-input">
+                <option value="">
+                    Elegí una categoría
+                </option>
+                <option value="IPhones" 
+                <% if(product.category == 'IPhones') {%>
+                selected
+                <% } %>
+                >iPhones</option>
+                <option value="Auriculares" 
+                <% if(product.category == "Auriculares") {%>
+                selected
+                <% } %>
+                >Airpods</option>
+                <option value="Fundas y protección" 
+                <% if(product.category == "Fundas y protección") {%>
+                selected
+                <% } %>
+                >Fundas</option>
+            </select>
+        </p>
+
+        <p>
+            <textarea rows="4" cols="50" placeholder="Descripción del producto"><%= product.description %></textarea>
+        </p>
+        
+        <h4>Reemplaza imagén del producto:</h4>
+        <input type="file" id="img" name="img">
+        <br>
+        <button class="button-submit" type="submit"> Publicar Producto </button>
+    </form>
+    <div class="current">
+        <p class="text-img-current">Imagén actual</p>
+        <img src="/images/products/<%= product.image %>" class="img-current">
+    </div>
+    
+    <!-- Footer -->
+    <%- include('./partials/footer') -%>
+</body>
+</html>

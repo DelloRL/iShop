@@ -51,7 +51,7 @@ const controller = {
     edit: (req, res) => {
         products.forEach(product => {
             if (product.id == req.params.id) {
-                res.render('product-edit-form', { product: product });
+                res.render('productEdit', { product: product });
             }
         });
 	},
