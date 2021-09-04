@@ -17,13 +17,12 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 app.use(express.static('./public'));
-app.use(logMiddleware);
-
-app.use('/', mainRoutes);
-app.use("/products", products);
 
 app.use(methodOverride("_method"));
 app.use(session({secret: 'Secreto' /*Acá se identifica el sitio web y la información que se guarde del usuario*/}));
+
+app.use('/', mainRoutes);
+app.use("/products", products);
 
 //servidor
 app.listen(3080,() => {

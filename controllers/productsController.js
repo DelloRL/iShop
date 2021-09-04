@@ -1,19 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+function getProduts(){
+	const productsFilePath = path.join(__dirname, '../data/products.json');
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	return products;
+};
 
 
 const controller = {
 	// Show all products
 	products: (req, res) => {
+		const products = getProduts();
         res.render('products', { products })
     },
 	// Detail from one product
     detail: (req, res) => {
         let productId = req.params.id - 1;
-
+		const products = getProduts();
         res.render('detail', { product: products[productId] })
     },
 
@@ -24,10 +28,7 @@ const controller = {
 
 	// store
 	store: (req, res) => {
-		let productsDataJSON = fs.readFileSync("data/products.json",{encoding: "utf-8"})
-
-		let products = JSON.parse(productsDataJSON);
-
+		const products = getProduts();
 
 		let id = products.length + 1;
 	
@@ -49,6 +50,7 @@ const controller = {
 
 	// Update - Form to edit
     edit: (req, res) => {
+		const products = getProduts();
         products.forEach(product => {
             if (product.id == req.params.id) {
                 res.render('productEdit', { product: product });
@@ -60,9 +62,7 @@ const controller = {
 		res.send("put funciona")
 	},
 	editSave: (req, res) => {
-		let productsJSON = fs.readFileSync('data/products.json', { encoding: 'utf-8' });
-
-        let products = JSON.parse(productsJSON);
+		const products = getProduts();
 
         let updatedProducts = [];
         products.forEach(product => {
@@ -92,14 +92,24 @@ const controller = {
         });
 
         let updatedProductsJSON = JSON.stringify(updatedProducts);
-
         fs.writeFileSync('data/products.json', updatedProductsJSON);
     
 		return res.redirect('../detail/' + req.params.id);
     },
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		// Do the magic
+		const products = getProduts();
+
+		let idProducto = products.findIndex(product => {
+			return product.id == req.params.id;
+		});
+
+		products.splice(idProducto, 1);
+
+		let updatedProductsJSON = JSON.stringify(products);
+        fs.writeFileSync('data/products.json', updatedProductsJSON);
+		
+		return res.redirect("/products");
 	},
 
 

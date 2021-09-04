@@ -50,10 +50,12 @@
 .edit {
   background-color: blue;
   border: 10px solid blue;
+  cursor:pointer;
 }
 .delete {
   background-color: red;
   border: 10px solid red;
+  cursor:pointer;
 }
 .col-one {
   max-width: 300px;
