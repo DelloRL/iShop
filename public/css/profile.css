@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+/*body*/
+
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Section 1*/
+
+.all{
+    border: 1px violet solid;
+    height: 510px;
+    width: 360px;
+}
+
+.section1{
+    display: flex;
+}
+
+.nameUser{
+    align-self: flex-end;
+}
+
+
+.userImage{
+    border-radius: 50%;
+    height: 150px;  
+    width: 150px;
+    margin: 5px;
+    border: black 2px solid;
+}
+
+/*Section 2*/
+
+
+
+.email{
+    margin-left: 5px;
+}
+
+.role{
+    margin-left: 5px;
+}
+
+/*Section 3*/
+
+.section3{
+    display: flex;
+}
+
+
+.editProfile{
+    
+}
+

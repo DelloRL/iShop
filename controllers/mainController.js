@@ -8,8 +8,11 @@ const controller = {
     carrito: (req, res) => {
         return res.render('Carrito');
     },
+    profile:(req,res)=>{
+        return res.render('profile');
+    },
     editarUsuarios: (req, res) => {
-        return res.render('userEdit')
+        return res.render('userEdit');
     }
 }
 
