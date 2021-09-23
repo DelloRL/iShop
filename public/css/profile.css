@@ -11,13 +11,7 @@ body {
     background-color: rgb(53, 53, 53);
 }
 
-
 /*Section 1*/
-
-.all{
-    height: 510px;
-    width: 360px;
-}
 
 .section1{
     display: flex;
@@ -40,9 +34,11 @@ body {
 /*Section 2*/
 
 .section2{
+    
     background-color: rgb(53, 53, 53);
     border: 1px solid rgb(53, 53, 53);
     margin: 5px;
+    
 }
 
 .email{
@@ -60,10 +56,14 @@ body {
 
 /*Section 3*/
 
-
+.section3{
+    text-align: center;
+    margin-top: 10px;
+}
 
 .editProfile{
     padding: 10px 25px;
+    margin: 20px;
     border-radius: 10px;
     font-size: 15px;
     background : rgb(82, 81, 81);
@@ -78,3 +78,51 @@ body {
     color: black;
 }
 
+
+
+/*MediaQ*/
+/* A partir de 768px, resolución tablet */ 
+
+@media (min-width: 768px) {
+    /*Section 1*/
+
+    .nameUser{
+    font-size: 25px;
+}
+    .userImage{
+    height: 200px;  
+    width: 200px;
+}
+
+/*Section 2*/
+
+    .email{
+    font-size: 23px;
+}
+    .role{
+    font-size: 23px;
+}
+
+/*Section 3*/
+
+    .editProfile{
+    font-size: 20px;
+}
+
+}
+
+
+/* A partir de 1200px, resolución desktop */
+@media (min-width: 1200px){
+/*Section 1*/
+
+    .nameUser{
+    font-size: 30px;
+}
+
+/*section 2*/
+    .section2{
+        width: 50%;
+    }
+
+}
