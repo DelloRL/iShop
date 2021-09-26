@@ -5,7 +5,8 @@
         "nombre":"jorge borges",
         "email": "",
         "usuario":"",
-        "contrasena":""
+        "contrasena":"",
+        "rol":"Admin"
     }
 
 ]
