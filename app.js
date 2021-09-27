@@ -10,7 +10,7 @@ let session = require('express-session');
 app.use(express.urlencoded({extende: false}));
 app.use(express.json());
 
-
+const adminRoutes = require('./routes/adminRoutes.js');
 
 // view engine setup //
 app.set('view engine', 'ejs');
@@ -23,6 +23,8 @@ app.use(session({secret: 'Secreto' /*Acá se identifica el sitio web y la inform
 
 app.use('/', mainRoutes);
 app.use("/products", products);
+app.use('/', adminRoutes);
+
 
 //servidor
 app.listen(3080,() => {

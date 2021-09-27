@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link rel="stylesheet" href="/css/administrar.css">   
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <%- include('../partials/header') -%>
+    <br><br>
+    <h1>Bienvenido, "ACA VA EL NOMBRE"</h1>
+    <br>
+      <div id="main-container">
+
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th><th>Producto</th><th>Ver</th><th>Editar</th><th>Borrar</th>
+				</tr>
+			</thead>
+
+			<% products.forEach(product => { %>
+                <tr>
+                  <td><%= product.id%> </td>
+                  <td><%= product.name%> </td>
+                  <td><a href="/administrar/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                  <td><a href="/administrar/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                  <td><a href="/administrar/delete/<%= product.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                </tr>
+                <% }); %>
+		</table>
+	</div>
+
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') -%>
+
+</body>
+</html>
+
