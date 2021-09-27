@@ -49,7 +49,42 @@ const controller = {
 	},
 
 	// Update - Form to edit
-    edit: (req, res) => {
+	edit: (req, res) => {
+			const products = getProduts();
+			products.forEach(product => {
+				if (product.id == req.params.id) {
+					res.render('productEdit', { product: product });
+				}
+			});
+	},
+
+	update:(req,res)=>{
+		const products = getProduts()
+
+		products.forEach(product =>{
+			
+		})
+
+        req.body.id = req.params.id;
+
+        const producstUpdate = products.map(product=>{
+            if(product.id == req.body.id){
+                return product = req.body;
+            }
+            return product;
+        })
+
+
+
+
+
+		let updatedProductsJSON = JSON.stringify(producstUpdate);
+        fs.writeFileSync('data/products.json', updatedProductsJSON);
+
+        return res.redirect("../products/" + req.params.id);
+	},
+
+    /* edit: (req, res) => {
 		const products = getProduts();
         products.forEach(product => {
             if (product.id == req.params.id) {
@@ -57,11 +92,13 @@ const controller = {
             }
         });
 	},
-	// Update - Method to update
+*/
+
+/*	// Update - Method to update
 	pruebaPut: (req, res) => {
 		res.send("put funciona")
 	},
-	editSave: (req, res) => {
+	editSave : (req, res) => {
 		const products = getProduts();
 
         let updatedProducts = [];
@@ -95,7 +132,11 @@ const controller = {
         fs.writeFileSync('data/products.json', updatedProductsJSON);
     
 		return res.redirect('../detail/' + req.params.id);
-    },
+    },*/
+
+
+
+
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		const products = getProduts();
