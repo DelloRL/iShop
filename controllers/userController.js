@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 {
     search: function search (req, res){
         let loQueBuscaElUsuario = req.query.search;
@@ -26,7 +29,7 @@
         }
 
         //GUARDA
-        res.redirect("/users/list")
+        res.redirect("amongas")
     }
 
     edit: function edit(req, res) {

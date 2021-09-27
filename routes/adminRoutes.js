@@ -19,7 +19,7 @@ var storage = multer.diskStorage({
    
   const upload = multer({ storage })
 
-router.get('/administrar', controllersAdmin.index);
+router.get('/admin', controllersAdmin.index);
 
 
 module.exports = router;
