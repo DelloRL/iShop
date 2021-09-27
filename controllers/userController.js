@@ -1,5 +1,5 @@
 {
-    search: function(req, res){
+    search: function search (req, res){
         let loQueBuscaElUsuario = req.query.search;
 
         let users = [
@@ -16,8 +16,9 @@
                 usersResults.push(users[i]);
             }
         }
-    },
-    create: function(req, res) {
+    }
+
+    create: function create (req, res) {
         let usuario = {
             nombre: req.body.txtNombre,
             usuario: req.body.txtUsuario,
@@ -26,10 +27,9 @@
 
         //GUARDA
         res.redirect("/users/list")
-    },
+    }
 
-
-    edit: function(req, res) {
+    edit: function edit(req, res) {
         let idUser = req.params.idUser;
 
         let users = [
