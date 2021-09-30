@@ -10,14 +10,14 @@ const controllersAdmin = require(path.resolve(__dirname,'../controllers/adminCon
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/images/motos'));
+      cb(null, path.resolve(__dirname, '../../public/images/products'));
     },
     filename: function (req, file, cb) {
       cb(null, 'moto-'+Date.now()+path.extname(file.originalname))
     }
-  })
+})
    
-  const upload = multer({ storage })
+const upload = multer({ storage })
 
 router.get('/admin', controllersAdmin.index);
 

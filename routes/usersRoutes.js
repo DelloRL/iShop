@@ -14,18 +14,18 @@ const validateRegister = [
 
 
 /* Todos los usuarios */
-router.get('/', controller.index);
+// router.get('/', userController.index);
 
 /* Formulario de creación */
 router.get('/register', userController.register);
 
-router.post('/', validateRegister, userController.store);
-router.post('/register', logDBMiddleware, userController.store);
+// router.post('/', validateRegister, userController.store);
+router.post('/register', userController.processRegister);
 
 /*Detalle de un usuario*/
-router.get('/:id', userController.show)
+// router.get('/:id', userController.show)
 
 /*Editar un usuario*/
-router.get('/edit/:idUser', userController.edit)
+// router.get('/edit/:idUser', userController.edit)
 
 module.exports = router;

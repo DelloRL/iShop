@@ -1,54 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 
-{
-    search: function search (req, res){
-        let loQueBuscaElUsuario = req.query.search;
-
-        let users = [
-            {id: 1, name: "Fran"},
-            {id: 2, name: "Mauri"},
-            {id: 3, name: "Lucas"},
-            {id: 4, name: "Pane"},
-            {id: 5, name: "Ro"},
-        ];
-
-        let usersResults = [];
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].name.includes(loQueBuscaElUsuario)){
-                usersResults.push(users[i]);
-            }
-        }
+module.exports = {
+    register: (req,res) => {
+        return res.render('users/login_register');
+    },
+    processRegister: (req,res) => {
+        return res.send("Viaje por post")
+    },
+    profile: (req,res) => {
+        return res.render('users/profile');
+    },
+    editarUsuarios: (req, res) => {
+        return res.render('userEdit');
     }
-
-    create: function create (req, res) {
-        let usuario = {
-            nombre: req.body.txtNombre,
-            usuario: req.body.txtUsuario,
-            contrasena: req.body.txtContrasena,
-        }
-
-        //GUARDA
-        res.redirect("amongas")
-    }
-
-    edit: function edit(req, res) {
-        let idUser = req.params.idUser;
-
-        let users = [
-            {id: 1, name: "Fran"},
-            {id: 2, name: "Mauri"},
-            {id: 3, name: "Lucas"},
-            {id: 4, name: "Pane"},
-            {id: 5, name: "Ro"},
-        ];
-
-        let userToEdit = users[idUser];
-
-        res.render("userEdit", {userToEdit: userToEdit});
-    }
-};
+}
 
 
 
-module.exports = userController;
+
+
+

@@ -28,24 +28,28 @@ const controller = {
 
 	// store
 	store: (req, res) => {
-		const products = getProduts();
+		if(req.file) {
+			const products = getProduts();
 
-		let id = products.length + 1;
-	
-		let product = {
-			id: id,
-			name: req.body.name,
-			description:req.body.description,
-			price:req.body.price,
-			category: req.body.category,
-			image:req.file.filename
-		};
-		products.push(product);
+			let id = products.length + 1;
+		
+			let product = {
+				id: id,
+				name: req.body.name,
+				description:req.body.description,
+				price:req.body.price,
+				category: req.body.category,
+				image:req.file.filename
+			};
+			products.push(product);
 
-		let productsJSON = JSON.stringify(products);
+			let productsJSON = JSON.stringify(products);
 
-		fs.writeFileSync('data/products.json', productsJSON);
-		return res.redirect("/")
+			fs.writeFileSync('data/products.json', productsJSON);
+			return res.redirect("/")
+		} else {
+			res.render("products/productAdd");
+		}
 	},
 
 	// Update - Form to edit
