@@ -6,7 +6,7 @@ const path = require('path')
 let session = require('express-session');
 const bcrypt = require('bcrypt')
 
-app.use(express.urlencoded({extende: false}));
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 const adminRoutes = require('./routes/adminRoutes.js');
@@ -21,7 +21,13 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.static('./public'));
 
 app.use(methodOverride("_method"));
-app.use(session({secret: 'Secreto' /*Acá se identifica el sitio web y la información que se guarde del usuario*/}));
+
+// Objeto literal para acceder a todo lo que tenga en el req
+app.use(session({
+    secret: 'Es un secreto, y tu mirada y la mia un resentimiento',
+    resave: false,
+    saveUninitialized: false,
+}))
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);

@@ -25,12 +25,12 @@
     </header>
 
     <!--Main-->
-        <form id="form1" action="" method="post">
+        <form id="form1" action="/login" method="post">
             <section class="form-login">
                 <h5>Inicio de Sesión</h5>
                 <input type="text" name="email" value="" placeholder="Email">
                 <input type="password" name="password" value="" placeholder="Contraseña">
-                <input type="button" value="Ingresar">
+                <input type="submit" value="Ingresar">
                 <% if (locals.errors) { %>
                     <p class="error-1">Registro inválido, por favor vuelva a intentar</p>
                 <% } %>

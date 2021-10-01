@@ -38,6 +38,7 @@ body {
     color: darkred;
     text-align: center;
     font-weight: bold;
+    padding: 10px;
 }
 
 /*CSS LOGIN/REGISTRO*/
@@ -54,9 +55,8 @@ body {
 }
 
 .form-login h5 {
-    margin: 0;
+
     text-align: center;
-    margin-bottom: 30px;
     border-bottom: 1px solid;
     font-size: 20px;
 }

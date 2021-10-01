@@ -51,5 +51,8 @@ router.get('/login', userController.login)
 
 router.post('/login', userController.processLogin)
 
+// Perfil
+
+router.get('/profile', userController.profile)
 
 module.exports = router;

@@ -4,11 +4,6 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
 const User = require('../models/user')
 
-// function getUsers(){
-// 	const usersFilePath = path.join(__dirname, '../data/users.json');
-// 	const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-// 	return users;
-// };
 
 module.exports = {
     register: (req,res) => {
@@ -46,12 +41,6 @@ module.exports = {
         let userCreated = User.create(userToCreate)
         res.redirect("/login")
     },
-    profile: (req,res) => {
-        return res.render('users/profile');
-    },
-    editarUsuarios: (req, res) => {
-        return res.render('userEdit');
-    },
     login: (req,res) => {
         return res.render('users/login')
     },
@@ -61,7 +50,9 @@ module.exports = {
         if(userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (passwordHash) {
-                return res.send('Podes ingresar perrito')
+                delete userToLogin.password
+                req.session.userLogged = userToLogin
+                return res.redirect('/profile')
             }
         }
 
@@ -72,6 +63,14 @@ module.exports = {
                 }
             }
         })
-    }
+    },
+    profile: (req,res) => {
+        console.log("Estas en profile")
+        console.log(req.session)
+        return res.render('users/profile');
+    },
+    editarUsuarios: (req, res) => {
+        return res.render('userEdit');
+    },
 }
 
