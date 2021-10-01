@@ -1,0 +1,16 @@
+[
+ {
+  "id": 1,
+  "name": "jorge borges",
+  "email": "jorgito@gmail.com",
+  "contrasena": "123",
+  "role": "9"
+ },
+ {
+  "id": 2,
+  "name": "Airpod",
+  "email": "caggianomauricio@gmail.com",
+  "password": "$2a$10$YKELVPRyS94gwgK/iHMNg.26LU0zN6t9oBmOSBkNAzkMWDOjo0ney",
+  "image": "avatar-1633043062560.png"
+ }
+]

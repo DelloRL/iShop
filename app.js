@@ -4,6 +4,7 @@ const methodOverride = require('method-override');
 const app = express();
 const path = require('path')
 let session = require('express-session');
+const bcrypt = require('bcrypt')
 
 app.use(express.urlencoded({extende: false}));
 app.use(express.json());
@@ -32,3 +33,4 @@ app.use('/', usersRoutes)
 app.listen(3080,() => {
     console.log("Servidor corriendo en el puerto 3080")
 });
+

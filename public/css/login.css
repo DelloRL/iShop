@@ -25,16 +25,29 @@ body {
     margin-top: 25px;
     width: 250px;
 }
-
+.title {
+    font-size: 26px!important;
+    font-weight: 300!important;
+    padding-top: 10px;
+}
 .logoWrapper {
     margin: 0 auto;
     text-align: center;
+}
+.error {
+    color: red;
+}
+.error-1 {
+    color: darkred;
+}
+.text-error {
+    padding-bottom: 10px;
+    color: red;
 }
 
 /*CSS LOGIN/REGISTRO*/
 .form-login {
     width: 400px;
-    height: 21pc;
     border-radius: 15px;
     background: #777777;
     margin: auto;
@@ -88,7 +101,7 @@ input[type="button"]:hover{
 input[type="text"] {
     width: 100%;
     border-bottom: 3px solid #4796E6;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 5px;
     height: 50px;
     line-height: 52px;
@@ -112,6 +125,32 @@ input[type="password"] {
     font-size: 18px;
     font-weight: italic;
     text-align: left;
+    color: white;
+}
+
+input[type="email"] {
+    width: 100%;
+    border-bottom: 3px solid #4796E6;
+    margin-bottom: 20px;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 52px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 18px;
+    font-weight: italic;
+    text-align: left;
+    color: white;
+}
+input[type="file"] {
+    width: 100%;
+    border-bottom: 3px solid #4796E6;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 18px;
+    text-align: center;
     color: white;
 }
 

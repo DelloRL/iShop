@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>¡Inicia Sesión en iShop!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+
+
+    <body>
+
+    <header class="main-header">
+        <div class="logoWrapper">
+            <div class="logoContainer">
+                <a href="/home"><img src="/images/logo_white_large.png" alt="LogoApple" class="logo"></a>
+            </div>
+        </div>
+    </header>
+
+    <!--Main-->
+        <form id="form1" action="" method="post">
+            <section class="form-login">
+                <h5>Inicio de Sesión</h5>
+                <input type="text" name="email" value="" placeholder="Email">
+                <input type="password" name="password" value="" placeholder="Contraseña">
+                <input type="button" value="Ingresar">
+                <% if (locals.errors) { %>
+                    <p class="error-1">Registro inválido, por favor vuelva a intentar</p>
+                <% } %>
+            </section>
+        </form>
+        
+        <script src="/js/popup.js"></script>
+
+    </body>
+</html>

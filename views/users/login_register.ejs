@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-        <link rel="stylesheet" href="css/estiloLoginRegistro.css">
+        <link rel="stylesheet" href="css/login-register.css">
     </head>
 
 
@@ -28,26 +28,52 @@
         <form id="form1" action="" method="post">
             <section class="form-login">
                 <h5>Inicio de Sesión</h5>
-                <input type="text" name="usuario" value="" placeholder="Usuario">
-                <input type="password" name="contrasena" value="" placeholder="Contraseña">
+                <input type="text" name="email" value="" placeholder="Email">
+                <input type="password" name="password" value="" placeholder="Contraseña">
                 <input type="button" value="Ingresar">
+                <% if (locals.errors) { %>
+                    <p class="error-1">Registro inválido, por favor vuelva a intentar</p>
+                <% } %>
                 <input type="button" id="button" value="Registrarse">
             </section>
         </form>
-
+        
+         
         <div class="overlay" id="overlay">
             <div class="popup" id="popup">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <h3>Registro</h3>
                 <h4>Registra tu usuario en nuestro e-commerce.</h4>
-                <form action="/register" method="POST">
+                <form action="/register" method="POST" enctype="multipart/form-data">
                     <div class="contenedor-inputs">
-                        <input type="text" name="txtNombre" placeholder="Nombre Completo" id="nameRegister">
-                        <input type="text" name="txtUsuario" placeholder="Nombre de Usuario" id="usernameRegister">
-                        <input type="password" name="txtEmail" placeholder="Email" id="emailRegister">
-                        <input type="password" name="txtContrasena" placeholder="Contraseña" id="passwordRegister">
+                        <input type="text" name="name" placeholder="Nombre Completo" id="">
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="text-error">
+                                <%= errors.name.msg %>
+                            </div>
+                        <% } %>
+                        <input type="email" name="email" placeholder="Email" id="">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-error">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <input type="password" name="password" placeholder="Contraseña" id="">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-error">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                        <hr>
+                        <h4 class="title">Selecciona tu imagén de perfil:</h4>
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div class="text-error">
+                                <%= errors.avatar.msg %>
+                            </div>
+                        <% } %>
+                        <input type="file" name="avatar" id=""/>
                     </div>
-                    <input type="submit" class="btn-submit" value="Enviar Registro">
+                    <input type="submit" class="btn-submit" value="Enviar registro">
                 </form>
             </div>
         </div>
