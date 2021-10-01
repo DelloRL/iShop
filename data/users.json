@@ -12,5 +12,12 @@
   "email": "caggianomauricio@gmail.com",
   "password": "$2a$10$YKELVPRyS94gwgK/iHMNg.26LU0zN6t9oBmOSBkNAzkMWDOjo0ney",
   "image": "avatar-1633043062560.png"
+ },
+ {
+  "id": 3,
+  "name": "El perrito",
+  "email": "perrito@hotmail.com",
+  "password": "$2a$10$v3a5C0YixCWIEmNqyHC3dOoTMWtBqMnmTcB3RTrov8o015S8j8agG",
+  "avatar": "avatar-1633049722335.png"
  }
 ]

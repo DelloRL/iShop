@@ -36,6 +36,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /* Formulario de registro y login */
+
 router.get('/register', userController.register);
 
 // Validación de registro y envio del formulario
@@ -43,7 +44,12 @@ router.get('/register', userController.register);
 router.post('/register', upload.single('avatar'), validations , userController.processRegister);
 
 // Formulario de login
+
 router.get('/login', userController.login)
+
+// Procesar el login
+
+router.post('/login', userController.processLogin)
 
 
 module.exports = router;

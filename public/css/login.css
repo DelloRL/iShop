@@ -34,15 +34,10 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-.error {
-    color: red;
-}
-.error-1 {
+.error-email {
     color: darkred;
-}
-.text-error {
-    padding-bottom: 10px;
-    color: red;
+    text-align: center;
+    font-weight: bold;
 }
 
 /*CSS LOGIN/REGISTRO*/

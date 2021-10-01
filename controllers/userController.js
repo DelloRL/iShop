@@ -53,7 +53,25 @@ module.exports = {
         return res.render('userEdit');
     },
     login: (req,res) => {
-        return res.render('users/login.ejs')
+        return res.render('users/login')
+    },
+    processLogin: (req,res) => {
+        let userToLogin = User.findByField('email', req.body.email)
+        
+        if(userToLogin) {
+            let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
+            if (passwordHash) {
+                return res.send('Podes ingresar perrito')
+            }
+        }
+
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'Las credenciales son inválidas'
+                }
+            }
+        })
     }
 }
 
