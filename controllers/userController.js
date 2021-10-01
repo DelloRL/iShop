@@ -69,9 +69,10 @@ module.exports = {
             user: req.session.userLogged
         });
     },
-    logout: (req,res) => {
-        req.session.destroy()
-        return res.redirect("/home")
+    logout: (req,res) =>{
+        req.session.destroy();
+        res.cookie('email',null,{maxAge: -1});
+        res.redirect('/home')
     },
     editarUsuarios: (req, res) => {
         return res.render('userEdit');
