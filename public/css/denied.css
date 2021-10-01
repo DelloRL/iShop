@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.denied {
+    text-align: center;
+    margin: 20px;
+    margin: auto;
+}
+
+.denied img {
+    width: 450px;
+    margin: 20px;
+}
+
+.title {
+    font-family: 'Roboto', 'Arial';
+    font-size: 36px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.title-two {
+    font-family: 'Roboto', 'Arial';
+    font-size: 36px;
+    text-align: center;
+    font-weight: 300;
+    margin: 20px;
+}
+
+.title-two a {
+    text-decoration: none;
+    color: firebrick;
+}
+
+.home {
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    margin: 10px;
+}
+
+.home-div {
+    text-align: center;
+}

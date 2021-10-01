@@ -1,13 +1,18 @@
+const fs = require('fs')
+const path = require('path')
+
+let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
 function adminMiddleware(req, res, next){
     if(req.session && req.session.userLogged){
-        let userAdmin = req.session.userLogged
-        if(userAdmin.role === 9){
+        let usuario = req.session.userLogged
+        if(usuario.role === 9){
             return res.redirect("/admin")
         } else {
-            res.send("no sos admin pa")
+            return res.render(path.resolve(__dirname, '../views/accesoDenegado'));   
         }
     }
     next();
 }
 
 module.exports = adminMiddleware
+
