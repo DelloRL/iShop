@@ -6,12 +6,11 @@ function adminMiddleware(req, res, next){
     if(req.session && req.session.userLogged){
         let usuario = req.session.userLogged
         if(usuario.role === 9){
-            return res.redirect("/admin")
+            next();
         } else {
             return res.render(path.resolve(__dirname, '../views/accesoDenegado'));   
         }
     }
-    next();
 }
 
 module.exports = adminMiddleware

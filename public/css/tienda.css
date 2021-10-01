@@ -8,10 +8,11 @@ body {
     font-family: 'Roboto';
     margin: 0;
     padding: 0;
+    background-color: #ebebebfa;
 }
 
 .banner-promo {
-    background: #c71b36;
+    background: #1E7DBA9e;
     padding: 13px 0px;
     display: flex;
     justify-content: center;
@@ -89,6 +90,8 @@ body {
 .product p {
     color: #17a2b8;
     font-weight: bold;
+    text-align: justify;
+    line-height: 1.30;
 }
 
 .product img {

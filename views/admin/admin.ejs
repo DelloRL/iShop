@@ -17,7 +17,7 @@
     <!-- Header -->
     <%- include('../partials/header') -%>
     <br><br>
-    <h1>Bienvenido, "ACA VA EL NOMBRE"</h1>
+    <h1>Bienvenido <span class="userNameADM"><%= locals.userLogged.name %></span></h1>
     <br>
       <div id="main-container">
 
@@ -39,7 +39,7 @@
                 <% }); %>
 		</table>
 	</div>
-
+    <br><br>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
     <!-- Footer -->
