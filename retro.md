@@ -19,5 +19,6 @@ ANALISIS Del cuarto Sprint.
 El cuarto sprint no fue exactamente como lo esperabamos,pocos commits,sin tener todo muy claro pero no dejamos de ir charlando las cosas que ibamos modificando o pensando,nos decidimos a unificar la tienda,planteamos ya comenzar a hacerla dinamica al igual que el detalle de productos,van a quedar cosas para seguir acommondando en el proximo sprint pero dentro de todo llegamos bastante bien. 
 
 ANALISIS Del Quinto Sprint.
-Siendo sinceros,nos relajamos en cuanto al tiempo,de nuevo estuvo flojo el compromiso con los commits,sin embargo tenemos las cosas bien encaminadas y vamos llegar muy bien a la fecha de entrega. 
+Siendo sinceros,nos relajamos en cuanto al tiempo,de nuevo estuvo flojo el compromiso con los commits,sin embargo logramos todo o casi todo lo propuesto en el quinto sprint gracias a que pusimos manos a la obra.
+Reflexionamos sobre como llegamos siempre a la entrega,pero no esta bueno el echo de que la mayor parte se haga al final,queremos cambiar esto ultimo y alcanzar lo propuesto de una manera "comoda" por asi decirlo,sin correr aultimo momento,paso a paso desde el principio.
 
