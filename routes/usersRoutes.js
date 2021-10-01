@@ -2,8 +2,12 @@ const express = require('express');
 const router = express.Router();
 const multer = require("multer");
 const { body } = require('express-validator');
-const userController = require('../controllers/userController');
+
 const path = require("path")
+
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
+const userController = require('../controllers/userController');
 
 /* Validaciones */
 const validations = [
@@ -37,7 +41,7 @@ const upload = multer({ storage });
 
 /* Formulario de registro y login */
 
-router.get('/register', userController.register);
+router.get('/register', guestMiddleware, userController.register);
 
 // Validación de registro y envio del formulario
 
@@ -45,7 +49,7 @@ router.post('/register', upload.single('avatar'), validations , userController.p
 
 // Formulario de login
 
-router.get('/login', userController.login)
+router.get('/login', guestMiddleware, userController.login)
 
 // Procesar el login
 
@@ -53,6 +57,9 @@ router.post('/login', userController.processLogin)
 
 // Perfil
 
-router.get('/profile', userController.profile)
+router.get('/profile', authMiddleware, userController.profile)
 
+// Logout
+
+router.get('/logout', userController.logout)
 module.exports = router;

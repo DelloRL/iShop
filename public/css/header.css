@@ -88,7 +88,11 @@ nav li ul li {
 .submenu a {
     font-size: 16px!important;
 }
-
+.userName {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 /* A partir de 768px, resolución tablet */
 
 @media (min-width: 768px) {

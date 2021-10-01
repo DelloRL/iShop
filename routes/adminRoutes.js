@@ -4,7 +4,7 @@ const path = require('path');
 const multer = require('multer');
 
 const controllersAdmin = require(path.resolve(__dirname,'../controllers/adminController.js'));
-
+const adminMiddleware = require('../middlewares/adminMiddleware')
 // const acceso = require(path.resolve(__dirname,'../middlewares/acceso'));
 
 
@@ -19,7 +19,7 @@ var storage = multer.diskStorage({
    
 const upload = multer({ storage })
 
-router.get('/admin', controllersAdmin.index);
+router.get('/admin', adminMiddleware, controllersAdmin.index);
 
 
 module.exports = router;

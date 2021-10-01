@@ -21,16 +21,15 @@
         <div class="section1">
 
             <div class="profilePhoto"> 
-                <img src="/images/users/AvatarAdmin.png" alt="userImage" class="userImage">
+                <img src="/images/users/<%=user.avatar %>" alt="userImage" class="userImage">
             </div>
-            <p class="nameUser">Nombre de usuario</p>
+            <p class="nameUser">Bienvenido <span class="nameUserSpan"><%= user.name %></span></p>
 
         </div>
 
         <div class="section2"> 
 
-            <p class="email">Email: Alguien@example.com.ar</p>
-            <p class="role">Rol: Admin</p>
+            <p class="email"><%= user.email %></p>
 
         </div>
 
@@ -42,7 +41,7 @@
 
     </div>
 
-
+    <br><br><br><br><br>
 
     <!-- Footer -->
     <%- include('../partials/footer') -%>

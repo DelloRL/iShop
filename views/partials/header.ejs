@@ -14,21 +14,31 @@
             <a href="#" class="iconHome"><i class="fas fa-home"></i></a>
             
             <ul class="left-navbar">
-                <li><a href="#">Nosotros </a></li>
-                <li><a href="#">Ayuda </a></li>
                 <li class="menu-des"><a href="/products">Productos</a>
+                <% if (locals.isLogged) { %>
+                <li><a href ="/profile">Mi perfil</a></li>     
+                <% } %>
+
                 <li><a href ="/admin">Administrar</a></li>
+
                 </li>
             </ul>
             
         </div>
         
         <div class="buscador">
-            
+            <% if (locals.isLogged) { %>
+                <div class="userName">
+                    <%= locals.userLogged.name %> 
+                </div>
+                <a href="/profile"><i class="fas fa-user"></i></a>
+            <% } %>
+            <% if (!locals.isLogged) { %>
             <a href="/register"><i class="fas fa-user"></i></a>
+            <% } %>
             <a href="#"><i class="fas fa-search"></i></a>
             <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
-            
+
         </div>
         
 

@@ -65,9 +65,13 @@ module.exports = {
         })
     },
     profile: (req,res) => {
-        console.log("Estas en profile")
-        console.log(req.session)
-        return res.render('users/profile');
+        return res.render('users/profile', {
+            user: req.session.userLogged
+        });
+    },
+    logout: (req,res) => {
+        req.session.destroy()
+        return res.redirect("/home")
     },
     editarUsuarios: (req, res) => {
         return res.render('userEdit');

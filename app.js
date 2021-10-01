@@ -4,7 +4,7 @@ const methodOverride = require('method-override');
 const app = express();
 const path = require('path')
 let session = require('express-session');
-const bcrypt = require('bcrypt')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -29,6 +29,10 @@ app.use(session({
     saveUninitialized: false,
 }))
 
+// Middleware de aplicación
+app.use(userLoggedMiddleware)
+
+//Rutas
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/', adminRoutes);
