@@ -30,6 +30,8 @@
                 <h5>Inicio de Sesión</h5>
                 <input type="text" name="email" value="" placeholder="Email">
                 <input type="password" name="password" value="" placeholder="Contraseña">
+                <label for="">Recordarme</label>
+                <input type="checkbox" name="rememberMe" value="rememberMe"></input>   
                 <input type="submit" value="Ingresar">
                 <% if (locals.errors) { %>
                     <p class="error-1">Registro inválido, por favor vuelva a intentar</p>
@@ -38,7 +40,7 @@
             </section>
         </form>
         
-         
+        
         <div class="overlay" id="overlay">
             <div class="popup" id="popup">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
@@ -50,7 +52,7 @@
                         <% if (locals.errors && errors.name) { %>
                             <div class="text-error">
                                 <%= errors.name.msg %>
-                            </div>
+                            </div>  
                         <% } %>
                         <input type="email" name="email" placeholder="Email" id="">
                         <% if (locals.errors && errors.email) { %>

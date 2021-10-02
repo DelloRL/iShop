@@ -3,6 +3,7 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
 const User = require('../models/user')
+const cookie=require('cookie-parser')
 
 
 module.exports = {
@@ -54,6 +55,11 @@ module.exports = {
                 req.session.userLogged = userToLogin
                 return res.redirect('/profile')
             }
+
+
+            /* if(req.body.rememberMe != undefined){
+            res.cookie('rememberMe',userLogged.email,{maxAge: 60000})   
+        }*/
         }
 
         return res.render('users/login', {
