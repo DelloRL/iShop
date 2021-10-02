@@ -56,7 +56,6 @@ module.exports = {
                 return res.redirect('/profile')
             }
 
-
             /* if(req.body.rememberMe != undefined){
             res.cookie('rememberMe',userLogged.email,{maxAge: 60000})   
         }*/
