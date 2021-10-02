@@ -39,6 +39,11 @@ tr:hover td{
 	color: white;
 }
 
+.userNameADM {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: coral!important;
+}
 /* ---------------- */
 
 h1 {
