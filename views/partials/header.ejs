@@ -1,13 +1,51 @@
 <header class="main-header">
-            
+    
+
     <div class="main-header-top">
         <img src="/images/logo_white_large.png" alt="LogoApple" class="logo" >
+        <button class="hamburguer" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
-    <a href="#" class="hamburger-button">
-        <i class="fas fa-bars"></i>
-    </a>
+
+    <nav class="main-navbar-cel" id="menu">
     
-    <nav class="main-navbar" id="menu">
+        <div class="links-navbar">
+            <ul class="left-navbar">
+                <li class="menu-des"><a href="/products">Productos</a>
+                <% if (locals.isLogged) { %>
+                <li><a href ="/profile">Mi perfil</a></li>     
+                <% } %>
+                <% if (locals.userLogged && userLogged.role === 9) { %>
+                    <li><a href ="/admin">Administrar</a></li> 
+                <% } %>
+
+                </li>
+            </ul>
+            
+        </div>
+        
+        <div class="buscador">
+            <% if (locals.isLogged) { %>
+                <div class="userName">
+                    <%= locals.userLogged.name %> 
+                </div>
+                <a href="/profile"><i class="fas fa-user"></i></a>
+            <% } %>
+
+            <% if (!locals.isLogged) { %>
+            <a href="/register"><i class="fas fa-user"></i></a>
+            <% } %>
+
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
+
+        </div>
+        
+
+    </nav>
+    
+    <nav class="main-navbar">
     
         <div class="links-navbar">
             <a href="/home" style="padding: 0!important;"><img  src="/images/logo_white_large.png" alt="LogoApple" class="logo"></a>
@@ -46,5 +84,5 @@
         
 
     </nav>
-
+    <script src="./js/header.js"></script>
 </header>
