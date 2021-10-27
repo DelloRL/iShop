@@ -20,5 +20,8 @@ El cuarto sprint no fue exactamente como lo esperabamos,pocos commits,sin tener 
 
 ANALISIS Del Quinto Sprint.
 Siendo sinceros,nos relajamos en cuanto al tiempo,de nuevo estuvo flojo el compromiso con los commits,sin embargo logramos todo o casi todo lo propuesto en el quinto sprint gracias a que pusimos manos a la obra.
-Reflexionamos sobre como llegamos siempre a la entrega,pero no esta bueno el echo de que la mayor parte se haga al final,queremos cambiar esto ultimo y alcanzar lo propuesto de una manera "comoda" por asi decirlo,sin correr aultimo momento,paso a paso desde el principio.
+Reflexionamos sobre como llegamos siempre a la entrega,pero no esta bueno el echo de que la mayor parte se haga al final,queremos cambiar esto ultimo y alcanzar lo propuesto de una manera "comoda" por asi decirlo,sin correr a ultimo momento,paso a paso desde el principio.
+
+ANALISIS Del Sexto Sprint.
+Este sexto sprint comenzo muy bien,con un diseño para la base de datos y una delegacion de tareas rapida,al ir pasando el tiempo nos quedamos atras en los objetivos que propusimos desde un principio y esto hizo que de nuevo no estuviesemos sobrados de tiempo,al contrario realmente.
 
