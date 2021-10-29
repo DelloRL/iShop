@@ -20,5 +20,13 @@ module.exports = function(sequelize, dataTypes){
 
     let cartitem = sequelize.define(alias, cols, config);
 
+    cartitem.associate = function(models){
+        cartitems.belongsTo(models.cart, {
+            as: "cartitems",
+            foreignKey: "cartItem_id"
+        });
+    }
+
+
     return cartitem;
 }

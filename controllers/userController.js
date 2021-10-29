@@ -1,3 +1,4 @@
+let db = require("../database/models");
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
@@ -6,7 +7,7 @@ const User = require('../models/user')
 const cookie=require('cookie-parser')
 
 
-module.exports = {
+let userController = {
     register: (req,res) => {
         return res.render('users/login_register');
     },
@@ -81,6 +82,7 @@ module.exports = {
     },
     editarUsuarios: (req, res) => {
         return res.render('userEdit');
-    },
+    }
 }
 
+module.exports = userController;

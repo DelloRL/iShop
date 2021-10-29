@@ -1,7 +1,8 @@
+let db = require("../database/models");
 const fs = require('fs');
 const path = require('path');
 
-const controller = {
+const mainController = {
     home: (req, res) => {
         return res.render('home');
     },
@@ -10,4 +11,4 @@ const controller = {
     },
 }
 
-module.exports = controller;
+module.exports = mainController;

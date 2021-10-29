@@ -1,3 +1,4 @@
+let db = require("../database/models");
 const fs = require('fs');
 const path = require('path');
 
@@ -8,7 +9,7 @@ function getProduts(){
 };
 
 
-const controller = {
+const productsController = {
 	// Show all products
 	products: (req, res) => {
 		const products = getProduts();
@@ -107,4 +108,4 @@ const controller = {
 
 };
 
-module.exports = controller
+module.exports = productsController;

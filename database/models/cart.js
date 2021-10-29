@@ -20,5 +20,12 @@ module.exports = function(sequelize, dataTypes){
 
     let cart = sequelize.define(alias, cols, config);
 
+    cart.associate = function(models){
+        cart.hasMany(models.cartitems, {
+            as: "cartitems",
+            foreignKey: "cartItem_id"
+        });
+    }
+
     return cart;
 }
