@@ -1,6 +1,7 @@
 let db = require("../database/models");
 const fs = require('fs');
 const path = require('path');
+const { promiseImpl } = require("ejs");
 
 function getProduts(){
 	const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -11,15 +12,20 @@ function getProduts(){
 
 const productsController = {
 	// Show all products
-	products: (req, res) => {
-		const products = getProduts();
-        res.render('products/products', { products })
+	products:function (req, res) {
+		db.products.findAll()
+		.then(function(product){
+			return res.render('products/products',{product:product});
+		})
+        
     },
+
 	// Detail from one product
     detail: (req, res) => {
-        let productId = req.params.id - 1;
-		const products = getProduts();
-        res.render('products/detail', { product: products[productId] })
+		db.products.findByPk(req.params.id)
+		.then(function(pelicula){
+			res.render('products/detail',{products:products});
+		})
     },
 
 	// create
@@ -28,39 +34,24 @@ const productsController = {
 	},
 
 	// store
-	store: (req, res) => {
-		if(req.file) {
-			const products = getProduts();
+	store: function(req, res) {
+		db.products.create({
+			name: req.body.name,
+			description: req.body.description,
+			image: req.body.img,
+			category: req.body.category,
+			price: req.body.price, 
+		});
 
-			let id = products.length + 1;
-		
-			let product = {
-				id: id,
-				name: req.body.name,
-				description:req.body.description,
-				price:req.body.price,
-				category: req.body.category,
-				image:req.file.filename
-			};
-			products.push(product);
-
-			let productsJSON = JSON.stringify(products);
-
-			fs.writeFileSync('data/products.json', productsJSON);
-			return res.redirect("/")
-		} else {
-			res.render("products/productAdd");
-		}
+		res.redirect("products/products")
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
-			const products = getProduts();
-			products.forEach(product => {
-				if (product.id == req.params.id) {
-					res.render('products/productEdit', { product: product });
-				}
-			});
+	edit: function (req, res) {
+		let pedidoProducto = db.products.findByPk(req.params.id);
+
+		promise.all()
+
 	},
 
 	update:(req,res)=>{

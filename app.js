@@ -12,7 +12,7 @@ app.use(express.json());
 
 const adminRoutes = require('./routes/adminRoutes.js');
 const mainRoutes= require("./routes/mainRoutes.js");
-const productsRoutes = require("./routes/products.js");
+const productsRoutes = require("./routes/productsRoutes.js");
 const usersRoutes = require('./routes/usersRoutes.js');
 const cookieParser = require("cookie-parser");
 
