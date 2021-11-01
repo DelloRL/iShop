@@ -3,9 +3,10 @@ module.exports = function(sequelize, dataTypes){
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            primaryKey: true
         },
-        cartitem_id: {
+        cartItem_id: {
             type: dataTypes.INTEGER
         },
         amount: {
@@ -18,14 +19,14 @@ module.exports = function(sequelize, dataTypes){
         timestamps: false
     }
 
-    let cart = sequelize.define(alias, cols, config);
+    let Cart = sequelize.define(alias, cols, config);
 
-    cart.associate = function(models){
-        cart.hasMany(models.cartitems, {
+    Cart.associate = function(models){
+        Cart.hasMany(models.Cartitem, {
             as: "cartitems",
             foreignKey: "cartItem_id"
         });
     }
 
-    return cart;
+    return Cart;
 }

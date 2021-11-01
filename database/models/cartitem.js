@@ -1,9 +1,10 @@
 module.exports = function(sequelize, dataTypes){
-    let alias = "cartitem";
+    let alias = "Cartitem";
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            primaryKey: true
         },
         product_id: {
             type: dataTypes.INTEGER
@@ -18,15 +19,15 @@ module.exports = function(sequelize, dataTypes){
         timestamps: false
     }
 
-    let cartitem = sequelize.define(alias, cols, config);
+    let Cartitem = sequelize.define(alias, cols, config);
 
-    cartitem.associate = function(models){
-        cartitems.belongsTo(models.cart, {
+    Cartitem.associate = function(models){
+        Cartitem.belongsTo(models.Cart, {
             as: "cartitems",
             foreignKey: "cartItem_id"
         });
     }
 
 
-    return cartitem;
+    return Cartitem;
 }
