@@ -40,8 +40,8 @@ app.use(userLoggedMiddleware)
 //Rutas
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
-app.use('/', adminRoutes);
-app.use('/', usersRoutes)
+app.use('/admin', adminRoutes);
+app.use('/user', usersRoutes)
 
 
 //servidor

@@ -12,7 +12,7 @@ module.exports = function(sequelize, dataTypes){
         description: {
             type: dataTypes.STRING
         },
-        avatar: {
+        image: {
             type: dataTypes.STRING
         },
         category: {

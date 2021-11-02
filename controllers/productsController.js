@@ -23,7 +23,7 @@ const productsController = {
 	// Detail from one product
     detail: (req, res) => {
 		db.products.findByPk(req.params.id)
-		.then(function(pelicula){
+		.then(function(products){
 			res.render('products/detail',{products:products});
 		})
     },
@@ -81,20 +81,15 @@ const productsController = {
 	},
 
 	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		const products = getProduts();
+	destroy : function(req, res){
+		db.products.destroy({
+			where: {
+				id: req.params.id
+			}
+		})
 
-		let idProducto = products.findIndex(product => {
-			return product.id == req.params.id;
-		});
-
-		products.splice(idProducto, 1);
-
-		let updatedProductsJSON = JSON.stringify(products);
-        fs.writeFileSync('data/products.json', updatedProductsJSON);
-		
-		return res.redirect("/products");
-	},
+		res.redirect("/products");
+	}
 
 
 };

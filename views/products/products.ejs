@@ -27,7 +27,7 @@
             <h1>iPhone 12</h1>
         </div>
         <div class="container-products">
-            <% products.forEach(product => { %>
+            <% product.forEach(product => { %>
                 <% if(product.category == 'IPhones') {%>
             <div class="product"> 
                 <div class="img-contenedor">
@@ -62,7 +62,7 @@
         </div>
 
         <div class="container-products">
-            <% products.forEach(product => { %>
+            <% product.forEach(product => { %>
                 <% if(product.category == 'Fundas y protección' ) {%>
             <div class="product"> 
                 <div class="img-contenedor">
@@ -94,7 +94,7 @@
         </div>
         
         <div class="container-products">
-            <% products.forEach(product => { %>
+            <% product.forEach(product => { %>
                 <% if(product.category == 'Auriculares') {%>
             <div class="product">
                 <div class="img-contenedor">

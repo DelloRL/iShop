@@ -30,15 +30,15 @@
         <div class="container-section-all">
 
             <div class="col-one">
-                <img src="../images/products/<%= product.image %>" class="iphone-img-one">
+                <img src="../images/products/<%= products.image %>" class="iphone-img-one">
             </div>
 
             <div class="col-two">
-                <h2 class="description"> <%= product.name %> </h2>
+                <h2 class="description"> <%= products.name %> </h2>
                 <h2>Descripción</h3>
-                <p> <%= product.description %> </p>
+                <p> <%= products.description %> </p>
                 <h2>Precio</h2>
-                <p id="price">$<%= product.price%></p>
+                <p id="price">$<%= products.price%></p>
                 <br>
                 <div class="text-center">
                 <a href="#" class="button">Agregar al carrito</a>
@@ -48,11 +48,11 @@
         </div>
         <div class="container-section-all">
 
-            <form action="/products/<%= product.id %>/edit" method="GET">
+            <form action="/products/<%= products.id %>/edit" method="GET">
                 <button type="submit" class="button edit">EDITAR PRODCUTO</button>
             </form>
 
-            <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+            <form action="/products/delete<%= products.id %>?_method=DELETE" method="POST">
                 <button type="submit" class="button delete">Eliminar</button>
             </form>
         </div>
