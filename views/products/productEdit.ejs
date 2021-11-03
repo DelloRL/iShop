@@ -16,16 +16,16 @@
     <%- include('../partials/header') -%>
 
     <!-- Main -->
-    <h1 class="current-edit">Estas editando: <span class="color"><%= product.name %></h1>
+    <h1 class="current-edit">Estas editando: <span class="color"><%= products.name %></h1>
 
-    <form action="/products/<%= product.id %>/edit?_method=PUT" method="POST" class="container" enctype="multipart/form-data">
+    <form action="/products/edit/<%= products.id %>" method="POST" class="container" enctype="multipart/form-data">
         
         <p>
-            <input type="text" name="name" value="<%= product.name %>" placeholder="Nombre del Producto">
+            <input type="text" name="name" value="<%= products.name %>" placeholder="Nombre del Producto">
         </p>
 
         <p>
-            <input type="text" name="price" value="<%= product.price %>" placeholder="Precio del Producto">
+            <input type="text" name="price" value="<%= products.price %>" placeholder="Precio del Producto">
         </p>
 
         <p>
@@ -34,17 +34,17 @@
                 Elegí una categoría 
                 </option>
                 <option value="IPhones" 
-                <% if(product.category == 'IPhones') {%>
+                <% if(products.category == 'IPhones') {%>
                 selected
                 <% } %>
                 >iPhones</option>
                 <option value="Auriculares" 
-                <% if(product.category == "Auriculares") {%>
+                <% if(products.category == "Auriculares") {%>
                 selected
                 <% } %>
                 >Airpods</option>
                 <option value="Fundas y protección" 
-                <% if(product.category == "Fundas y protección") {%>
+                <% if(products.category == "Fundas y protección") {%>
                 selected
                 <% } %>
                 >Fundas</option>
@@ -52,7 +52,7 @@
         </p>
 
         <p>
-            <textarea rows="4" cols="50" placeholder="Descripción del producto"><%= product.description %></textarea>
+            <textarea rows="4" cols="50" placeholder="Descripción del producto"><%= products.description %></textarea>
         </p>
         
         <h4 class="text-center">Reemplaza imagén del producto:</h4>
@@ -62,7 +62,7 @@
     </form>
     <div class="current">
         <p class="text-img-current">Imagén actual</p>
-        <img src="/images/products/<%= product.image %>" class="img-current">
+        <img src="/images/products/<%= products.image %>" class="img-current">
     </div>
     
 

@@ -14,16 +14,21 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+//Listado
 router.get('/', productsController.products);
 
+//Crear
 router.get("/create", productsController.create)
-
 router.post("/create", upload.single("img"),productsController.store);
 
+//detalle
 router.get('/:id/', productsController.detail);
 
-router.get('/:id/edit', productsController.edit);
+//Actualizar
+router.get('/edit/:id', productsController.edit);
+router.post('/edit/:id', productsController.update);
 
+//Borrar
 router.delete('/:id', productsController.destroy);
 
 module.exports = router
