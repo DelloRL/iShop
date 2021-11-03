@@ -4,10 +4,11 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
 const User = require('../models/user')
-const cookie=require('cookie-parser')
+const cookie = require('cookie-parser')
 
 
-let userController = {
+const userController = {
+    
     register: (req,res) => {
         return res.render('users/login_register');
     },

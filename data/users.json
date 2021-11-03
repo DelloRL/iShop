@@ -28,6 +28,13 @@
   "email": "FranMazu@gmail.com",
   "password": "$2a$10$2U908KZFizco2aFMdQCpLO7SPQHDtwxnXH2xlIS16ADYuf1aA1jr.",
   "avatar": "avatar-1633067305604.jpg",
- "role":9
+  "role": 9
+ },
+ {
+  "id": 5,
+  "name": "Mauricio José Caggiano",
+  "email": "mauritox@hotmail.com",
+  "password": "$2a$10$Jt67LJIgCm9hx48f2KNJPOB0nf4b3Aedtyvpm7SV/ZkglSH2Yegzi",
+  "avatar": "avatar-1635971828466.png"
  }
 ]
