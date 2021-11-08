@@ -28,13 +28,13 @@
 				</tr>
 			</thead>
 
-			<% products.forEach(product => { %>
+			<% product.forEach(products => { %>
                 <tr>
-                  <td><%= product.id%> </td>
-                  <td><%= product.name%> </td>
-                  <td><a href="/administrar/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                  <td><a href="/administrar/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                  <td><a href="/administrar/delete/<%= product.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                  <td><%= products.id%> </td>
+                  <td><%= products.name%> </td>
+                  <td><a href="/administrar/detail/<%= products.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                  <td><a href="/administrar/edit/<%= products.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                  <td><a href="/administrar/delete/<%= products.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
                 </tr>
                 <% }); %>
 		</table>
