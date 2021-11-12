@@ -69,24 +69,6 @@ const productsController = {
 		res.redirect("/products/" + req.params.id)
 	},
 
-
-
-
-
-	/* 			const products = getProduts()
-		products.forEach(product =>{	
-		})
-		req.body.id = req.params.id;
-		const producstUpdate = products.map(product=>{
-			if(product.id == req.body.id){
-				return product = req.body;
-			}
-			return product;
-		})
-		let updatedProductsJSON = JSON.stringify(producstUpdate);
-		fs.writeFileSync('data/products.json', updatedProductsJSON);
-		return res.redirect("../products/" + req.params.id);	 */
-
 	// Delete - Delete one product from DB
 	destroy : function(req, res){
 		db.products.destroy({

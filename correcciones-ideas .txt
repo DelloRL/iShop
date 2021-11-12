@@ -1,11 +1,14 @@
 Los usuarios deben guardarse en la base de datos 
 /LogIn-register:Implementar funcion "recordarme"
 /profile:Implementar funcion editar perfil
-/admin:Dentro de admin aun no se puede ver el detalle de prodcuto de un producto(ni editar ni borrar,ya que esas funcionalidades no estan implementadas)
+/admin: delete y edit no funcionan 
 /cart:El carrito es una chota. pero en cuanto a funcionalidad no tiene nada,es puro estilo,mas alla de la funcionalidad de agregar o eliminar productos estaria bueno 
  que al pulsar el boton pagar aparezca o te lleve a una pagina que sea efectivamente para realizar el pago,simulando una compra. 
 /home: la lupa del home no sirve para nada. 
-/create:la foto del producto al menos en mi prueba,no funciono.
+/create:Las fotos no se guardan en la DB entonces no se muestran. 
 /edit:no hace cambios en los productos.
 /delete:no borra.
+/products: el boton " + " solo debe verse cuando se este en modo admin 
+
+
 
