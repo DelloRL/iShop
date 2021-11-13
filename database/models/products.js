@@ -4,7 +4,8 @@ module.exports = function(sequelize, dataTypes){
     let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         name: {
             type: dataTypes.STRING
@@ -13,7 +14,7 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.STRING
         },
         image: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
         },
         category: {
             type: dataTypes.STRING

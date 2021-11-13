@@ -38,11 +38,15 @@ const productsController = {
 		db.products.create({
 			name: req.body.name,
 			description: req.body.description,
-			image: req.body.img,
+			image: req.file.filename,
 			category: req.body.category,
 			price: req.body.price, 
-		});
-		res.redirect("/products")
+		})
+
+		.then( ()=> {
+            return res.redirect('/products')})            
+        .catch(error => res.send(error))
+
 	},
 
 	// Update - Form to edit
