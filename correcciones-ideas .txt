@@ -5,10 +5,9 @@ Los usuarios deben guardarse en la base de datos
 /cart:El carrito es una chota. pero en cuanto a funcionalidad no tiene nada,es puro estilo,mas alla de la funcionalidad de agregar o eliminar productos estaria bueno 
  que al pulsar el boton pagar aparezca o te lleve a una pagina que sea efectivamente para realizar el pago,simulando una compra. 
 /home: la lupa del home no sirve para nada. 
-/create:Las fotos no se guardan en la DB entonces no se muestran. 
 /edit:no hace cambios en los productos.
+/edit:El reemplazo de la foto no funciona,es decir la opcion de reemplazar la foto por una nueva no esta implementada. 
 /delete:no borra.
-/products: el boton " + " solo debe verse cuando se este en modo admin 
 
 
 

@@ -111,10 +111,13 @@
     </div>
 
 
+    <% if (locals.userLogged && userLogged.role === 9) { %>
+        <a href="/products/create">
+            <button class="btn" title="Carga Productos"><i class="fas fa-plus"></i></button>
+        </a>
+    <% } %>
 
-    <a href="/products/create">
-        <button class="btn" title="Carga Productos"><i class="fas fa-plus"></i></button>
-    </a>
+
 
 
 
