@@ -44,11 +44,17 @@ body {
     padding-bottom: 10px;
     color: red;
 }
+.error-email {
+    color: darkred;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
 
 /*CSS LOGIN/REGISTRO*/
 .form-login {
     width: 400px;
-    height: 21pc;
+    height: 23pc;
     border-radius: 15px;
     background: #777777;
     margin: auto;

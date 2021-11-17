@@ -45,7 +45,7 @@ const userController = {
         res.redirect("/login")
     },
     login: (req,res) => {
-        return res.render('users/login')
+        return res.render('users/login_register')
     },
     processLogin: (req,res) => {
         let userToLogin = User.findByField('email', req.body.email)
@@ -63,7 +63,7 @@ const userController = {
         }*/
         }
 
-        return res.render('users/login', {
+        return res.render('users/login_register', {
             errors: {
                 email: {
                     msg: 'Las credenciales son inválidas'
