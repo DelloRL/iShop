@@ -22,13 +22,13 @@ router.get("/create", productsController.create)
 router.post("/create", upload.single("img"),productsController.store);
 
 //detalle
-router.get('/:id/', productsController.detail);
+router.get('/:id', productsController.detail);
 
 //Actualizar
 router.get('/edit/:id', productsController.edit);
 router.post('/edit/:id', productsController.update);
 
 //Borrar
-router.delete('/:id', productsController.destroy);
+router.get('/:id/delete', productsController.destroy);
 
 module.exports = router
