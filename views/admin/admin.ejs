@@ -33,8 +33,8 @@
                   <td><%= products.id%> </td>
                   <td><%= products.name%> </td>
                   <td><a href="products/<%= products.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                  <td><a href="/administrar/edit/<%= products.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                  <td><a href="/administrar/delete/<%= products.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                  <td><a href="products/edit/<%= products.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                  <td><a href="products/delete/<%= products.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
                 </tr>
                 <% }); %>
 		</table>

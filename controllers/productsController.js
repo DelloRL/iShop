@@ -69,7 +69,7 @@ const productsController = {
 				id: req.params.id
 			}
 		});
-		res.redirect("/products/edit/" + req.params.id)
+		res.redirect("/products/" + req.params.id)
 	},
 
 	// Delete - Delete one product from DB
