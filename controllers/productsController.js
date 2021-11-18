@@ -74,12 +74,13 @@ const productsController = {
 
 	// Delete - Delete one product from DB
 	destroy : function(req, res){
-		db.products.findByPk(req.params.id)
+		const id = req.params.id
+		db.products.findByPk(id)
 		.then((product) => {
 			fs.unlinkSync(`./public/images/products/${product.image}`);
 			db.products.destroy({ where: { id: req.params.id } })
 				.then(() => {
-					res.redirect('/')
+					res.redirect('/products')
 				})
 		})
 	}
