@@ -22,12 +22,12 @@ const userController = {
             });
         }
         
-        let userInDB = User.findByField('email', req.body.email)
+        let userInDB = User.findByField('email', req.body.emailLogin)
 
         if(userInDB) {
             return res.render('users/login_register', {
                 errors: {
-                    email: {
+                    emailLogin: {
                         msg: 'Este email ya esta registrado'
                     }
                 },
@@ -48,7 +48,7 @@ const userController = {
         return res.render('users/login_register')
     },
     processLogin: (req,res) => {
-        let userToLogin = User.findByField('email', req.body.email)
+        let userToLogin = User.findByField('email', req.body.emailLogin)
         
         if(userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
@@ -59,13 +59,13 @@ const userController = {
             }
 
             if(req.body.rememberMe != undefined){
-            res.cookie('rememberMe',userLogged.email,{maxAge: 60000})   
+            res.cookie('rememberMe',userLogged.emailLogin,{maxAge: 60000})   
         }
         }
 
         return res.render('users/login_register', {
             errors: {
-                email: {
+                emailLogin: {
                     msg: 'Las credenciales son inválidas'
                 }
             }
