@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administración</title>
+  <link rel="stylesheet" href="/css/tienda.css">
   <link rel="stylesheet" href="/css/administrar.css">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/header.css">
@@ -63,13 +64,15 @@
     </div>
     <br><br>
 
+
     <script>
       function confirm(id){
 
         Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
+          title: 'Estas seguro de esto?',
+          text: "No puedes deshacer esta opcion!",
           icon: 'warning',
+          iconColor:"#C95840",
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
@@ -84,6 +87,13 @@
 
     <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js"></script>
+
+    <% if (locals.userLogged && userLogged.role === 9) { %>
+      <a href="/products/create">
+          <button class="btn" title="Carga Productos"><i class="fas fa-plus"></i></button>
+      </a>
+  <% } %>
+
 
     <!-- Footer -->
     <%- include('../partials/footer') -%>

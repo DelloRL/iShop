@@ -14,7 +14,7 @@ const adminRoutes = require('./routes/adminRoutes.js');
 const mainRoutes= require("./routes/mainRoutes.js");
 const productsRoutes = require("./routes/productsRoutes.js");
 const usersRoutes = require('./routes/usersRoutes.js');
-const cookieParser = require("cookie-parser");
+const cookies = require("cookie-parser");
 
 // view engine setup //
 app.set('view engine', 'ejs');
@@ -24,7 +24,7 @@ app.use(express.static('./public'));
 
 app.use(methodOverride("_method"));
 
-app.use(cookieParser());
+app.use(cookies()); 
 
 
 // Objeto literal para acceder a todo lo que tenga en el req

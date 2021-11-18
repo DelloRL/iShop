@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,122 +10,121 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
 </head>
 
 <body>
     <!-- Header -->
     <%- include('../partials/header') -%>
 
-    <div class="banner-promo">
-        <p class="bold">Bienvenidos</p><p class="banner-text"> a iShop STORE</p>
-    </div>
-
-    <!-- SECTION PRODUCTS IPHONE -->
-    <div class="section-products">
-        <div class="title-subtitle">
-            <h1>IPhones</h1>
+        <div class="banner-promo">
+            <p class="bold">Bienvenidos</p>
+            <p class="banner-text"> a iShop STORE</p>
         </div>
-        <div class="container-products">
-            <% product.forEach(product => { %>
-                <% if(product.category == 'IPhones') {%>
-            <div class="product"> 
-                <div class="img-contenedor">
-                <img src="images/products/<%= product.image %>" alt="">
-                </div>
-                <h1><%= product.name %></h1>
-                <p class="description">
-                    <%= product.description %>
-                </p>
-                <div class="product-center">
-                <a class="button-product" href="/products/<%= product.id %>">Ver más
-                    <i class="fas fa-arrow-right iconRight"></i>
-                </a>
-                </div>
+
+        <!-- SECTION PRODUCTS IPHONE -->
+        <div class="section-products">
+            <div class="title-subtitle">
+                <h1>IPhones</h1>
             </div>
-            <% }  %>
+            <div class="container-products">
+                <% product.forEach(product=> { %>
+                    <% if(product.category=='IPhones' ) {%>
+                        <div class="product">
+                            <div class="img-contenedor">
+                                <img src="images/products/<%= product.image %>" alt="">
+                            </div>
+                            <h1>
+                                <%= product.name %>
+                            </h1>
+                            <p class="description">
+                                <%= product.description %>
+                            </p>
+                            <div class="product-center">
+                                <a class="button-product" href="/products/<%= product.id %>">Ver más
+                                    <i class="fas fa-arrow-right iconRight"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <% } %>
 
-            <% }); %>
-        </div>
-    </div>
-
-    <!-- SECTION PRODUCTS -->
-    <div class="section-products">
-
-        <div class="title-subtitle">
-            <h1>Fundas y protección</h1>
-        </div>
-
-        <div class="container-products">
-            <% product.forEach(product => { %>
-                <% if(product.category == 'Fundas y protección' ) {%>
-            <div class="product"> 
-                <div class="img-contenedor">
-                <img src="images/products/<%= product.image %>" alt="">
-                </div>
-                <h1> <%= product.name %>  </h1>
-                <p class="description">        
-                    <%= product.description %> 
-                
-                </p>
-                <div class="product-center">
-                <a class="button-product" href="/products/<%= product.id %>">Ver más
-                    <i class="fas fa-arrow-right iconRight"></i>
-                </a>
-                </div>
+                            <% }); %>
             </div>
-            <% }  %>
-
-            <% }); %>
         </div>
-    </div>
 
-    
-    <!-- SECTION PRODUCTS -->
-    <div class="section-products">
+        <!-- SECTION PRODUCTS -->
+        <div class="section-products">
 
-        <div class="title-subtitle">
-            <h1>Airpods</h1>
-        </div>
-        
-        <div class="container-products">
-            <% product.forEach(product => { %>
-                <% if(product.category == 'Auriculares') {%>
-            <div class="product">
-                <div class="img-contenedor">
-                    <img src="images/products/<%= product.image %>" alt="">
-                </div>
-                <h1><%= product.name %> </h1>
-                <p class="description">
-                    <%= product.description %> 
-                </p>
-                <div class="product-center">
-                    <a class="button-product" href="/products/<%= product.id %>">Ver más
-                        <i class="fas fa-arrow-right iconRight"></i>
-                    </a>
-                </div>
+            <div class="title-subtitle">
+                <h1>Fundas y protección</h1>
             </div>
-            <% }  %>
 
-            <% }); %>
+            <div class="container-products">
+                <% product.forEach(product=> { %>
+                    <% if(product.category=='Fundas y protección' ) {%>
+                        <div class="product">
+                            <div class="img-contenedor">
+                                <img src="images/products/<%= product.image %>" alt="">
+                            </div>
+                            <h1>
+                                <%= product.name %>
+                            </h1>
+                            <p class="description">
+                                <%= product.description %>
+
+                            </p>
+                            <div class="product-center">
+                                <a class="button-product" href="/products/<%= product.id %>">Ver más
+                                    <i class="fas fa-arrow-right iconRight"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <% } %>
+
+                            <% }); %>
+            </div>
         </div>
-    </div>
 
 
-    <% if (locals.userLogged && userLogged.role === 9) { %>
-        <a href="/products/create">
-            <button class="btn" title="Carga Productos"><i class="fas fa-plus"></i></button>
-        </a>
-    <% } %>
+        <!-- SECTION PRODUCTS -->
+        <div class="section-products">
 
+            <div class="title-subtitle">
+                <h1>Airpods</h1>
+            </div>
 
+            <div class="container-products">
+                <% product.forEach(product=> { %>
+                    <% if(product.category=='Auriculares' ) {%>
+                        <div class="product">
+                            <div class="img-contenedor">
+                                <img src="images/products/<%= product.image %>" alt="">
+                            </div>
+                            <h1>
+                                <%= product.name %>
+                            </h1>
+                            <p class="description">
+                                <%= product.description %>
+                            </p>
+                            <div class="product-center">
+                                <a class="button-product" href="/products/<%= product.id %>">Ver más
+                                    <i class="fas fa-arrow-right iconRight"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <% } %>
 
+                            <% }); %>
+            </div>
+        </div>
 
+        <br><br>
 
-    <br><br>
-
-    <!-- Footer -->
-    <%- include('../partials/footer') -%>
+        <!-- Footer -->
+        <%- include('../partials/footer') -%>
 
 </body>
+
 </html>

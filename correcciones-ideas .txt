@@ -4,18 +4,20 @@ Los usuarios deben guardarse en la base de datos
 
 /profile:Implementar funcion editar perfil
 
-/admin: delete y edit no funcionan 
+/admin: edit no funciona
+
+/edit:no hace cambios en los productos.
+
+/edit:El reemplazo de la foto no funciona,es decir la opcion de reemplazar la foto por una nueva no esta implementada. 
 
 /cart:El carrito es una chota. pero en cuanto a funcionalidad no tiene nada,es puro estilo,mas alla de la funcionalidad de agregar o eliminar productos estaria bueno 
  que al pulsar el boton pagar aparezca o te lleve a una pagina que sea efectivamente para realizar el pago,simulando una compra. 
 
 /home: la lupa del home no sirve para nada. 
 
-/edit:no hace cambios en los productos.
 
-/edit:El reemplazo de la foto no funciona,es decir la opcion de reemplazar la foto por una nueva no esta implementada. 
 
-/delete:no borra.
+
 
 
 emprolijar todos los codigos del proyecto 
@@ -28,8 +30,6 @@ IDEAS :
 Ofertas 
 
 caracteristicas amplias a los productos
-
-alerta de que vas a editar un producto
 
 
 
