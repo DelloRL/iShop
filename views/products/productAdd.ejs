@@ -17,17 +17,17 @@
 
 
     <!-- Main -->
-    <form action="/products/create" method="POST" class="container" enctype="multipart/form-data">
+    <form id="formCRUD" action="/products/create" method="POST" class="container" enctype="multipart/form-data">
         <p>
-            <input type="text" name="name" required placeholder="Nombre del Producto">
+            <input type="text" name="productName" required placeholder="Nombre del Producto">
         </p>
 
         <p>
-            <input type="text" name="price" required placeholder="Precio del Producto">
+            <input type="text" name="productPrice" required placeholder="Precio del Producto">
         </p>
 
         <p>
-            <select name="category" id="category" class="form-input">
+            <select name="productCategory" id="category" class="form-input" class="required"></select>>
                 <option value="">Elegí una categoría</option>
                 <option value="IPhones">iPhones</option>
                 <option value="Auriculares">Airpods</option>
@@ -36,11 +36,11 @@
         </p>
 
         <p>
-            <textarea rows="4" cols="50" name="description" placeholder="Descripción del producto"></textarea>
+            <textarea rows="4" cols="50" name="productDescription" placeholder="Descripción del producto"></textarea>
         </p>
         
         <h4>Añade imágenes del producto:</h4>
-        <input type="file" id="img" name="img" />
+        <input type="file" id="img" name="productImage" />
         <br>
         <button class="button-submit" type="submit"> Publicar Producto </button>
     </form>
@@ -48,5 +48,7 @@
 
     <!-- Footer -->
     <%- include('../partials/footer') -%>
+
+    <script src="/js/CRUDValidation.js"></script>
 </body>
 </html>

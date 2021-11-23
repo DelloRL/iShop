@@ -34,7 +34,7 @@
                 </p>
                 <% } %>
                     <input type="text" name="emailLogin" value="" placeholder="Email">
-                    <input type="password" name="password" value="" placeholder="Contraseña">
+                    <input type="password" name="passwordLogin" value="" placeholder="Contraseña">
                     <label for="">Recordarme</label>
                     <input type="checkbox" name="rememberMe" value="rememberMe"></input>
                     <input type="submit" value="Ingresar">
@@ -48,21 +48,21 @@
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
             <h3>Registro</h3>
             <h4>Registra tu usuario en nuestro e-commerce.</h4>
-            <form action="/register" method="POST" enctype="multipart/form-data">
+            <form id="registerForm" action="/register" method="POST" enctype="multipart/form-data">
                 <div class="contenedor-inputs">
-                    <input type="text" name="name" placeholder="Nombre Completo" id="">
+                    <input type="text" name="nameRegister" placeholder="Nombre Completo" id="">
                     <% if (locals.errors && errors.name) { %>
                         <div class="text-error">
                             <%= errors.name.msg %>
                         </div>
                         <% } %>
-                            <input type="email" name="email" placeholder="Email" id="">
+                            <input type="email" name="emailRegister" placeholder="Email" id="">
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-error">
                                     <%= errors.email.msg %>
                                 </div>
                                 <% } %>
-                                    <input type="password" name="password" placeholder="Contraseña" id="">
+                                    <input type="password" name="passwordRegister" placeholder="Contraseña" id="">
                                     <% if (locals.errors && errors.password) { %>
                                         <div class="text-error">
                                             <%= errors.password.msg %>
@@ -75,7 +75,7 @@
                                                     <%= errors.avatar.msg %>
                                                 </div>
                                                 <% } %>
-                                                    <input type="file" name="avatar" id="" />
+                                                    <input type="file" name="avatarRegister" id="avatarRegister" accept=".jpeg,.jpg,.png"/>
                 </div>
                 <input type="submit" class="btn-submit" value="Enviar registro">
             </form>
@@ -84,6 +84,7 @@
 
     <script src="/js/popup.js"></script>
     <script src="/js/loginValidation.js"></script>
+    <script src="/js/registerValidation.js"></script>
 
 </body>
 

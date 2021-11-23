@@ -2,8 +2,8 @@ window.addEventListener("load", function(e){
     let form = document.querySelector("#form1");
 
     form.addEventListener("submit", function(e){
+        //Login Email Validation
         let emailLogin = document.getElementsByName("emailLogin")[0].value;
-        console.log(emailLogin);
         if(emailLogin == ""){
             alert("El email debe estar completo.");
             e.preventDefault()

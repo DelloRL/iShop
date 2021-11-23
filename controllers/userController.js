@@ -22,12 +22,12 @@ const userController = {
             });
         }
         
-        let userInDB = User.findByField('email', req.body.emailLogin)
+        let userInDB = User.findByField('email', req.body.emailRegister)
 
         if(userInDB) {
             return res.render('users/login_register', {
                 errors: {
-                    emailLogin: {
+                    emailRegister: {
                         msg: 'Este email ya esta registrado'
                     }
                 },
@@ -37,7 +37,7 @@ const userController = {
 
         let userToCreate = {
             ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
+            passwordRegister: bcrypt.hashSync(req.body.passwordRegister, 10),
             avatar: req.file.filename
         }
 
@@ -51,7 +51,7 @@ const userController = {
         let userToLogin = User.findByField('email', req.body.emailLogin)
         
         if(userToLogin) {
-            let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
+            let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password)
             if (passwordHash) {
                 delete userToLogin.password
                 req.session.userLogged = userToLogin
