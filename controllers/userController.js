@@ -8,23 +8,23 @@ const cookie = require('cookie-parser')
 
 
 const userController = {
-    
-    register: (req,res) => {
+
+    register: (req, res) => {
         return res.render('users/login_register');
     },
-    processRegister: (req,res) => {
+    processRegister: (req, res) => {
         const resultValidation = validationResult(req)
 
-        if(resultValidation.errors.length > 0){
+        if (resultValidation.errors.length > 0) {
             return res.render('users/login_register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
         }
-        
-        let userInDB = User.findByField('email', req.body.emailRegister)
 
-        if(userInDB) {
+        let userInDB = User.findByField('email', req.body.emailLogin)
+
+        if (userInDB) {
             return res.render('users/login_register', {
                 errors: {
                     emailRegister: {
@@ -44,13 +44,13 @@ const userController = {
         let userCreated = User.create(userToCreate)
         res.redirect("/login")
     },
-    login: (req,res) => {
+    login: (req, res) => {
         return res.render('users/login_register')
     },
-    processLogin: (req,res) => {
+    processLogin: (req, res) => {
         let userToLogin = User.findByField('email', req.body.emailLogin)
-        
-        if(userToLogin) {
+
+        if (userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password)
             if (passwordHash) {
                 delete userToLogin.password
@@ -58,9 +58,9 @@ const userController = {
                 return res.redirect('/profile')
             }
 
-            if(req.body.rememberMe != undefined){
-            res.cookie('rememberMe',userLogged.emailLogin,{maxAge: 60000})   
-        }
+            if (req.body.rememberMe != undefined) {
+                res.cookie('rememberMe', userLogged.emailLogin, { maxAge: 60000 })
+            }
         }
 
         return res.render('users/login_register', {
@@ -71,14 +71,14 @@ const userController = {
             }
         })
     },
-    profile: (req,res) => {
+    profile: (req, res) => {
         return res.render('users/profile', {
             user: req.session.userLogged
         });
     },
-    logout: (req,res) =>{
+    logout: (req, res) => {
         req.session.destroy();
-        res.cookie('email',null,{maxAge: -1});
+        res.cookie('email', null, { maxAge: -1 });
         res.redirect('/home')
     },
     editarUsuarios: (req, res) => {

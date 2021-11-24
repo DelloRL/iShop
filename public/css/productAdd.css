@@ -52,6 +52,18 @@ input[type="text"]{
     color: black;
 }
 
+input[type="number"]{
+    width: 100%;
+    border-bottom: 3px solid #4796E6;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 11px 10px;
+    background: lemonchiffon;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
 textarea{
     font-family: "Roboto";
     width: 100%;

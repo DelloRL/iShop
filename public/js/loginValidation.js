@@ -11,5 +11,11 @@ window.addEventListener("load", function(e){
             alert("El campo debe tener al menos 6 caracteres")
             e.preventDefault()
         }
+
+        let passwordLogin = document.getElementsByName("passwordLogin")[0].value;
+        if(passwordLogin == ""){
+            alert("Por favor escriba su contraseña.");
+            e.preventDefault()
+        }
     })
 });
