@@ -1,14 +1,5 @@
 let db = require("../database/models");
 const fs = require('fs');
-const path = require('path');
-const { promiseImpl } = require("ejs");
-
-// function getProduts(){
-// // 	const productsFilePath = path.join(__dirname, '../data/products.json');
-// // 	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-// // 	return products;
-// // };
-
 
 const productsController = {
 	// Show all products

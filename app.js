@@ -14,6 +14,7 @@ const adminRoutes = require('./routes/adminRoutes.js');
 const mainRoutes= require("./routes/mainRoutes.js");
 const productsRoutes = require("./routes/productsRoutes.js");
 const usersRoutes = require('./routes/usersRoutes.js');
+const apiRoutes = require("./routes/api/productsRoutes")
 const cookies = require("cookie-parser");
 
 // view engine setup //
@@ -40,9 +41,9 @@ app.use(userLoggedMiddleware)
 //Rutas
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
-app.use("/", adminRoutes);
+app.use('/', adminRoutes);
 app.use('/', usersRoutes)
-
+app.use('/api', apiRoutes)
 
 //servidor
 app.listen(3080,() => {
