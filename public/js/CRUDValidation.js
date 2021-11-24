@@ -29,7 +29,7 @@ window.addEventListener("load", function(e){
         //Product Description Validation
         let productDescription = document.getElementsByName("productDescription")[0].value;
         if(productDescription.length < 6) {
-            alert("El campo debe tener al menos 15 caracteres")
+            alert("El campo 'Descripción' debe tener al menos 15 caracteres")
             e.preventDefault()
         }
 

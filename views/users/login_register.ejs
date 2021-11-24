@@ -25,12 +25,13 @@
     </header>
 
     <!--Main-->
+            <!--LOGIN-->
     <form id="form1" action="/login" method="post">
         <section class="form-login">
             <h5>Inicio de Sesión</h5>
-            <% if (locals.errors && errors.email) { %>
+            <% if (locals.errors && errors.emailLogin) { %>
                 <p class="error-email">
-                    <%= errors.email.msg %>
+                    <%= errors.emailLogin.msg %>
                 </p>
                 <% } %>
                     <input type="text" name="emailLogin" value="" placeholder="Email">
@@ -42,7 +43,7 @@
         </section>
     </form>
 
-
+    <!--REGISTER-->
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
