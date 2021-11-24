@@ -12,6 +12,12 @@ const controller = {
                 }
                 res.json(response)
             });
+    },
+    detail: (req, res) => {
+        Product.findByPk(req.params.id,)
+        .then(product => {
+            res.json(product)
+        })
     }
 }
 
