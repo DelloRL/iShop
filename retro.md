@@ -25,3 +25,6 @@ Reflexionamos sobre como llegamos siempre a la entrega,pero no esta bueno el ech
 ANALISIS Del Sexto Sprint.
 Este sexto sprint comenzo muy bien,con un diseño para la base de datos y una delegacion de tareas rapida,al ir pasando el tiempo nos quedamos atras en los objetivos que propusimos desde un principio y esto hizo que de nuevo no estuviesemos sobrados de tiempo,al contrario realmente.
 
+ANALISIS Del Septimo Sprint.
+Con un ojo puesto en la entrega final y el otro sobre las clases dejamos un poco de lado las validaciones en las primeras semanas,no fue hasta 
+un poco mas adelante que decidimos darle una atencion mayor,no se logro terminar a la fecha,pero todo quedara resuelto.  
