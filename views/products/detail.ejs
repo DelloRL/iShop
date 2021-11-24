@@ -40,19 +40,16 @@
                     <h2 class="description">
                         <%= products.name %>
                     </h2>
-                    <h2>Descripción</h3>
+                    <h2>Descripción</h2>
                         <p>
                             <%= products.description %>
                         </p>
                         <h2>Precio</h2>
                         <p id="price">$<%= products.price%>
                         </p>
-                        <br>
-
-
+                            <br>
                         <div class="text-center">
                             <a href="#" class="button" onclick="confirm('<%= products.id %>')">Agregar al carrito</a>
-                            <!-- <a href="/delete" class="button">Delete</a> -->
                         </div>
                 </div>
 
@@ -76,7 +73,6 @@
         <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js"></script>
-
 
         <!-- Footer -->
         <%- include('../partials/footer') -%>
