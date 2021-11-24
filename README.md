@@ -8,8 +8,6 @@ Incluimos venta de cargadores y auriculares!
 
 miembros fundadores:
 
-Serena Pérez del Cerro: Estudiante de ultimo año nivel secundario, cursos de junior Archievement e Inglés.
-
 Mauricio Caggiano: Estudiante de ultimo año nivel secundario, experiencia en HTML,CSS y Bootstrap.
 
 Franco Mazuryk:Estudiante de ultimo nivel secundario actualmente sin mucho conocimiento en el mundo de desarollo web,con conocimientos de ingles basico.
