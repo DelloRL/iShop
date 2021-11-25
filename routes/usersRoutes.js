@@ -41,11 +41,11 @@ const upload = multer({ storage });
 
 /* Formulario de registro y login */
 
-router.get('/register', guestMiddleware, userController.register);
+router.get('/register', guestMiddleware, userController.create);
 
 // Validación de registro y envio del formulario
 
-router.post('/register', upload.single('avatar'), validations , userController.processRegister);
+router.post('/register', upload.single('avatar'), validations , userController.store);
 
 // Formulario de login
 

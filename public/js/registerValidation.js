@@ -28,5 +28,12 @@ window.addEventListener("load", function(e){
             alert("El mínimo de caracteres para la contraseña es 6");
             e.preventDefault()
         }
+
+        //Register Avatar Validation
+        let avatar = document.getElementsByName("avatar")[0].value;
+        if(avatar == ""){
+            alert("Por favor seleccione una imagen de perfil.");
+            e.preventDefault()
+        }
     })
 });

@@ -1,54 +1,41 @@
 let db = require("../database/models");
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator');
+const { validationResult, header } = require('express-validator');
 const bcrypt = require('bcryptjs')
-const User = require('../models/user')
-const cookie = require('cookie-parser')
+const cookie = require('cookie-parser');
+const users = require("../database/models/users");
 
 
 const userController = {
+    // create + store
+	create: (req, res) => {
+		db.users.findAll()
+			.then(function (users) {
+				res.render('users/login_register', { users: users });
+			})
+	},
+	store: function (req, res) {
+		db.users.create({
+			name: req.body.nameRegister,
+			email: req.body.emailRegister,
+			avatar: req.file.avatar,
+			password: req.body.passwordRegister,
+			//role: req.body.productPrice,
+		})
+			.then(() => {
+                alert("Usuario creado exitosamente!")
+				return res.redirect('users/login_register')
+			})
+			.catch(error => res.send(error))
+	},
 
-    register: (req, res) => {
-        return res.render('users/login_register');
-    },
-    processRegister: (req, res) => {
-        const resultValidation = validationResult(req.body)
 
-        if (resultValidation.errors.length > 0) {
-            return res.render('users/login_register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        }
-
-        let userInDB = User.findByField('email', req.body.emailLogin)
-
-        if (userInDB) {
-            return res.render('users/login_register', {
-                errors: {
-                    emailRegister: {
-                        msg: 'Este email ya esta registrado'
-                    }
-                },
-                oldData: req.body
-            });
-        }
-
-        let userToCreate = {
-            ...req.body,
-            passwordRegister: bcrypt.hashSync(req.body.passwordRegister, 10),
-            avatar: req.file.filename
-        }
-
-        let userCreated = User.create(userToCreate)
-        res.redirect("/login")
-    },
     login: (req, res) => {
         return res.render('users/login_register')
     },
     processLogin: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.emailLogin)
+        let userToLogin = users.findByField('email', req.body.emailLogin)
 
         if (userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password)
