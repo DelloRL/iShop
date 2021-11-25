@@ -43,5 +43,13 @@
   "email": "lucas.dello.russo@gmail.com",
   "password": "$2a$10$2s58jUHNK/iveoJHd40C9edtknqjbk.yBHRp6sWAHbb8AkyoVG9aa",
   "avatar": "avatar-1636415153502.gif"
+ },
+ {
+  "id": 7,
+  "nameRegister": "mazu",
+  "emailRegister": "Mazu@gmail.com",
+  "passwordRegister": "$2a$10$ntu7PjSyKuBQcTRSHmQ.WO0KreB.J5RRV0pHa.6pMzOZV7Bgp6hsS",
+  "avatar": "avatar-1637854981230.jpg",
+  "role" : 9 
  }
 ]

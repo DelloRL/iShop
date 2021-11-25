@@ -27,11 +27,11 @@ const productsController = {
 	},
 	store: function (req, res) {
 		db.products.create({
-			name: req.body.name,
-			description: req.body.description,
+			name: req.body.productName,
+			description: req.body.productDescription,
 			image: req.file.filename,
-			category: req.body.category,
-			price: req.body.price,
+			category: req.body.productCategory,
+			price: req.body.productPrice,
 		})
 			.then(() => {
 				return res.redirect('/products')

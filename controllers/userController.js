@@ -13,7 +13,7 @@ const userController = {
         return res.render('users/login_register');
     },
     processRegister: (req, res) => {
-        const resultValidation = validationResult(req)
+        const resultValidation = validationResult(req.body)
 
         if (resultValidation.errors.length > 0) {
             return res.render('users/login_register', {
