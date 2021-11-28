@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/detalle.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
-
+    <link rel="stylesheet" href="/css/tienda.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -41,16 +41,21 @@
                         <%= products.name %>
                     </h2>
                     <h2>Descripción</h2>
-                        <p>
-                            <%= products.description %>
-                        </p>
-                        <h2>Precio</h2>
-                        <p id="price">$<%= products.price%>
-                        </p>
-                            <br>
-                        <div class="text-center">
-                            <a href="#" class="button" onclick="confirm('<%= products.id %>')">Agregar al carrito</a>
-                        </div>
+                    <p>
+                        <%= products.description %>
+                    </p>
+                    <h2>Precio</h2>
+                    <p id="price">$<%= products.price%>
+                    </p>
+                    <br>
+                    <div class="text-center">
+                        <a href="#" class="button" onclick="confirm('<%= products.id %>')">Agregar al carrito</a>
+                    </div>
+                    <% if (locals.userLogged && userLogged.role===9) { %>
+                        <a href="/products/edit/<%= products.id %>">
+                            <button class="btn" title="EditProducts"><i class="far fa-edit"></i></button>
+                        </a>
+                        <% } %>
                 </div>
 
             </div>
