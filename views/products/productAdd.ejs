@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +9,76 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/productAdd.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
     <title>Sube tu producto</title>
 </head>
+
 <body>
     <!-- Header -->
     <%- include('../partials/header') -%>
 
 
-    <!-- Main -->
-    <form id="formCRUD" action="/products/create" method="POST" class="container" enctype="multipart/form-data">
-        <p>
-            <input type="text" name="productName" required placeholder="Nombre del Producto">
-        </p>
+        <!-- Main -->
+        <form id="formCRUD" action="/products/create" method="POST" class="container" enctype="multipart/form-data">
+            <p>
+                <input type="text" name="productName" required placeholder="Nombre del Producto">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-error">
+                        <%= errors.name.msg %>
+                    </div>
+                    <% } %>
+            </p>
 
-        <p>
-            <input type="number" name="productPrice" required placeholder="Precio del Producto">
-        </p>
+            <p>
+                <input type="number" name="productPrice" required placeholder="Precio del Producto">
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-error">
+                        <%= errors.price.msg %>
+                    </div>
+                    <% } %>
+            </p>
 
-        <p>
-            <select name="productCategory" id="category" class="form-input" class="required">
-                <option value="">Elegí una categoría</option>
-                <option value="IPhones">iPhones</option>
-                <option value="Auriculares">Airpods</option>
-                <option value="Fundas y protección">Fundas</option>
-            </select>
-        </p>
+            <p>
+                <select name="productCategory" id="category" class="form-input" class="required">
+                    <option value="">Elegí una categoría</option>
+                    <option value="IPhones">iPhones</option>
+                    <option value="Auriculares">Airpods</option>
+                    <option value="Fundas y protección">Fundas</option>
+                </select>
+                <% if (locals.errors && errors.category) { %>
+                    <div class="text-error">
+                        <%= errors.category.msg %>
+                    </div>
+                    <% } %>
+            </p>
 
-        <p>
-            <textarea rows="4" cols="50" name="productDescription" placeholder="Descripción del producto"></textarea>
-        </p>
-        
-        <h4>Añade imágenes del producto:</h4>
-        <input type="file" id="img" name="img" />
-        <br>
-        <button class="button-submit" type="submit"> Publicar Producto </button>
-    </form>
+            <p>
+                <textarea rows="4" cols="50" name="productDescription" placeholder="Descripción del producto"></textarea>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-error">
+                        <%= errors.description.msg %>
+                    </div>
+                    <% } %>
+            </p>
+
+            <h4>Añade imágenes del producto:</h4>
+            <input type="file" id="img" name="img" />
+            <% if (locals.errors && errors.img) { %>
+                <div class="text-error">
+                    <%= errors.img.msg %>
+                </div>
+                <% } %>
+            <br>
+            <button class="button-submit" type="submit"> Publicar Producto </button>
+        </form>
 
 
-    <!-- Footer -->
-    <%- include('../partials/footer') -%>
+        <!-- Footer -->
+        <%- include('../partials/footer') -%>
 
-    <script src="/js/CRUDValidation.js"></script>
+            <script src="/js/CRUDValidation.js"></script>
 </body>
+
 </html>
