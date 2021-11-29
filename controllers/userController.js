@@ -9,57 +9,58 @@ const users = require("../database/models/users")
 
 const userController = {
     // create + store
-	create: (req, res) => {
-		db.users.findAll()
-			.then(function (users) {
-				res.render('users/login_register', { users: users });
-			})
-	},
-	store: function (req, res) {
-		db.users.create({
-			name: req.body.nameRegister,
-			email: req.body.emailRegister,
-			avatar: req.file.avatar,
-			password: req.body.passwordRegister,
-			//role: req.body.productPrice,
-		})
-			.then(() => {
+    create: (req, res) => {
+        db.users.findAll()
+            .then(function (users) {
+                res.render('users/login_register', { users: users });
+            })
+    },
+    store: function (req, res) {
+        db.users.create({
+            name: req.body.nameRegister,
+            email: req.body.emailRegister,
+            avatar: req.file.avatar,
+            password: req.body.passwordRegister,
+            //role: req.body.productPrice,
+        })
+            .then(() => {
                 alert("Usuario creado exitosamente!")
-				return res.redirect('users/login_register')
-			})
-			.catch(error => res.send(error))
-	},
+                return res.redirect('users/login_register')
+            })
+            .catch(error => res.send(error))
+    },
 
 
     login: (req, res) => {
         return res.render('users/login_register')
     },
     processLogin: (req, res) => {
-        let userToLogin = db.users.findAll({
-            where : { 'email': req.body.emailLogin }
-        });
-
-        if (userToLogin) {
-            let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password)
-            if (passwordHash) {
-                delete userToLogin.password
-                req.session.userLogged = userToLogin
-                return res.redirect('/profile')
-            }
-
-            if (req.body.rememberMe != undefined) {
-                res.cookie('rememberMe', userLogged.emailLogin, { maxAge: 60000 })
-            }
-        }
-
-        return res.render('users/login_register', {
-            errors: {
-                emailLogin: {
-                    msg: 'Las credenciales son inválidas'
+        db.users.findOne({ where: { email: req.body.emailLogin } }) .then((userToLogin) => {
+            console.log(userToLogin);
+            if (userToLogin) {
+                let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password);
+    
+                if (passwordHash) {
+                    delete userToLogin.password
+                    req.session.userLogged = userToLogin
+                    return res.redirect('/profile')
+                }
+    
+                if (req.body.rememberMe != undefined) {
+                    res.cookie('rememberMe', userLogged.emailLogin, { maxAge: 60000 })
                 }
             }
+    
+            return res.render('users/login_register', {
+                errors: {
+                    emailLogin: {
+                        msg: 'Las credenciales son inválidas'
+                    }
+                }
+            })
         })
     },
+    
     profile: (req, res) => {
         return res.render('users/profile', {
             user: req.session.userLogged
