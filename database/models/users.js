@@ -21,7 +21,7 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.STRING
         },
         role: {
-            type: dataTypes.NUMBER 
+            type: dataTypes.INTEGER
         }
     }
 

@@ -4,7 +4,7 @@ const path = require('path');
 const { validationResult, header } = require('express-validator');
 const bcrypt = require('bcryptjs')
 const cookie = require('cookie-parser');
-const users = require("../database/models/users");
+const users = require("../database/models/users")
 
 
 const userController = {
@@ -35,7 +35,9 @@ const userController = {
         return res.render('users/login_register')
     },
     processLogin: (req, res) => {
-        let userToLogin = users.findByField('email', req.body.emailLogin)
+        let userToLogin = db.users.findAll({
+            where : { 'email': req.body.emailLogin }
+        });
 
         if (userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password)
