@@ -43,7 +43,7 @@ const userController = {
                     }
                     db.users.create(userToCreate)
                         .then(() => {
-                            return res.redirect('users/login_register')
+                            return res.redirect('/profile')
                         })
                 }
             })

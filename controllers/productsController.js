@@ -43,23 +43,22 @@ const productsController = {
 	// Update - Form to edit
 	edit: function (req, res) {
 		db.products.findByPk(req.params.id)
-		//Promise.all([pedidoProducto])
 			.then(function (products) {
 				res.render('products/productEdit', { products: products });
 			})
 	},
 
-	update: function(req, res){
+	update: function (req, res) {
 		db.products.update({
 			name: req.body.productName,
 			price: req.body.productPrice,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
 			image: req.body.img,
-		},
-			{ where: { id: req.params.id } });
-
-		res.redirect("/products/" + req.params.id)
+		}, { where: { id: req.params.id } })
+			.then(() => {
+				res.redirect("/products/" + req.params.id)
+			})
 	},
 
 	// Delete - Delete one product from DB
