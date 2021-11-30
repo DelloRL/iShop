@@ -10,18 +10,15 @@ const users = require("../database/models/users")
 const userController = {
     // create + store
     create: (req, res) => {
-        db.users.findAll()
-            .then(function (users) {
-                res.render('users/login_register', { users: users });
-            })
+        return res.render('users/login_register');
     },
     store: function (req, res) {
         db.users.create({
             name: req.body.nameRegister,
             email: req.body.emailRegister,
-            avatar: req.file.avatar,
-            password: req.body.passwordRegister,
-            //role: req.body.productPrice,
+            avatar: req.file.filename,
+            password: bcrypt.hashSync(req.body.passwordRegister, 10),
+            role: 1
         })
             .then(() => {
                 alert("Usuario creado exitosamente!")
@@ -36,7 +33,7 @@ const userController = {
     },
     processLogin: (req, res) => {
         db.users.findOne({ where: { email: req.body.emailLogin } }) .then((userToLogin) => {
-            console.log(userToLogin);
+
             if (userToLogin) {
                 let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password);
     
