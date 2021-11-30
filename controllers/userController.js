@@ -8,26 +8,48 @@ const users = require("../database/models/users")
 
 
 const userController = {
-    // create + store
-    create: (req, res) => {
+    register: (req, res) => {
         return res.render('users/login_register');
     },
-    store: function (req, res) {
-        db.users.create({
-            name: req.body.nameRegister,
-            email: req.body.emailRegister,
-            avatar: req.file.filename,
-            password: bcrypt.hashSync(req.body.passwordRegister, 10),
-            role: 1
-        })
-            .then(() => {
-                alert("Usuario creado exitosamente!")
-                return res.redirect('users/login_register')
+    processRegister: (req, res) => {
+        const resultValidation = validationResult(req)
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('users/login_register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+        db.users.findOne({ where: { email: req.body.emailRegister } })
+            .then((userInDB) => {
+                if (userInDB) {
+                    return res.render('users/login_register', {
+                        errors: {
+                            emailRegister: {
+                                msg: 'Este email ya esta registrado'
+                            }
+                        },
+                        oldData: req.body
+                    });
+
+                } else {
+                    let userToCreate = {
+                        name: req.body.nameRegister,
+                        email: req.body.emailRegister,
+                        avatar: req.file.filename,
+                        password: bcrypt.hashSync(req.body.passwordRegister, 10),
+                        role: 1
+                    }
+                    db.users.create(userToCreate)
+                        .then(() => {
+                            return res.redirect('users/login_register')
+                        })
+                }
             })
-            .catch(error => res.send(error))
+
+
     },
-
-
     login: (req, res) => {
         return res.render('users/login_register')
     },

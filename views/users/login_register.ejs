@@ -58,9 +58,9 @@
                         </div>
                         <% } %>
                             <input type="email" name="emailRegister" placeholder="Email" id="">
-                            <% if (locals.errors && errors.email) { %>
+                            <% if (locals.errors && errors.emailRegister) { %>
                                 <div class="text-error">
-                                    <%= errors.email.msg %>
+                                    <%= errors.emailRegister.msg %>
                                 </div>
                                 <% } %>
                                     <input type="password" name="passwordRegister" placeholder="Contraseña" id="">

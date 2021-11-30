@@ -11,15 +11,15 @@ const userController = require('../controllers/userController');
 
 /* Validaciones */
 const validations = [
-    body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
-    body('email')
+    body('nameRegister').notEmpty().withMessage('Debes completar el campo de nombre'),
+    body('emailRegister')
         .notEmpty().withMessage('Debes ingresar un email').bail()
         .isEmail().withMessage('Debes ingresar un correo válido'),
-    body('password')
+    body('passwordRegister')
         .notEmpty().withMessage('Debes escribir una contraseña').bail()
         .isLength(6).withMessage('La contraseña debe tener un minimo de 6 caracteres')
     ,
-    body('avatar').custom((value, { req }) => {
+    body('avatarRegister').custom((value, { req }) => {
         let file = req.file
         if(!file) {
             throw new Error('Tienes que subir una imagén')
@@ -41,11 +41,11 @@ const upload = multer({ storage });
 
 /* Formulario de registro y login */
 
-router.get('/register', guestMiddleware, userController.create);
+router.get('/register', guestMiddleware, userController.register);
 
 // Validación de registro y envio del formulario
 
-router.post('/register', upload.single('avatar'), validations , userController.store);
+router.post('/register', upload.single('avatar'), validations , userController.processRegister);
 
 // Formulario de login
 
