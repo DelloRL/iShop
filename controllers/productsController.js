@@ -1,5 +1,6 @@
 let db = require("../database/models");
 const fs = require('fs');
+const products = require("../database/models/products")
 
 const productsController = {
 	// Show all products
@@ -41,39 +42,37 @@ const productsController = {
 
 	// Update - Form to edit
 	edit: function (req, res) {
-		let pedidoProducto = db.products.findByPk(req.params.id);
-		Promise.all([pedidoProducto])
-			.then(function ([products]) {
+		db.products.findByPk(req.params.id)
+		//Promise.all([pedidoProducto])
+			.then(function (products) {
 				res.render('products/productEdit', { products: products });
 			})
 	},
 
-	update: (req, res) => {
+	update: function(req, res){
 		db.products.update({
-			name: req.body.name,
-			description: req.body.description,
+			name: req.body.productName,
+			price: req.body.productPrice,
+			category: req.body.productCategory,
+			description: req.body.productDescription,
 			image: req.body.img,
-			category: req.body.category,
-			price: req.body.price,
-		}, {
-			where: {
-				id: req.params.id
-			}
-		});
+		},
+			{ where: { id: req.params.id } });
+
 		res.redirect("/products/" + req.params.id)
 	},
 
 	// Delete - Delete one product from DB
-	destroy : function(req, res){
+	destroy: function (req, res) {
 		const id = req.params.id
 		db.products.findByPk(id)
-		.then((product) => {
-			fs.unlinkSync(`./public/images/products/${product.image}`);
-			db.products.destroy({ where: { id: req.params.id } })
-				.then(() => {
-					res.redirect('/products')
-				})
-		})
+			.then((product) => {
+				fs.unlinkSync(`./public/images/products/${product.image}`);
+				db.products.destroy({ where: { id: req.params.id } })
+					.then(() => {
+						res.redirect('/products')
+					})
+			})
 	}
 
 };
