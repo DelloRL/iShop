@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,65 +9,72 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/productAdd.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
     <title>Edita tu producto</title>
 </head>
+
 <body>
     <!-- Header -->
     <%- include('../partials/header') -%>
 
-    <!-- Main -->
-    <h1 class="current-edit">Estas editando: <span class="color"><%= products.name %></h1>
+        <!-- Main -->
+        <h1 class="current-edit">Estas editando: <span class="color">
+                <%= products.name %>
+        </h1>
 
-    <form action="/products/edit/<%= products.id %>" method="POST" class="container" enctype="multipart/form-data">
-        
-        <p>
-            <input type="text" name="name" value="<%= products.name %>" placeholder="Nombre del Producto">
-        </p>
+        <form action="/products/edit/<%= products.id %>" method="POST" class="container" enctype="multipart/form-data">
 
-        <p>
-            <input type="text" name="price" value="<%= products.price %>" placeholder="Precio del Producto">
-        </p>
+            <p>
+                <input type="text" name="productName" value="<%= products.name %>" placeholder="Nombre del Producto">
+            </p>
 
-        <p>
-            <select name="category" id="category" class="form-input">
-                <option value="">
-                Elegí una categoría 
-                </option>
-                <option value="IPhones" 
-                <% if(products.category == 'IPhones') {%>
-                selected
-                <% } %>
-                >iPhones</option>
-                <option value="Auriculares" 
-                <% if(products.category == "Auriculares") {%>
-                selected
-                <% } %>
-                >Airpods</option>
-                <option value="Fundas y protección" 
-                <% if(products.category == "Fundas y protección") {%>
-                selected
-                <% } %>
-                >Fundas</option>
-            </select>
-        </p>
+            <p>
+                <input type="text" name="productPrice" value="<%= products.price %>" placeholder="Precio del Producto">
+            </p>
 
-        <p>
-            <textarea rows="4" cols="50" placeholder="Descripción del producto"><%= products.description %></textarea>
-        </p>
-        
-        <h4 class="text-center">Reemplaza imagén del producto:</h4>
-        <input type="file" id="img" name="img">
-        <br>
-        <button class="button-submit" type="submit"> Editar producto </button>
-    </form>
-    <div class="current">
-        <p class="text-img-current">Imagén actual</p>
-        <img src="/images/products/<%= products.image %>" class="img-current">
-    </div>
-    
+            <p>
+                <select name="productCategory" id="category" class="form-input">
+                    <option value="">
+                        Elegí una categoría
+                    </option>
+                    <option value="IPhones" <% if(products.category=='IPhones' ) {%>
+                        selected
+                        <% } %>
+                            >iPhones
+                    </option>
+                    <option value="Auriculares" <% if(products.category=="Auriculares" ) {%>
+                        selected
+                        <% } %>
+                            >Airpods
+                    </option>
+                    <option value="Fundas y protección" <% if(products.category=="Fundas y protección" ) {%>
+                        selected
+                        <% } %>
+                            >Fundas
+                    </option>
+                </select>
+            </p>
 
-    <!-- Footer -->
-    <%- include('../partials/footer') -%>
+            <p>
+                <textarea name="productDescription" rows="4" cols="50"
+                    placeholder="Descripción del producto"><%= products.description %></textarea>
+            </p>
+
+            <h4 class="text-center">Reemplaza imagén del producto:</h4>
+            <input type="file" id="img" name="img">
+            <br>
+            <button class="button-submit" type="submit"> Editar producto </button>
+        </form>
+        <div class="current">
+            <p class="text-img-current">Imagén actual</p>
+            <img src="/images/products/<%= products.image %>" class="img-current">
+        </div>
+
+
+        <!-- Footer -->
+        <%- include('../partials/footer') -%>
 </body>
+
 </html>

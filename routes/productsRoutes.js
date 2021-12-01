@@ -4,6 +4,7 @@ const path = require("path")
 const router = express.Router();
 const productsController = require('../controllers/productsController');
 const { body } = require('express-validator');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 /* Validaciones */
 const validations = [
@@ -50,8 +51,8 @@ router.post("/create", upload.single("img"), validations, productsController.sto
 router.get('/:id', productsController.detail);
 
 //Actualizar
-router.get('/edit/:id', productsController.edit);
-router.post('/edit/:id', productsController.update);
+router.get('/edit/:id',adminMiddleware, productsController.edit);
+router.post('/edit/:id',adminMiddleware, upload.single("img"), productsController.update);
 
 //Borrar
 router.get('/:id/delete', productsController.destroy);

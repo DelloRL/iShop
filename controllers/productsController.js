@@ -54,11 +54,15 @@ const productsController = {
 			price: req.body.productPrice,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
-			image: req.body.img,
+			image: req.body.img, 
 		}, { where: { id: req.params.id } })
 			.then(() => {
-				res.redirect("/products/" + req.params.id)
+				res.redirect("/products/");
+				console.log(req.body)
 			})
+			.catch(err =>
+				console.log(err)
+			)
 	},
 
 	// Delete - Delete one product from DB
