@@ -19,7 +19,7 @@ const validations = [
     ,
     body('avatarRegister').custom((value, { req }) => {
         let file = req.file
-        if(!file) {
+        if (!file) {
             throw new Error('Tienes que subir una imagén')
         }
         return true;
@@ -38,27 +38,24 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /* Formulario de registro y login */
-
 router.get('/register', guestMiddleware, userController.register);
 
 // Validación de registro y envio del formulario
-
-router.post('/register', upload.single('avatar'), validations , userController.processRegister);
+router.post('/register', upload.single('avatar'), validations, userController.processRegister);
 
 // Formulario de login
-
 router.get('/login', guestMiddleware, userController.login)
 
 // Procesar el login
-
 router.post('/login', userController.processLogin)
 
 // Perfil
-
 router.get('/profile', authMiddleware, userController.profile)
+router.get('/profileEdit', authMiddleware, userController.profileEdit)
+router.post('/profileEditProcess', authMiddleware, userController.profileEditProcess)
+
 
 // Logout
-
 router.get('/logout', userController.logout)
 
 

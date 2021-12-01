@@ -85,6 +85,16 @@ const userController = {
             user: req.session.userLogged
         });
     },
+
+    profileEdit: (req, res) =>{
+        return res.render('users/profileEdit', {
+            user: req.session.userLogged
+        }); 
+    },
+    profileEditProcess: (req, res) =>{
+
+    },
+
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('email', null, { maxAge: -1 });
