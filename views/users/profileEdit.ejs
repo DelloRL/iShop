@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="/css/Profile.css">
@@ -30,21 +29,22 @@
 
             </div>
 
-            <form action="/profileEditProcess" method="post">
+            <form action="/profileEditProcess/<%= user.id %>" method="post">
                 <div class="section2">
                     <p class="email">
-                        <input type="text" name="profileName" class="email" value="<%= user.email %>"
+                        <input type="email" name="profileEmail" class="email" value="<%= user.email %>"
                             placeholder="Email del Usuario">
                     </p>
-
                 </div>
 
                 <div class="section3">
                     <a><button class="editProfile" type="submit"> <i class="far fa-edit"></i>Guardar</button></a>
-                    <a href="/profile"><button class="closeSession"> <i
-                                class="fas fa-sign-out-alt"></i>Cancelar</button></a>
                 </div>
             </form>
+            <div class="section3">
+                <a href="/profile"><button class="closeSession"> <i
+                            class="fas fa-sign-out-alt"></i>Cancelar</button></a>
+            </div>
         </div>
 
         <br><br><br><br><br>

@@ -54,22 +54,22 @@ const userController = {
         return res.render('users/login_register')
     },
     processLogin: (req, res) => {
-        db.users.findOne({ where: { email: req.body.emailLogin } }) .then((userToLogin) => {
+        db.users.findOne({ where: { email: req.body.emailLogin } }).then((userToLogin) => {
 
             if (userToLogin) {
                 let passwordHash = bcrypt.compareSync(req.body.passwordLogin, userToLogin.password);
-    
+
                 if (passwordHash) {
                     delete userToLogin.password
                     req.session.userLogged = userToLogin
                     return res.redirect('/profile')
                 }
-    
+
                 if (req.body.rememberMe != undefined) {
-                    res.cookie('rememberMe', userLogged.emailLogin, { maxAge: 60000 })
+                    res.cookie('rememberMe', userLogged.emailLogin, { maxAge: 6000000 })
                 }
             }
-    
+
             return res.render('users/login_register', {
                 errors: {
                     emailLogin: {
@@ -79,20 +79,35 @@ const userController = {
             })
         })
     },
-    
+
     profile: (req, res) => {
         return res.render('users/profile', {
             user: req.session.userLogged
         });
     },
-
-    profileEdit: (req, res) =>{
+    profileEdit: (req, res) => {
         return res.render('users/profileEdit', {
             user: req.session.userLogged
-        }); 
+        });
     },
-    profileEditProcess: (req, res) =>{
+    profileEditProcess: (req, res) => {
+        console.log(req.session)
+        db.users.update({
+            email: req.body.profileEmail,
+        },
+            {
+                where: {
+                    id: req.params.id,
+                    //user: req.session.userLogged
+                }
+            })
+            .then(() => {
+                res.redirect("/profile/");
 
+            })
+            .catch(err =>
+                console.log(err)
+            )
     },
 
     logout: (req, res) => {

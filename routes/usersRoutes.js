@@ -44,15 +44,15 @@ router.get('/register', guestMiddleware, userController.register);
 router.post('/register', upload.single('avatar'), validations, userController.processRegister);
 
 // Formulario de login
-router.get('/login', guestMiddleware, userController.login)
+router.get('/login', guestMiddleware, userController.login);
 
 // Procesar el login
-router.post('/login', userController.processLogin)
+router.post('/login', userController.processLogin);
 
 // Perfil
-router.get('/profile', authMiddleware, userController.profile)
-router.get('/profileEdit', authMiddleware, userController.profileEdit)
-router.post('/profileEditProcess', authMiddleware, userController.profileEditProcess)
+router.get('/profile', authMiddleware, userController.profile);
+router.get('/profileEdit', authMiddleware, userController.profileEdit);
+router.post('/profileEditProcess/:id', authMiddleware, upload.single('avatar'), userController.profileEditProcess);
 
 
 // Logout
