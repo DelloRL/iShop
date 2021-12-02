@@ -57,7 +57,7 @@ const productsController = {
 			image: req.body.img, 
 		}, { where: { id: req.params.id } })
 			.then(() => {
-				res.redirect("/products/");
+				res.redirect("/products");
 				console.log(req.body)
 			})
 			.catch(err =>
