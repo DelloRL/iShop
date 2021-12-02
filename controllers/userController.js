@@ -90,8 +90,7 @@ const userController = {
             user: req.session.userLogged
         });
     },
-    profileEditProcess: (req, res) => {
-        console.log(req.session)
+    profileEditProcess: function (req, res) {
         db.users.update({
             email: req.body.profileEmail,
         },
@@ -102,8 +101,7 @@ const userController = {
                 }
             })
             .then(() => {
-                res.redirect("/profile/");
-
+                res.redirect("/profile");
             })
             .catch(err =>
                 console.log(err)
