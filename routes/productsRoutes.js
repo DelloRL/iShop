@@ -57,4 +57,9 @@ router.post('/edit/:id',adminMiddleware, upload.single("img"), productsControlle
 //Borrar
 router.get('/:id/delete', productsController.destroy);
 
+//Cart
+router.get('/addToCart/:id', loggedInMiddlware, productsControllers.addToCart);
+router.get('/deleteToCart/:id', loggedInMiddlware, productsControllers.deleteToCart);
+
+
 module.exports = router
