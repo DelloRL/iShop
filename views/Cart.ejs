@@ -22,35 +22,28 @@
     <!--Main-->
     <main>
         <nav class="Seccion1">
-            <h3 class="Titulo">Tu carrito Ishop</h3> 
+            <h3 class="Titulo">Tu carrito iShop</h3> 
             <a href="/home" class="fas fa-angle-double-left" ></a>
         </nav>
 
         <nav class="Seccion2">
-            <div class="Producto">
-                <img src="/images/auricularesAirPods.png" alt="Imagen del Producto" class="ImagenProducto">
-                <p class="precio"> <a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$
-                </p>
-    
-                <input type="number" min="0" class="cantidad-button">
-                <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
-            </div>
+            <% let precioTotal = 0; %>
+            <% if (products != '') { %>
+                <% products.forEach(product => { %>
+                        <div class="Producto">
+                            <img src="images/products/<%= product.image %>" alt="" class="imagenProducto">
+                            <p class="precio"> <a class="NombreDeProducto"><%= product.name %></a> <br> Precio: <%= product.price%>
+                            
+                            </p>
+                        </div>
+                    <% precioTotal += Number(product.price) %>  
+                <% }) %>
+            <% } else { %>
+                <h3 class="vacio">No hay productos en el carrito</h3>
+            <% } %> 
             <br>
-            <div class="Producto">
-                <img src="/images/xrRojo.jpg" alt="Imagen del Producto" class="ImagenProducto">
-                <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
-                <input type="number" min="0" class="cantidad-button">
-                <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
-            </div>
-            <br>
-            <div class="Producto">
-                <img src="/images/funda1.png" alt="Imagen del Producto" class="ImagenProducto">
-                <p class="precio"><a class="NombreDeProducto">Esto es un nombre de producto</a> <br> Precio: $$$$$$$</p>
-                <input type="number" min="0" class="cantidad-button">
-                <button class="boton-quitar"> <i class="fas fa-trash-alt"></i> </button>
-            </div>
         </nav>
-
+        
         <nav class="Seccion3">
             <div class="elegir-Pago">
             <div>
