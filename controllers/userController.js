@@ -81,14 +81,22 @@ const userController = {
     },
 
     profile: (req, res) => {
-        return res.render('users/profile', {
-            user: req.session.userLogged
-        });
+        //const user = req.session.userLogged,
+        db.users.findByPk(req.session.userLogged.id).then((user) => {
+            console.log(user)
+            return res.render('users/profile', {
+                user
+            });
+        })
     },
     profileEdit: (req, res) => {
-        return res.render('users/profileEdit', {
-            user: req.session.userLogged
-        });
+        //const user = req.session.userLogged,
+        db.users.findByPk(req.session.userLogged.id).then((user) => {
+            console.log(user)
+            return res.render('users/profileEdit', {
+                user
+            });
+        })
     },
     profileEditProcess: function (req, res) {
         db.users.update({

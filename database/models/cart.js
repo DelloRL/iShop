@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Cart';
+    let alias = 'cart';
 
     let cols = {
         user_id: {
@@ -25,11 +25,11 @@ module.exports = (sequelize, dataTypes) => {
     Cart.removeAttribute('id');
 
     Cart.associate = function (models) {
-        Cart.belongsTo(models.User, {
-            as: 'user',
-            foreignKey: 'user_id'
+        Cart.belongsTo(models.users, {
+            as: 'users',
+            foreignKey: 'users_id'
         })
-        Cart.belongsTo(models.Product, {
+        Cart.belongsTo(models.products, {
             as: 'products',
             foreignKey: 'product_id'
         })

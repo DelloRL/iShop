@@ -54,7 +54,7 @@ const productsController = {
 			price: req.body.productPrice,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
-			image: req.body.img,
+			image: req.file.filename,
 		}, { where: { id: req.params.id } })
 			.then(() => {
 				res.redirect("/products");
@@ -80,12 +80,13 @@ const productsController = {
 
 	//CART FUNCTIONALITY
 	addToCart: (req, res) => {
-		Cart.create({
-			user_id: req.session.user.id,
+		console.log(req.session.userLogged.id);
+		db.cart.create({
+			users_id: req.session.userLogged.id,
 			product_id: req.params.id
 		})
 			.then(() => {
-				res.redirect('/products/cart')
+				res.redirect('/cart')
 			})
 			.catch(err => {
 				res.send(err)
@@ -93,14 +94,17 @@ const productsController = {
 	},
 
 	deleteToCart: (req, res) => {
-		Cart.destroy({
+		db.cart.destroy({
 			where: {
-				user_id: req.session.user.id,
+				users_id: req.session.userLogged.id,
 				product_id: req.params.id
 			}
 		})
 			.then(() => {
-				return res.redirect('/products/cart')
+				return res.redirect('/cart')
+			})
+			.catch(err => {
+				res.send(err)
 			})
 	},
 
