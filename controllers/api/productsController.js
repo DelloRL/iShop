@@ -11,7 +11,7 @@ const controller = {
                         products.forEach(product => {
                             let newProduct = {
                                 ...product.dataValues,
-                                detail: `/api/products/${product.id}`
+                                detail: `/api/products/${product.id}` 
                             }
                             productsWithUrl.push(newProduct);            
                         });

@@ -1,5 +1,6 @@
 
 const db = require('../../database/models/index.js');
+const { use } = require('../../routes/mainRoutes.js');
 const User = db.users;
 
 
@@ -7,6 +8,7 @@ const controller = {
     list: (req, res) => {
         User.findAll()
             .then(users => {
+                console.log(users)
                 let usersWithUrl = [];
                         users.forEach(user => {
                             let newUser = {
@@ -32,7 +34,7 @@ const controller = {
                     id: user.id,
                     name: user.name,
                     email: user.email,
-                    avatar: `/images/users${user.image}`
+                    avatar: `/images/users/${user.avatar}`
                 }
                 res.json(response)
             })

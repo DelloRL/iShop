@@ -15,6 +15,7 @@ const adminRoutes = require('./routes/adminRoutes.js');
 const mainRoutes= require("./routes/mainRoutes.js");
 const productsRoutes = require("./routes/productsRoutes.js");
 const usersRoutes = require('./routes/usersRoutes.js');
+
 const apiRoutesProducts = require("./routes/api/productsRoutes")
 const apiRoutesUsers = require("./routes/api/usersRoutes.js");
 const cookies = require("cookie-parser");
@@ -46,8 +47,8 @@ app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/', adminRoutes);
 app.use('/', usersRoutes)
-app.use('/api', apiRoutesProducts)
-app.use('/api', apiRoutesUsers)
+app.use('/api/products', apiRoutesProducts)
+app.use('/api/users', apiRoutesUsers)
 
 //servidor
 app.listen(3080,() => {
