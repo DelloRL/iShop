@@ -54,7 +54,7 @@ const productsController = {
 			price: req.body.productPrice,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
-			image: req.body.img, 
+			image: req.body.img,
 		}, { where: { id: req.params.id } })
 			.then(() => {
 				res.redirect("/products");
@@ -76,7 +76,33 @@ const productsController = {
 						res.redirect('/products')
 					})
 			})
-	}
+	},
+
+	//CART FUNCTIONALITY
+	addToCart: (req, res) => {
+		Cart.create({
+			user_id: req.session.user.id,
+			product_id: req.params.id
+		})
+			.then(() => {
+				res.redirect('/products/cart')
+			})
+			.catch(err => {
+				res.send(err)
+			})
+	},
+
+	deleteToCart: (req, res) => {
+		Cart.destroy({
+			where: {
+				user_id: req.session.user.id,
+				product_id: req.params.id
+			}
+		})
+			.then(() => {
+				return res.redirect('/products/cart')
+			})
+	},
 
 };
 
