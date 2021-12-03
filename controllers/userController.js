@@ -66,7 +66,7 @@ const userController = {
                 }
 
                 if (req.body.rememberMe != undefined) {
-                    res.cookie('rememberMe', userLogged.emailLogin, { maxAge: 6000000 })
+                    res.cookie('rememberMe', userLogged.id, { maxAge: 6000000 })
                 }
             }
 
@@ -118,7 +118,7 @@ const userController = {
 
     logout: (req, res) => {
         req.session.destroy();
-        res.cookie('email', null, { maxAge: -1 });
+        res.clearCookie("remember");
         res.redirect('/home')
     },
     editarUsuarios: (req, res) => {
