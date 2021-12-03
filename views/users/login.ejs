@@ -2,19 +2,19 @@
 
 <html lang="es" dir="ltr">
 
-    <head>
-        <meta charset="utf-8">
-        <title>¡Inicia Sesión en iShop!</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-        <link rel="stylesheet" href="css/login.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>¡Inicia Sesión en iShop!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
 
 
-    <body>
+<body>
 
     <header class="main-header">
         <div class="logoWrapper">
@@ -25,23 +25,26 @@
     </header>
 
     <!--Main-->
-        <form id="form1" action="/login" method="post">
-            <section class="form-login">
-                <h5>Inicio de Sesión</h5>
-                <% if (locals.errors && errors.email) { %>
-                    <p class="error-email"> <%= errors.email.msg  %> </p>
+    <form id="form1" action="/login" method="post">
+        <section class="form-login">
+            <h5>Inicio de Sesión</h5>
+            <% if (locals.errors && errors.email) { %>
+                <p class="error-email">
+                    <%= errors.email.msg %>
+                </p>
                 <% } %>
-                <input type="text" name="email" value="" placeholder="Email">
-                <input type="password" name="password" value="" placeholder="Contraseña">
-                <input type="submit" value="Ingresar">
-                <label for="">Recordarme</label>
-                <input type="checkbox" name="rememberMe" value="rememberMe"></input>   
-            </section>
-        </form>
-        
-        
-        
-        <script src="/js/popup.js"></script>
+                    <input type="text" name="email" value="" placeholder="Email">
+                    <input type="password" name="password" value="" placeholder="Contraseña">
+                    <input type="submit" value="Ingresar">
+                    <label for="">Recordarme</label>
+                    <input type="checkbox" name="rememberMe" value="rememberMe"></input>
+        </section>
+    </form>
 
-    </body>
+
+
+    <script src="/js/popup.js"></script>
+
+</body>
+
 </html>

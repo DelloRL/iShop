@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu carrito</title>
-    <link rel="stylesheet" href="/css/Carrito.css">   
+    <link rel="stylesheet" href="/css/Carrito.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
 </head>
 
 <body>
@@ -19,62 +21,64 @@
     <%- include('./partials/header') -%>
 
 
-    <!--Main-->
-    <main>
-        <nav class="Seccion1">
-            <h3 class="Titulo">Tu carrito iShop</h3> 
-            <a href="/home" class="fas fa-angle-double-left" ></a>
-        </nav>
+        <!--Main-->
+        <main>
+            <nav class="Seccion1">
+                <h3 class="Titulo">Tu carrito iShop</h3>
+                <a href="/home" class="fas fa-angle-double-left"></a>
+            </nav>
 
-        <nav class="Seccion2">
-            <% let precioTotal = 0; %>
-            <% if (products != '') { %>
-                <% products.forEach(product => { %>
-                        <div class="Producto">
-                            <img src="images/products/<%= product.image %>" alt="" class="imagenProducto">
-                            <p class="precio"> <a class="NombreDeProducto"><%= product.name %></a> <br> Precio: <%= product.price%>
-                            
-                            </p>
-                        </div>
-                    <% precioTotal += Number(product.price) %>  
-                <% }) %>
-            <% } else { %>
-                <h3 class="vacio">No hay productos en el carrito</h3>
-            <% } %> 
-            <br>
-        </nav>
-        
-        <nav class="Seccion3">
-            <div class="elegir-Pago">
-            <div>
-                    <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
-                    <label for="Cuotas">Cuotas</label>
-                    <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
-                    <label for="Contado">Al Contado</label>
-            </div>
-        
-                <div class="Texto">
-                    <p> Pagando al contado tenes hasta un </p>
-                    <p class="descuento">15% de descuento!</p>
-                    <p class="total">Total:$$$</p>
+            <nav class="Seccion2">
+                <% let precioTotal=0; %>
+                    <% if (products !='' ) { %>
+                        <% products.forEach(product=> { %>
+                            <div class="Producto">
+                                <img src="images/products/<%= product.image %>" alt="" class="imagenProducto">
+                                <p class="precio"> <a class="NombreDeProducto">
+                                        <%= product.name %>
+                                    </a> <br> Precio: <%= product.price%>
+
+                                </p>
+                            </div>
+                            <% precioTotal +=Number(product.price) %>
+                                <% }) %>
+                                    <% } else { %>
+                                        <h3 class="vacio">No hay productos en el carrito</h3>
+                                        <% } %>
+                                            <br>
+            </nav>
+
+            <nav class="Seccion3">
+                <div class="elegir-Pago">
+                    <div>
+                        <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
+                        <label for="Cuotas">Cuotas</label>
+                        <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
+                        <label for="Contado">Al Contado</label>
+                    </div>
+
+                    <div class="Texto">
+                        <p> Pagando al contado tenes hasta un </p>
+                        <p class="descuento">15% de descuento!</p>
+                        <p class="total">Total:$$$</p>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-    <nav class="botones">
-        <div class="padreBotonP">
-            <button class="boton-Pagar">Pagar</button>
-        </div>
+            <nav class="botones">
+                <div class="padreBotonP">
+                    <button class="boton-Pagar">Pagar</button>
+                </div>
 
-        <div class="padreBotonV">
-                <button class="boton-vaciar">Vaciar </button>
-        </div>
-    </nav>
+                <div class="padreBotonV">
+                    <a href="/products/deleteToCart/<%= products.id %>"><i class="close fas fa-times"> Vaciar </i></a>
+                </div>
+            </nav>
 
-    </main>
+        </main>
 
-    <!-- Footer -->
-    <%- include('./partials/footer') -%>
+        <!-- Footer -->
+        <%- include('./partials/footer') -%>
 
 </body>
 

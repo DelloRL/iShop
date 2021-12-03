@@ -2,9 +2,9 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'cart';
 
     let cols = {
-        user_id: {
+        users_id: {
             type: dataTypes.INTEGER,
-            references: 'user',
+            references: 'users',
             referencesKey: 'id'
         },
         product_id: {

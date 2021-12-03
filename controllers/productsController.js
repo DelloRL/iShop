@@ -95,11 +95,9 @@ const productsController = {
 
 	deleteToCart: (req, res) => {
 		db.cart.destroy({
-			where: {
-				users_id: req.session.userLogged.id,
-				product_id: req.params.id
-			}
-		})
+			where: {},
+			truncate: true
+		  })
 			.then(() => {
 				return res.redirect('/cart')
 			})

@@ -1,17 +1,17 @@
-window.addEventListener("load", function(e){
+window.addEventListener("load", function (e) {
     let form = document.querySelector("#registerForm");
 
-    form.addEventListener("submit", function(e){
+    form.addEventListener("submit", function (e) {
         //Register Name Validation
         let nameRegister = document.getElementsByName("nameRegister")[0].value;
-        if(nameRegister == ""){
+        if (nameRegister == "") {
             alert("El Nombre debe estar completo.");
             e.preventDefault()
         }
 
         //Register Email Validation
         let emailRegister = document.getElementsByName("emailRegister")[0].value;
-        if(emailRegister == ""){
+        if (emailRegister == "") {
             alert("El Email debe estar completo.");
             e.preventDefault()
         } else if (emailRegister.length < 6) {
@@ -21,7 +21,7 @@ window.addEventListener("load", function(e){
 
         //Register Password Validation
         let passwordRegister = document.getElementsByName("passwordRegister")[0].value;
-        if(passwordRegister == ""){
+        if (passwordRegister == "") {
             alert("La contraseña debe estar completa.");
             e.preventDefault()
         } else if (passwordRegister.length < 6) {
@@ -31,7 +31,7 @@ window.addEventListener("load", function(e){
 
         //Register Avatar Validation
         let avatar = document.getElementsByName("avatar")[0].value;
-        if(avatar == ""){
+        if (avatar == "") {
             alert("Por favor seleccione una imagen de perfil.");
             e.preventDefault()
         }

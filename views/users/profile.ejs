@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="/css/Profile.css">   
+    <link rel="stylesheet" href="/css/Profile.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    
+
 </head>
 
 <body>
-        <!-- Header -->
-        <%- include('../partials/header') -%>
+    <!-- Header -->
+    <%- include('../partials/header') -%>
 
-    <div class="all">
+        <div class="all">
 
-        <div class="section1">
+            <div class="section1">
 
-            <div class="profilePhoto"> 
-                <img src="/images/users/<%=user.avatar %>" alt="userImage" class="userImage">
+                <div class="profilePhoto">
+                    <img src="/images/users/<%=user.avatar %>" alt="userImage" class="userImage">
+                </div>
+                <p class="nameUser">Bienvenido <span class="nameUserSpan">
+                        <%= user.name %>
+                    </span></p>
+
             </div>
-            <p class="nameUser">Bienvenido <span class="nameUserSpan"><%= user.name %></span></p>
+
+            <div class="section2">
+
+                <p class="email">
+                    <%= user.email %>
+                </p>
+
+            </div>
+
+            <div class="section3">
+
+                <a href="/profileEdit"><button class="editProfile"> <i class="far fa-edit"></i> Editar mi
+                        perfil</button></a>
+                <a href="/logout"><button class="closeSession"> <i class="fas fa-sign-out-alt"></i> Cerrar
+                        session</button></a>
+            </div>
 
         </div>
 
-        <div class="section2"> 
+        <br><br><br><br><br>
 
-            <p class="email"><%= user.email %></p>
-
-        </div>
-
-        <div class="section3">
-
-            <a href="/profileEdit"><button class="editProfile"> <i class="far fa-edit"></i> Editar mi perfil</button></a>
-            <a href="/logout"><button class="closeSession"> <i class="fas fa-sign-out-alt"></i> Cerrar session</button></a>
-        </div>
-
-    </div>
-
-    <br><br><br><br><br>
-
-    <!-- Footer -->
-    <%- include('../partials/footer') -%>
+        <!-- Footer -->
+        <%- include('../partials/footer') -%>
 </body>
+
 </html>

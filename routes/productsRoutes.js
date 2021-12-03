@@ -9,7 +9,7 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 /* Validaciones */
 const validations = [
     body('name').notEmpty().withMessage('Debes completar el campo de nombre')
-    .isLength(6).withMessage('El campo de Nombre debe tener al menos 6 caracteres.')
+        .isLength(6).withMessage('El campo de Nombre debe tener al menos 6 caracteres.')
     ,
     body('price')
         .notEmpty().withMessage('Debes ingresar un Precio').bail()
@@ -51,8 +51,8 @@ router.post("/create", upload.single("img"), validations, productsController.sto
 router.get('/:id', productsController.detail);
 
 //Actualizar
-router.get('/edit/:id',adminMiddleware, productsController.edit);
-router.post('/edit/:id',adminMiddleware, upload.single("img"), productsController.update);
+router.get('/edit/:id', adminMiddleware, productsController.edit);
+router.post('/edit/:id', adminMiddleware, upload.single("img"), productsController.update);
 
 //Borrar
 router.get('/:id/delete', productsController.destroy);

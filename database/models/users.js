@@ -32,5 +32,12 @@ module.exports = function(sequelize, dataTypes){
 
     let users = sequelize.define(alias, cols, config);
 
+    users.associate = function (models) {
+        users.hasMany(models.cart, {
+            as: 'cart',
+            foreignKey: 'users_id'
+        })
+    }
+
     return users;
 }

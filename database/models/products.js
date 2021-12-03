@@ -1,4 +1,4 @@
-module.exports = function(sequelize, dataTypes){
+module.exports = function (sequelize, dataTypes) {
     let alias = "products";
 
     let cols = {
@@ -31,5 +31,13 @@ module.exports = function(sequelize, dataTypes){
 
     let products = sequelize.define(alias, cols, config);
 
+
+    products.associate = function (models) {
+        products.hasMany(models.cart, {
+            as: 'cart',
+            foreignKey: 'product_id'
+        })
+    }
+
     return products;
-}
+};

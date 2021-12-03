@@ -9,7 +9,7 @@ const mainController = {
         db.products.findAll({
             include: [
                 {
-                    model: Cart,
+                    model: db.cart,
                     as: 'cart',
                     where: {
                         users_id: req.session.userLogged.id
@@ -19,7 +19,6 @@ const mainController = {
             .then((products) => {
                 return res.render('./cart', { products });
             })
-        return res.render('cart');
     },
 }
 
