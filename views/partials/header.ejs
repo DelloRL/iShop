@@ -38,8 +38,11 @@
                         <% } %>
 
                             <a href="#"><i class="fas fa-search"></i></a>
-                            <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
+                            <% if (locals.isLogged) { %>
 
+                                <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
+
+                                <% } %>
         </div>
 
 
@@ -79,7 +82,11 @@
                         <% } %>
 
                             <a href="#"><i class="fas fa-search"></i></a>
-                            <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
+                            <% if (locals.isLogged) { %>
+
+                                <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
+
+                                <% } %>
 
         </div>
 

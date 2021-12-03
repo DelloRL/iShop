@@ -48,15 +48,18 @@
                     <p id="price">$<%= products.price%>
                     </p>
                     <br>
-                    <div class="text-center">
-                        <a href="/products/addToCart/<%= products.id %>" class="button"
-                            onclick="confirm('<%= products.id %>')">Agregar al carrito</a>
-                    </div>
-                    <% if (locals.userLogged && userLogged.role===9) { %>
-                        <a href="/products/edit/<%= products.id %>">
-                            <button class="btn" title="EditProducts"><i class="far fa-edit"></i></button>
-                        </a>
-                        <% } %>
+                    <% if (locals.isLogged) { %>
+                        <div class="text-center">
+                            <a href="/products/addToCart/<%= products.id %>" class="button"
+                                onclick="confirm('<%= products.id %>')">Agregar al carrito</a>
+                        </div>
+                    <% } %>
+
+                            <% if (locals.userLogged && userLogged.role===9) { %>
+                                <a href="/products/edit/<%= products.id %>">
+                                    <button class="btn" title="EditProducts"><i class="far fa-edit"></i></button>
+                                </a>
+                                <% } %>
                 </div>
 
             </div>
