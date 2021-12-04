@@ -49,19 +49,35 @@ const productsController = {
 	},
 
 	update: function (req, res) {
-		db.products.update({
-			name: req.body.productName,
-			price: req.body.productPrice,
-			category: req.body.productCategory,
-			description: req.body.productDescription,
-			image: req.file.filename,
-		}, { where: { id: req.params.id } })
-			.then(() => {
-				res.redirect("/products");
-			})
-			.catch(err =>
-				console.log(err)
-			)
+		if (req.file != undefined) {
+			db.products.update({
+				name: req.body.productName,
+				price: req.body.productPrice,
+				category: req.body.productCategory,
+				description: req.body.productDescription,
+				image: req.file.filename,
+			}, { where: { id: req.params.id } })
+				.then(() => {
+					res.redirect("/products");
+				})
+				.catch(err =>
+					console.log(err)
+				)
+		} else {
+			db.products.update({
+				name: req.body.productName,
+				price: req.body.productPrice,
+				category: req.body.productCategory,
+				description: req.body.productDescription,
+				image: products.image
+			}, { where: { id: req.params.id } })
+				.then(() => {
+					res.redirect("/products");
+				})
+				.catch(err =>
+					console.log(err)
+				)
+		}
 	},
 
 	// Delete - Delete one product from DB

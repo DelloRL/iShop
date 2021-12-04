@@ -52,7 +52,7 @@ router.post('/login', userController.processLogin);
 // Perfil
 router.get('/profile', authMiddleware, userController.profile);
 router.get('/profileEdit', authMiddleware, userController.profileEdit);
-router.post('/profileEditProcess/:id', authMiddleware, upload.single('avatar'), userController.profileEditProcess);
+router.post('/profileEditProcess/:id',upload.single('avatar'), authMiddleware, userController.profileEditProcess);
 
 
 // Logout

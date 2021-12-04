@@ -53,7 +53,7 @@
                             <a href="/products/addToCart/<%= product.id %>" class="button"
                                 onclick="confirm('<%= product.id %>')">Agregar al carrito</a>
                         </div>
-                    <% } %>
+                        <% } %>
 
                             <% if (locals.userLogged && userLogged.role===9) { %>
                                 <a href="/products/edit/<%= product.id %>">

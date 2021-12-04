@@ -101,6 +101,7 @@ const userController = {
     profileEditProcess: function (req, res) {
         db.users.update({
             email: req.body.profileEmail,
+            name: req.body.profileName,
         },
             {
                 where: {

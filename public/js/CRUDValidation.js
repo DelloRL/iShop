@@ -34,8 +34,8 @@ window.addEventListener("load", function(e){
         }
 
         //Product Image Validation
-        let emailLogin = document.getElementsByName("emailLogin")[0].value;
-        if(emailLogin == ""){
+        let img = document.getElementsByName("img")[0].value;
+        if(img == ""){
             alert("Debe seleccionarse una imágen para el producto.");
             e.preventDefault()
         }
