@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2021 a las 20:07:58
+-- Tiempo de generación: 04-12-2021 a las 21:38:26
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.7
 
@@ -37,10 +37,13 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`users_id`, `product_id`) VALUES
-(4, 1),
-(4, 1),
-(4, 1),
-(4, 1);
+(5, 3),
+(5, 5),
+(1, 2),
+(1, 11),
+(1, 7),
+(1, 2),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -62,9 +65,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `category`, `price`) VALUES
-(1, 'iPhone 12 mini', 'El chip A14 Bionic es el más rápido en un smartphone.Y supera los lí­mites de todo lo que era posible hacer hasta ahora.Como procesar billones de operaciones en el Neural Engine.', 'producto-1638553153997.jpg', 'IPhones', '15000'),
+(1, 'iPhone 12 mini', 'El chip A14 Bionic es el más rápido en un smartphone.Y supera los lí­mites de todo lo que era posible hacer hasta ahora.Como procesar billones de operaciones en el Neural Engine.', 'producto-1638566111256.png', 'IPhones', '15000'),
 (2, 'iPhone 12', 'El iPhone 12 tiene el chip A14 Bionic, el más rápido en un smartphone.Una pantalla OLED de borde a borde.Un nuevo frente de Ceramic Shield, cuatro veces más resistente a las caídas.', 'iPhone12negro.png', 'IPhones', '19000'),
-(3, 'iPhone 12 PRO', 'El Chip A14 Bionic, el más rápido en un smartphone.Y un sistema de cámaras Pro para tomar fotos increíbles con poca luz,que alcanza su máxima expresión en el iPhone 12 Pro Max.', 'producto-1638553164021.jpg', 'IPhones', '18500'),
+(3, 'iPhone 12 PRO', 'El Chip A14 Bionic, el más rápido en un smartphone.Y un sistema de cámaras Pro para tomar fotos increíbles con poca luz,que alcanza su máxima expresión en el iPhone 12 Pro Max.', 'producto-1638566138520.png', 'IPhones', '18500'),
 (4, 'iPhone XR', 'El iPhone XR tiene el LCD más avanzado en un smartphone:una pantalla Liquid Retina de 6,1 pulgadas con la mayor precisión de color de la industria y un innovador diseño retroiluminadoque lleva esta increíble pantalla hasta las esquinas', 'XrBlack.png', 'IPhones', '18750'),
 (5, 'iPhone 12 ProMax', 'Un salto al siguiente nivel. El chip A14 Bionic es muy superior a cualquier otro chip de smartphone.El sistema de cámaras Pro te permite tomar fotos espectaculares con poca luz, y el iPhone 12 Pro Max lleva tu talento fotográfico mucho más allá.', 'iPhone12ProMaxFam.png', 'IPhones', '19500'),
 (6, 'AirPods Caja', 'Los nuevos AirPods te brindan una experiencia inalámbrica nueva. Sólo sácalos del estuche de carga y estarán listos para que los uses con tu iPhone, Apple Watch, iPad o Mac.', 'auricularesAirPodsCaja.png', 'Auriculares', '6500'),
@@ -72,8 +75,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `image`, `category`, `price
 (8, 'EarPods', 'A diferencia de los audífonos circulares tradicionales, el diseño de los EarPods está definido por la geometría del oído. Esto los hace más cómodos de usar que cualquier otro audífono similar.', 'auricularesEarPods.jpg', 'Auriculares', '3500'),
 (9, 'Funda ProMax', 'Esta funda de silicón, diseñada especialmente por Apple para el iPhone 12 Pro Max se adapta perfectamente.', 'fundaProMax.png', 'Fundas y protección', '2500'),
 (10, 'Funda Tech', 'Con FlexShock, un material híbrido único que absorbe, disipa y repele la fuerza de impacto lejos de su dispositivo', 'fundaTech.png', 'Fundas y protección', '4050'),
-(11, 'Funda iPhone 12', 'La funda de silicón con MagSafe diseñada por Apple especialmente para el iPhone 12 | 12 Pro es una alternativa ideal de protección.', 'fundaiphone12pro.png', 'Fundas y protección', '7500'),
-(12, 'iPhone de la saladuk', 'Es un iPhone saladooooooooooooooooooooooooooo', 'producto-1638553062137.jpg', 'Fundas y protección', '12500');
+(11, 'Funda iPhone 12', 'La funda de silicón con MagSafe diseñada por Apple especialmente para el iPhone 12 | 12 Pro es una alternativa ideal de protección.', 'fundaiphone12pro.png', 'Fundas y protección', '7500');
 
 -- --------------------------------------------------------
 
@@ -96,8 +98,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `avatar`, `password`, `role`) VALUES
 (1, 'El Perrito', 'perrito@hotmail.com', 'avatar-1633049722335.png', '$2a$10$v3a5C0YixCWIEmNqyHC3dOoTMWtBqMnmTcB3RTrov8o015S8j8agG', 9),
-(2, 'Franco Mazu', 'FranMazu@gmail.com', 'avatar-1633067305604.jpg', '$2a$10$2U908KZFizco2aFMdQCpLO7SPQHDtwxnXH2xlIS16ADYuf1aA1jr', 9),
-(4, 'Lucas Dello Russo', 'lucas.dello.russo@gmail.com', 'avatar-1638552668815.jpg', '$2a$10$gX5cm1fu.SDxEpr2Ol.LseH2xPJFElv1DFtsEWS7aspn3qHluHYmG', 9);
+(5, 'Franco Mazuyk', 'Mazu@gmail.com', 'avatar-1638561995867.jpg', '$2a$10$pDl/AslzdDtovhmsalJl2eHvEg/6EtXxnT00oMbQGQHKdVfSRtbiO', 9),
+(6, 'Lucas Dello Russo', 'lucasadmin@gmail.com', 'avatar-1638647336327.jpg', '$2a$10$Ip54PhmgTj/Hx8vyUhwrLuDPIjfo58jhNo.1qQvbLJZRC3SIagbjO', 9);
 
 --
 -- Índices para tablas volcadas
@@ -130,13 +132,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
@@ -146,7 +148,7 @@ ALTER TABLE `users`
 -- Filtros para la tabla `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 COMMIT;
 
