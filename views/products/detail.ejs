@@ -33,30 +33,30 @@
             <div class="container-section-all">
 
                 <div class="col-one">
-                    <img src="../images/products/<%= products.image %>" class="iphone-img-one">
+                    <img src="../images/products/<%= product.image %>" class="iphone-img-one">
                 </div>
 
                 <div class="col-two">
                     <h2 class="description">
-                        <%= products.name %>
+                        <%= product.name %>
                     </h2>
                     <h2>Descripción</h2>
                     <p>
-                        <%= products.description %>
+                        <%= product.description %>
                     </p>
                     <h2>Precio</h2>
-                    <p id="price">$<%= products.price%>
+                    <p id="price">$<%= product.price%>
                     </p>
                     <br>
                     <% if (locals.isLogged) { %>
                         <div class="text-center">
-                            <a href="/products/addToCart/<%= products.id %>" class="button"
-                                onclick="confirm('<%= products.id %>')">Agregar al carrito</a>
+                            <a href="/products/addToCart/<%= product.id %>" class="button"
+                                onclick="confirm('<%= product.id %>')">Agregar al carrito</a>
                         </div>
                     <% } %>
 
                             <% if (locals.userLogged && userLogged.role===9) { %>
-                                <a href="/products/edit/<%= products.id %>">
+                                <a href="/products/edit/<%= product.id %>">
                                     <button class="btn" title="EditProducts"><i class="far fa-edit"></i></button>
                                 </a>
                                 <% } %>

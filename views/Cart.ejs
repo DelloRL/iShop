@@ -36,7 +36,8 @@
                                 <img src="images/products/<%= product.image %>" alt="" class="imagenProducto">
                                 <p class="nameProduct"><%= product.name  %> </p>
                                 <p class="priceProduct">Precio: <%= product.price  %>$ </p>
-                                <a href="/products/deleteToCart/<% product.id %>" class="trash">
+                                <a href="/products/deleteToCart/<%= product.id %>" class="trash">
+                                    
                                     <i class="close fas fa-trash style"></i>
                                 </a>
                             </div>

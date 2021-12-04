@@ -15,7 +15,7 @@ const productsController = {
 	detail: (req, res) => {
 		db.products.findByPk(req.params.id)
 			.then(function (products) {
-				res.render('products/detail', { products: products });
+				res.render('products/detail', { product: products });
 			})
 	},
 
@@ -94,9 +94,11 @@ const productsController = {
 
 	deleteToCart: (req, res) => {
 		db.cart.destroy({
-			where: {},
-			truncate: true
-		  })
+			where: {
+				users_id: req.session.userLogged.id,
+				product_id: req.params.id
+			}
+		})
 			.then(() => {
 				return res.redirect('/cart')
 			})
