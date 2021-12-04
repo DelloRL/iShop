@@ -1,6 +1,5 @@
 
 const db = require('../../database/models/index.js');
-const { use } = require('../../routes/mainRoutes.js');
 const User = db.users;
 
 
@@ -8,7 +7,6 @@ const controller = {
     list: (req, res) => {
         User.findAll()
             .then(users => {
-                console.log(users)
                 let usersWithUrl = [];
                         users.forEach(user => {
                             let newUser = {

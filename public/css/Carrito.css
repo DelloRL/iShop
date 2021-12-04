@@ -38,10 +38,38 @@ body {
 }
 
 .Producto{
-    border: 1px rgb(233, 232, 232) solid; 
     margin: 5px 4%;
+    border: 3px solid;
+    border-radius: 30px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.nameProduct {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.priceProduct {
+    text-transform: uppercase;
+    color: green;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid;
+    font-weight: 600;
+}
+
+.trash {
+    width: 35px;
+    color: orange;
+    padding: 5px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    text-align: center;
+}
+.Producto img {
+    width: 300px;
 }
 
 .Producto:hover{
@@ -102,9 +130,14 @@ body {
 }
 
 .total{
-    font-size: 25px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
 }
 
+.line {
+    text-decoration: underline;
+}
 /* botones o seccion 4*/
 
 .botones{

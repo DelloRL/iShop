@@ -29,18 +29,18 @@
             </nav>
 
             <nav class="Seccion2">
-                <% let precioTotal=0; %>
+                <% let amount = 0; %>
                     <% if (products !='' ) { %>
                         <% products.forEach(product=> { %>
                             <div class="Producto">
                                 <img src="images/products/<%= product.image %>" alt="" class="imagenProducto">
-                                <p class="precio"> <a class="NombreDeProducto">
-                                        <%= product.name %>
-                                    </a> <br> Precio: <%= product.price%>
-
-                                </p>
+                                <p class="nameProduct"><%= product.name  %> </p>
+                                <p class="priceProduct">Precio: <%= product.price  %>$ </p>
+                                <a href="/products/deleteToCart/<% product.id %>" class="trash">
+                                    <i class="close fas fa-trash style"></i>
+                                </a>
                             </div>
-                            <% precioTotal +=Number(product.price) %>
+                            <% amount +=Number(product.price) %>
                                 <% }) %>
                                     <% } else { %>
                                         <h3 class="vacio">No hay productos en el carrito</h3>
@@ -48,20 +48,20 @@
                                             <br>
             </nav>
 
+            <p class="total">
+                Total: 
+                <span class="line">$<%= amount  %></span>
+            </p> 
+
+
             <nav class="Seccion3">
                 <div class="elegir-Pago">
-                    <div>
-                        <input type="radio" name="radio-input" value="Cuotas" id="Cuotas" checked class="boton-cuotas">
-                        <label for="Cuotas">Cuotas</label>
-                        <input type="radio" name="radio-input" value="Contado" id="Contado" class="boton-Contado">
-                        <label for="Contado">Al Contado</label>
-                    </div>
 
                     <div class="Texto">
                         <p> Pagando al contado tenes hasta un </p>
                         <p class="descuento">15% de descuento!</p>
-                        <p class="total">Total:$$$</p>
                     </div>
+
                 </div>
             </nav>
 
@@ -70,9 +70,7 @@
                     <button class="boton-Pagar">Pagar</button>
                 </div>
 
-                <div class="padreBotonV">
-                    <a href="/products/deleteToCart/<%= products.id %>"><i class="close fas fa-times"> Vaciar </i></a>
-                </div>
+
             </nav>
 
         </main>

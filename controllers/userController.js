@@ -83,7 +83,7 @@ const userController = {
     profile: (req, res) => {
         //const user = req.session.userLogged,
         db.users.findByPk(req.session.userLogged.id).then((user) => {
-            console.log(user)
+            
             return res.render('users/profile', {
                 user
             });
@@ -92,7 +92,7 @@ const userController = {
     profileEdit: (req, res) => {
         //const user = req.session.userLogged,
         db.users.findByPk(req.session.userLogged.id).then((user) => {
-            console.log(user)
+            
             return res.render('users/profileEdit', {
                 user
             });
@@ -120,9 +120,6 @@ const userController = {
         req.session.destroy();
         res.clearCookie("remember");
         res.redirect('/home')
-    },
-    editarUsuarios: (req, res) => {
-        return res.render('userEdit');
     }
 }
 

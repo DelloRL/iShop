@@ -58,7 +58,6 @@ const productsController = {
 		}, { where: { id: req.params.id } })
 			.then(() => {
 				res.redirect("/products");
-				console.log(req.body)
 			})
 			.catch(err =>
 				console.log(err)
