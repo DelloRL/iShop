@@ -1,0 +1,42 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Roboto';
+}
+
+.profileCards{
+    display: flex;
+    padding: 50px;
+    justify-content: space-evenly;
+}
+
+img{
+    width: 100%;
+}
+
+.card{
+    max-width: 350px;
+    background: #fff;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+}
+
+.title{
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.social-media{
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    padding: 10px;
+    font-size: 30px;
+    color: #000;
+}
+
+.social-media a:hover{
+    opacity: 0.5;
+}

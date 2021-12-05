@@ -10,4 +10,6 @@ router.get('/home', mainController.home);
 
 router.get('/cart', authMiddleware ,mainController.carrito);
 
+router.get('/contact', mainController.contact);
+
 module.exports = router;

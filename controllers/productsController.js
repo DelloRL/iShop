@@ -101,7 +101,7 @@ const productsController = {
 			product_id: req.params.id
 		})
 			.then(() => {
-				res.redirect('/cart')
+				console.log("!!!!Producte Agregade!!!!")
 			})
 			.catch(err => {
 				res.send(err)

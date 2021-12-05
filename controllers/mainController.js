@@ -20,6 +20,9 @@ const mainController = {
                 return res.render('./cart', { products });
             })
     },
+    contact: (req, res) => {
+        return res.render('contact');
+    },
 }
 
 module.exports = mainController;
