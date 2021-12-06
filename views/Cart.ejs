@@ -102,7 +102,7 @@
 
                 function confirm() {
                     Swal.fire({
-                        title: '¡Y listo',
+                        title: '¡Y listo!',
                         text: 'Tu compra se realizo con exito!',
                         imageUrl: 'https://www.seriemaniac.com/wp-content/uploads/2020/06/alf_1.jpg',
                         imageWidth: 400,
@@ -114,6 +114,11 @@
 
             </script>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js"></script>
+
+
+        <% if (products == '') { %>
+            <br><br><br><br><br>
+        <% } %>  
 
         </main>
 

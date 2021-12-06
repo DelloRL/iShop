@@ -50,7 +50,7 @@ const productsController = {
 	},
 
 	update: function (req, res) {
-		if(req.file != undefined) {
+		if (req.file != undefined) {
 			db.products.update({
 				name: req.body.productName,
 				price: req.body.productPrice,
@@ -80,7 +80,7 @@ const productsController = {
 				)
 		}
 
-		
+
 	},
 
 	// Delete - Delete one product from DB
@@ -104,7 +104,7 @@ const productsController = {
 			product_id: req.params.id
 		})
 			.then(() => {
-				res.redirect('/cart')
+				console.log('producto agregado')
 			})
 			.catch(err => {
 				res.send(err)
@@ -112,18 +112,19 @@ const productsController = {
 	},
 
 	deleteToCart: (req, res) => {
-		db.cart.destroy({
-			where: {},
-			truncate: true
-		  })
-			.then(() => {
-				return res.redirect('/cart')
-			})
-			.catch(err => {
-				res.send(err)
-			})
-	},
-
+        db.cart.destroy({
+            where: {
+                users_id: req.session.userLogged.id,
+                product_id: req.params.id
+            }
+        })
+            .then(() => {
+                return res.redirect('/cart')
+            })
+            .catch(err => {
+                res.send(err)
+            })
+    },
 };
 
 module.exports = productsController;
