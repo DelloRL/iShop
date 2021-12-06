@@ -117,9 +117,6 @@ nav li ul li {
         width: 200px;
         margin-left: 0;
     }
-    button {
-        display: none;
-    }
     .main-navbar-cel.show {
         display: none!important;
     }
