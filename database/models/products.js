@@ -21,6 +21,9 @@ module.exports = function (sequelize, dataTypes) {
         },
         price: {
             type: dataTypes.NUMBER
+        },
+        created_at: {
+            type: dataTypes.DATE                        
         }
     }
 

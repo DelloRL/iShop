@@ -33,6 +33,7 @@ const productsController = {
 			image: req.file.filename,
 			category: req.body.productCategory,
 			price: req.body.productPrice,
+			created_at: new Date().toISOString().substring(0, 10)
 		})
 			.then(() => {
 				return res.redirect('/products')
@@ -49,7 +50,7 @@ const productsController = {
 	},
 
 	update: function (req, res) {
-		if (req.file != undefined) {
+		if(req.file != undefined) {
 			db.products.update({
 				name: req.body.productName,
 				price: req.body.productPrice,
@@ -78,6 +79,8 @@ const productsController = {
 					console.log(err)
 				)
 		}
+
+		
 	},
 
 	// Delete - Delete one product from DB
@@ -101,7 +104,7 @@ const productsController = {
 			product_id: req.params.id
 		})
 			.then(() => {
-				console.log("!!!!Producte Agregade!!!!")
+				res.redirect('/cart')
 			})
 			.catch(err => {
 				res.send(err)
@@ -110,11 +113,9 @@ const productsController = {
 
 	deleteToCart: (req, res) => {
 		db.cart.destroy({
-			where: {
-				users_id: req.session.userLogged.id,
-				product_id: req.params.id
-			}
-		})
+			where: {},
+			truncate: true
+		  })
 			.then(() => {
 				return res.redirect('/cart')
 			})
