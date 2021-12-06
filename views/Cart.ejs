@@ -20,24 +20,24 @@
     <!-- Header -->
     <%- include('./partials/header') -%>
 
-
         <!--Main-->
         <main>
-            <nav class="Seccion1">
+            <div class="Seccion1">
                 <h3 class="Titulo">Tu carrito iShop</h3>
                 <a href="/home" class="fas fa-angle-double-left"></a>
-            </nav>
+            </div>
 
-            <nav class="Seccion2">
-                <% let amount = 0; %>
+            <div class="Seccion2">
+                <% let amount=0; %>
                     <% if (products !='' ) { %>
                         <% products.forEach(product=> { %>
                             <div class="Producto">
                                 <img src="images/products/<%= product.image %>" alt="" class="imagenProducto">
-                                <p class="nameProduct"><%= product.name  %> </p>
-                                <p class="priceProduct">Precio: <%= product.price  %>$ </p>
+                                <p class="nameProduct">
+                                    <%= product.name %>
+                                </p>
+                                <p class="priceProduct">Precio: <%= product.price %>$ </p>
                                 <a href="/products/deleteToCart/<%= product.id %>" class="trash">
-                                    
                                     <i class="close fas fa-trash style"></i>
                                 </a>
                             </div>
@@ -47,32 +47,73 @@
                                         <h3 class="vacio">No hay productos en el carrito</h3>
                                         <% } %>
                                             <br>
-            </nav>
+            </div>
 
             <p class="total">
-                Total: 
-                <span class="line">$<%= amount  %></span>
-            </p> 
+                Total: $
+                <span class="line">
+                    <%= amount %>
+                </span>
+            </p>
 
+            <div class="botones">
+                <button class="boton-pagar" id="btnAbrirPop" onclick="abrirPopup()">Pagar</button>
+            </div>
 
-            <nav class="Seccion3">
-                <div class="elegir-Pago">
-
-                    <div class="Texto">
-                        <p> Pagando al contado tenes hasta un </p>
-                        <p class="descuento">15% de descuento!</p>
+            <div id="overlay" class="overlay">
+                <div class="popup" id="popup">
+                    <button class="cerrar-popup" onclick="cerrarPopup()"><i class="fas fa-times"></i></button>
+                    <div class="in-popUp">
+                        <h1>¡Cada vez mas cerca de tus productos!</h1>
+                        <h2>Para realizar tu compra primero debes elegir tu metodo de pago: </h2>
+                        <div class="Pago">
+                            <p class="descuentoParte1">Recuerda que pagando de contado tenes un</p>
+                            <p class="descuentoParte2">15% de descuento!</p>
+                            <input type="radio" value="cuotas" name="Pagos">Al contado,con descuento de:
+                            $<span>
+                                <%= amount * 0.15 %></input>
+                                    <br>
+                                    <input type="radio" value="contado" name="Pagos">12 cuotas de: $<span>
+                                        <%= amount / 12 %>
+                                    </span></input>
+                        </div>
                     </div>
-
+                    <div class="btn-finalizar">
+                        <input type="button" class="finalizar" value="Finalizar" onclick="confirm(),cerrarPopup()">
+                    </div>
                 </div>
-            </nav>
+            </div>
 
-            <nav class="botones">
-                <div class="padreBotonP">
-                    <button class="boton-Pagar">Pagar</button>
-                </div>
+            <script>
 
+                function abrirPopup() {
+                    popup = document.getElementById('popup')
+                    overlay = document.getElementById('overlay');
+                    overlay.classList.add('active');
+                    popup.classList.add('active');
+                }
 
-            </nav>
+                function cerrarPopup() {
+                    popup = document.getElementById('popup')
+                    overlay = document.getElementById('overlay');
+                    overlay.classList.remove('active')
+                    popup.classList.remove('active');
+                }
+
+                function confirm() {
+                    Swal.fire({
+                        title: '¡Y listo',
+                        text: 'Tu compra se realizo con exito!',
+                        imageUrl: 'https://www.seriemaniac.com/wp-content/uploads/2020/06/alf_1.jpg',
+                        imageWidth: 400,
+                        imageHeight: 200,
+                        imageAlt: 'Custom image',
+                    })
+
+                }
+
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js"></script>
 
         </main>
 

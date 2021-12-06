@@ -105,30 +105,6 @@ body {
     color:rgb(236, 108, 108)
 }
 
-/*Elegir pago o seccion 3*/
-
-.Seccion3{
-    display: flex;
-    justify-content: center;
-}
-
-.elegir-Pago{
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-    text-align: center; 
-    width: 250px;
-    height: 150px;
-    margin: 5% 15% 0px;
-    background-color: rgba(0, 0, 0, 0.801);
-    line-height: 10px;
-}
-
-.descuento{
-    font-size: 20px;
-    color: orange;
-}
-
 .total{
     font-size: 30px;
     text-align: center;
@@ -138,20 +114,17 @@ body {
 .line {
     text-decoration: underline;
 }
-/* botones o seccion 4*/
+/* seccion 3*/
 
 .botones{
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
     align-items: center;
+    margin: 2% 5% 2%;
 }
 
-.padreBotonP{
-    margin: 2% 5% 2%;
-    
-}
-.boton-Pagar{
+.boton-pagar{
     display:inline-block;
     text-align: center;
     padding: 10px 25px;
@@ -163,7 +136,7 @@ body {
     transition-property: background-color,color;
     transition-duration: 0.2s;
 }
-.boton-Pagar:hover{
+.boton-pagar:hover{
     background-color:white;   
     color: black;
 }
@@ -172,9 +145,83 @@ body {
     margin: 2% 5% 2%;
 }
 
-.boton-vaciar{
+
+/*PopUp*/
+
+.overlay{
+    background:rgba(0, 0, 0, .2) ;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+.popup{
+    background: #f1f1f1;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    padding: 20px;
+    transition: .4s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+.cerrar-popup{
+    font-size: 30px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #bbbbbb;
+    transition: .3s ease all;
+}
+.cerrar-popup:hover{
+    color: black;
+}
+
+.in-popUp{
+    text-align: center;
+}
+
+.in-popUp h1{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.in-popUp h2{
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.descuentoParte2{
+    color: rgb(252, 182, 54) ;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Pago{
+    border-radius: 5px;
+    background-color:#dddcdc;
+}
+
+.Pago p{
+    font-size: 20px;
+    margin:2px;
+}
+
+.finalizar{
     display:inline-block;
     text-align: center;
+    margin-top: 10px;
     padding: 10px 25px;
     border-radius: 10px;
     font-size: 15px;
@@ -185,10 +232,32 @@ body {
     transition-duration: 0.2s;
 }
 
-.boton-vaciar:hover{
+.finalizar:hover{
     background-color:white;   
     color: black;
 }
+
+/*.finalizar{
+    margin-top:10px;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(53, 53, 53);
+    border-radius: 5px;
+    transition: .3s ease all; 
+}
+
+.finalizar:hover{
+    color: black;
+    background-color:white;
+}*/
+
+/*Animaciones popUp*/
+
+.popup.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 /* mediaQ*/
 
@@ -239,7 +308,7 @@ body {
         font-size: 30px;
 }
 
-    .boton-Pagar{
+    .boton-pagar{
     font-size: 20px;
         
 }
@@ -266,13 +335,6 @@ body {
     .NombreDeProducto{
     visibility: visible;
 }
-.boton-quitar{
-    align-self: flex-end;
-}
-.cantidad-button{
-    align-self: flex-end;
-    margin: 5px;
-}
 
 .elegir-Pago{
     width: 550px;
@@ -281,7 +343,7 @@ body {
     font-size: 22px;
 }   
 
-.boton-Pagar{
+.boton-pagar{
     font-size: 30px;
     cursor: pointer;
 }
@@ -289,10 +351,4 @@ body {
 .fa-hand-point-right{
     visibility: visible;
 }
-
-.boton-vaciar{
-    cursor: pointer;
-    font-size: 30px;
-}
-
 }
