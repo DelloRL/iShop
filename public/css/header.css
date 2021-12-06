@@ -117,8 +117,11 @@ nav li ul li {
         width: 200px;
         margin-left: 0;
     }
-    .hamburger-button {
+    button {
         display: none;
+    }
+    .main-navbar-cel.show {
+        display: none!important;
     }
     .h2-header {
         display: none;

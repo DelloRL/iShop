@@ -29,13 +29,13 @@ const controller = {
                     products: productsWithUrl,
                     lastProduct,
                     countByCategory: {
-                        iPhones: {
+                        iphones: {
                             count: products.filter(product => product.category === "IPhones").length
                         },
-                        Auriculares: {
+                        auriculares: {
                             count: products.filter(product => product.category === "Auriculares").length
                         },
-                        Fundas: {
+                        fundas: {
                             count: products.filter(product => product.category === "Fundas y protección").length
                         }
                     }
