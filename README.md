@@ -1,5 +1,6 @@
 # iShop
 
+24/11/2021
 Somos una E-commerce. Nuestro principal objetivo es, a través de una pagina web, hacer posíble a Argentínos de todo el país, acceder de una manera sencilla a Smartphones APPLE. Marca que no tiene tiendas de ventas oficiales en nuestro país. 
 Compra en dolares o Pesos con una mínima tasa de interes, y en cuotas.
 "Nunca fue tan facil conseguir un iphone como hasta ahora".
